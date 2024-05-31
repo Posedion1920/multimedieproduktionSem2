@@ -3,7 +3,7 @@
 :root{
     /*colors */
     --white: #fff;
-    --lysBlaa: #0494;
+    --lysBlaa: #004494;
     --sideBaggrund: #f2f2f2;
     --gul: #fce144;
     --graa: #707070;
@@ -16,6 +16,43 @@
 *::before{
 box-sizing: border-box;
 }
-h1{
 
+.flex {
+    display: flex;
 }
+
+.justifyCenter {
+    justify-content: center;
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: "Roboto+Condensed", sans-serif;
+}
+
+h1{
+font-size: 1.8rem;
+}
+
+.btn {
+    margin: 15px;
+    padding: 10px;
+    background: var(--lysBlaa);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 5px;
+    font-size: 0.8rem;
+    text-align: center;
+    width: 10rem;
+    display: inline-block;
+}
+

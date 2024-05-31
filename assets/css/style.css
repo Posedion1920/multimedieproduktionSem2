@@ -9,7 +9,15 @@
     --graa: #707070;
     --blaa: #062142;
 
+
+    /* SPACING */
+    --smallSpacing: 10px;
+    --standardSpacing: 16px;
+    --mediumSpacing: 24px;
+    --largeSpacing: 35px;
+    --xLargeSpacing: 50px;
 }
+
 
 *,
 *::after,
@@ -38,7 +46,9 @@ h6,
 a {
     font-family: "Roboto+Condensed", sans-serif;
 }
-
+body{
+    margin: 0;
+}
 h1{
 font-size: 1.8rem;
 }
@@ -56,3 +66,19 @@ font-size: 1.8rem;
     display: inline-block;
 }
 
+nav{
+    background-color: var(--blaa);
+    width: 100%;
+}
+nav a{
+    text-decoration: none;
+    color: var(--white);
+       
+}
+nav ul{
+    padding: var(--mediumSpacing);
+    gap: 2rem;
+    list-style: none;
+    margin-top: 0;
+    
+}

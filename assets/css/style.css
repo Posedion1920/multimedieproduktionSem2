@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    /*colors */
+    --white: #fff;
+    --lysBlaa: #0494;
+    --sideBaggrund: #f2f2f2;
+    --gul: #fce144;
+    --graa: #707070;
+    --blaa: #062142;
+
+}
+
+*,
+*::after,
+*::before{
+box-sizing: border-box;
+}
+h1{
+
+}

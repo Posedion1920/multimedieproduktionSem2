@@ -56,6 +56,7 @@ storeToken()
 
 function getPostsByCategory(categoryId)
 {
+    // get request med en authorizationer header, som indehold vores api. den skal vi bruge for at bevise hvem vi er.
     fetch(baseUrl+`posts?status=private&categories=${categoryId}`,{
         headers:{
             Authorization: "Bearer"+apiToken

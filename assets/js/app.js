@@ -82,6 +82,15 @@ function RenderCards(posts){
 
 }
 
+function GetSinglePost(id){
+    fetch(baseUrl)
+    .then(res =>{
+
+    })
+    .then(data => data)
+    .catch(err => err)
+}
+
 getPostsByCategory(categoryIds.Arrangementer)
 // .then(data => console.log(data))
 

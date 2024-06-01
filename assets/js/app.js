@@ -83,7 +83,7 @@ function RenderCards(posts){
 }
 
 getPostsByCategory(categoryIds.Arrangementer)
-.then(data => console.log(data))
+// .then(data => console.log(data))
 
 
 

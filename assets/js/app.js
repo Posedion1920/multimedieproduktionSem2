@@ -27,6 +27,7 @@ function GetApiToken(){
         body: JSON.stringify(loginInfo)
     })
     .then(res => {
+        // tjekker om login info er sandt. vi vd at 401 betyder at ens login info ikke er sandt, så vi kan tjekke om det og give et svar tilbage i kode
         if(res.status ===401){
             console.log("Du fik ikke token muligvis fordi dine login info ikke er rigtigt")
         }
@@ -54,19 +55,37 @@ storeToken()
 
 // Main funktioner som skal bruges i andre js filer:
 
+
+
+
+// denne funktion fetcher posts som har et specifikt kategori id
 function getPostsByCategory(categoryId)
 {
     // get request med en authorizationer header, som indehold vores api. den skal vi bruge for at bevise hvem vi er.
-    fetch(baseUrl+`posts?status=private&categories=${categoryId}`,{
+    return fetch(baseUrl+`posts?status=private&categories=${categoryId}`,{
         headers:{
             Authorization: "Bearer"+apiToken
         }
     })
-    .then(res => res.json())
-    .then(data => console.log(data))
-    .catch(err => console.log(err))
-    
+    .then(res => {
+        // tjekker for status og melder tilbage om koden. vi ved 404 betyder er urlen ikke findes så der vil være noget galt i urlen
+        if(res.status === 404){
+            console.log("Siden blev ikke fundet. Tjek urlen og query parameter igennem")
+        }
+        return res.json()
+    })
+    .then(data => data)
+    .catch(err => console.log("Noget gik galt:",err))
 }
+
+getPostsByCategory(12)
+// .then(data => console.log(data))
+
+
+
+
+
+
 
 
 

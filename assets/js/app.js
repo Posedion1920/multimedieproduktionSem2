@@ -78,8 +78,12 @@ function getPostsByCategory(categoryId)
     .catch(err => console.log("Noget gik galt:",err))
 }
 
-getPostsByCategory(12)
-// .then(data => console.log(data))
+function RenderCards(posts){
+
+}
+
+getPostsByCategory(categoryIds.Arrangementer)
+.then(data => console.log(data))
 
 
 

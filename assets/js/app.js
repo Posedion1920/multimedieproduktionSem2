@@ -52,7 +52,6 @@ storeToken()
 
 
 
-
 // Main funktioner som skal bruges i andre js filer:
 
 function getPostsByCategory(categoryId)

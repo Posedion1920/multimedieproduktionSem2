@@ -144,6 +144,9 @@ nav ul{
     max-height: 347.29px;
     border-radius: 8px;
 }
+.wrapper a{
+    text-decoration: none;
+}
 
 .arrangementCard img{
     border-top-left-radius: 8px;

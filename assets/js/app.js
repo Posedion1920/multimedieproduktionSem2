@@ -81,10 +81,11 @@ function getPostsByCategory(categoryId)
 function RenderCards(posts){
     const divEL = document.querySelector(".wrapper");
     posts.forEach(function(post){
-        const aEl = document.createElement("a");
-        divEL.append(aEl);
-        aEl.append(articleEL);
+        const aLink = document.createElement("a");
+        aLink.href = `selvearrangement.html?id=${post.id}`
+        divEL.append(aLink);
         const articleEL = document.createElement("article");
+        aLink.append(articleEL);
         articleEL.classList.add("arrangementCard");
 
 

@@ -37,6 +37,7 @@ function storeToken(){
     .then(data => {
         // gemmer token i en variable
         let apiToken = data.data.token;
+        console.log(apiToken);
         // gemmer værdien i en key value i sessionstorage, da den skal bruges senere.
         sessionStorage.setItem("apiToken",apiToken);
     })
@@ -45,14 +46,7 @@ storeToken()
 
 
 
-
-
-
-
 // Main funktioner som skal bruges i andre js filer:
-
-
-
 
 // denne funktion fetcher posts som har et specifikt kategori id
 function getPostsByCategory(categoryId)
@@ -81,6 +75,12 @@ function GetSinglePost(id){
     .then(data => data)
     .catch(err => err)
 }
+
+//udfører nogle funktioner her bare lige for at teste om det virker
+getPostsByCategory(11)
+.then(data => RenderCards(data))
+.catch(err => console.log(err))
+
 
 
 function RenderCards(posts, checker){
@@ -119,10 +119,6 @@ function RenderCards(posts, checker){
     })
 }
 
-
-getPostsByCategory(11)
-.then(data => RenderCards(data))
-.catch(err => console.log(err))
 
 
 

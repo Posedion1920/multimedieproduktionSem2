@@ -5,9 +5,6 @@ const baseUrl = "https://0x.mohafh.dk/wp-json/wp/v2/";
 const tokenUrl = "https://0x.mohafh.dk/wp-json/jwt-auth/v1/token";
 
 
-
-
-
 function GetApiToken(){
     //loginfo er et objekt af vores login information, som vi senere skal bruge til et post request
     const loginInfo = {
@@ -27,7 +24,7 @@ function GetApiToken(){
     .then(res => {
         // tjekker om login info er sandt. vi vd at 401 betyder at ens login info ikke er sandt, så vi kan tjekke om det og give et svar tilbage i kode
         if(res.status ===401){
-            console.log("Du fik ikke token muligvis fordi dine login info ikke er rigtigt");
+            console.log("Du fik ikke token muligvis fordi dine login info ikke er rigtigt")
         }
         // vi bruger return her fordi vores arrow funktionen har flere linjer. Når en arrow funktionen har kun en linje, vil den by default return af sig
         return res.json();
@@ -35,8 +32,17 @@ function GetApiToken(){
     // catch tjekker om hvis der er noget som går galt i selve requesten og fanger den og udskriver
     .catch(err => console.log("noget gik galt i anmodningen request:", err))
 }
+function storeToken(){
+    GetApiToken()
+    .then(data => {
+        // gemmer token i en variable
+        let apiToken = data.data.token;
+        // gemmer værdien i en key value i sessionstorage, da den skal bruges senere.
+        sessionStorage.setItem("apiToken",apiToken);
+    })
+}
+storeToken()
 
-GetApiToken()
 
 
 
@@ -51,7 +57,6 @@ GetApiToken()
 // denne funktion fetcher posts som har et specifikt kategori id
 function getPostsByCategory(categoryId)
 {
-    // get request med en authorizationer header, som indehold vores api. den skal vi bruge for at bevise hvem vi er.
     return fetch(baseUrl+`posts?status=private&categories=${categoryId}`,{
         headers:{
             Authorization: "Bearer"+sessionStorage.getItem("apiToken")
@@ -113,7 +118,6 @@ function RenderCards(posts, checker){
     
     })
 }
-
 
 
 getPostsByCategory(11)

@@ -81,9 +81,11 @@ function getPostsByCategory(categoryId)
 function RenderCards(posts){
     const divEL = document.querySelector(".wrapper");
     posts.forEach(function(post){
+        const aEl = document.createElement("a");
+        divEL.append(aEl);
+        aEl.append(articleEL);
         const articleEL = document.createElement("article");
         articleEL.classList.add("arrangementCard");
-        divEL.append(articleEL);
 
 
         const imgEl = document.createElement("img");

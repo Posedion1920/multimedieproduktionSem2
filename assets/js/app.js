@@ -29,7 +29,7 @@ function GetApiToken(){
     .then(res => {
         // tjekker om login info er sandt. vi vd at 401 betyder at ens login info ikke er sandt, så vi kan tjekke om det og give et svar tilbage i kode
         if(res.status ===401){
-            console.log("Du fik ikke token muligvis fordi dine login info ikke er rigtigt")
+            console.log("Du fik ikke token muligvis fordi dine login info ikke er rigtigt");
         }
         // vi bruger return her fordi vores arrow funktionen har flere linjer. Når en arrow funktionen har kun en linje, vil den by default return af sig
         return res.json();
@@ -72,14 +72,37 @@ function getPostsByCategory(categoryId)
         if(res.status === 404){
             console.log("Siden blev ikke fundet. Tjek urlen og query parameter igennem")
         }
-        return res.json()
+        return res.json();
     })
     .then(data => data)
     .catch(err => console.log("Noget gik galt:",err))
 }
 
 function RenderCards(posts){
+    const divEL = document.querySelector(".wrapper");
+    posts.forEach(function(post){
+        const articleEL = document.createElement("article");
+        articleEL.classList.add("arrangementCard");
+        divEL.append(articleEL);
 
+
+        const imgEl = document.createElement("img");
+        imgEl.src = post.acf.cardimage.url;
+        articleEL.append(imgEl);
+
+        const h4El = document.createElement("h4");
+        h4El.textContent = post.acf.titel;
+        articleEL.append(h4El)
+
+        const pEl = document.createElement("p");
+        pEl.textContent = post.acf.tidspunkt;
+        articleEL.append(pEl);
+
+        const pEl2 = document.createElement("p");
+        pEl2.textContent = post.acf.disclouretekst;
+        articleEL.append(pEl2);
+    
+    })
 }
 
 function GetSinglePost(id){
@@ -92,7 +115,7 @@ function GetSinglePost(id){
 }
 
 getPostsByCategory(categoryIds.Arrangementer)
-// .then(data => console.log(data))
+.then(data => RenderCards(data))
 
 
 

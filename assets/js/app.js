@@ -3,10 +3,8 @@
 
 const baseUrl = "https://0x.mohafh.dk/wp-json/wp/v2/";
 const tokenUrl = "https://0x.mohafh.dk/wp-json/jwt-auth/v1/token";
-let apiToken = sessionStorage.getItem("apiToken")
-const categoryIds = {
-    Arrangementer:11
-};
+
+
 
 
 
@@ -38,18 +36,10 @@ function GetApiToken(){
     .catch(err => console.log("noget gik galt i anmodningen request:", err))
 }
 
+GetApiToken()
 
-function storeToken(){
-    GetApiToken()
-    .then(data => {
-        // gemmer token i en variable
-        let apiToken = data.data.token;
-        // gemmer værdien i en key value i sessionstorage, da den skal bruges senere.
-        sessionStorage.setItem("apiToken",apiToken);
-    })
-}
 
-storeToken()
+
 
 
 
@@ -64,7 +54,7 @@ function getPostsByCategory(categoryId)
     // get request med en authorizationer header, som indehold vores api. den skal vi bruge for at bevise hvem vi er.
     return fetch(baseUrl+`posts?status=private&categories=${categoryId}`,{
         headers:{
-            Authorization: "Bearer"+apiToken
+            Authorization: "Bearer"+sessionStorage.getItem("apiToken")
         }
     })
     .then(res => {
@@ -126,8 +116,9 @@ function RenderCards(posts, checker){
 
 
 
-getPostsByCategory(categoryIds.Arrangementer)
-.then(data => RenderCards(data,false))
+getPostsByCategory(11)
+.then(data => RenderCards(data))
+.catch(err => console.log(err))
 
 
 

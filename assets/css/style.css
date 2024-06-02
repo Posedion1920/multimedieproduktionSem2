@@ -89,6 +89,9 @@ nav ul{
     
 }
 
+main{
+    padding: 0rem 2rem 0rem 2rem; 
+}
 
 
 
@@ -135,17 +138,25 @@ nav ul{
 
 
 
-/* Styling af cards */
+
+/* Styling arrangementer siden og selve siden */
+
+header{
+    background-image: url(/Arrangementer\ header_mobil.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 18vh;
+}
 .arrangementCard{
     background-color: var(--blaa);
     text-align: center;
     color: white;
-    max-width: 273.1px;
-    max-height: 347.29px;
     border-radius: 8px;
 }
 .wrapper a{
     text-decoration: none;
+    max-width: 273.1px;
+    max-height: 347.29px;
 }
 
 .arrangementCard img{
@@ -157,4 +168,37 @@ nav ul{
     grid-template-columns: 1;
     row-gap: 2rem;
     justify-items: center;
+}
+.desktopVersion{
+    display: none;
+}
+
+
+@media screen and (min-width: 1000px){
+    header{
+        display: none;
+    } 
+    .desktopVersion{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .mobileVersion{
+        display: none;
+    }
+    .wrapper{
+        grid-template-columns: repeat(3,1fr);
+        
+    }
+    .wrapper a{
+        max-width: none;
+        max-height: none;
+    }
+
+    .arrangementCard p{
+        padding-bottom: 8px;
+    }
+    .arrangementCard p, h4 {
+        width: 30ch;
+    }
+
 }

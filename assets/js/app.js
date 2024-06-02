@@ -78,6 +78,16 @@ function getPostsByCategory(categoryId)
     .catch(err => console.log("Noget gik galt:",err))
 }
 
+function GetSinglePost(id){
+    fetch(baseUrl)
+    .then(res =>{
+
+    })
+    .then(data => data)
+    .catch(err => err)
+}
+
+
 function RenderCards(posts, checker){
     const divEL = document.querySelector(".wrapper");
     posts.forEach(function(post){
@@ -114,14 +124,7 @@ function RenderCards(posts, checker){
     })
 }
 
-function GetSinglePost(id){
-    fetch(baseUrl)
-    .then(res =>{
 
-    })
-    .then(data => data)
-    .catch(err => err)
-}
 
 getPostsByCategory(categoryIds.Arrangementer)
 .then(data => RenderCards(data,false))

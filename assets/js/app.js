@@ -78,9 +78,15 @@ function getPostsByCategory(categoryId)
     .catch(err => console.log("Noget gik galt:",err))
 }
 
-function RenderCards(posts){
+function RenderCards(posts, checker){
     const divEL = document.querySelector(".wrapper");
     posts.forEach(function(post){
+        // kontrolstruktur hvor vi tjekker om en checker er true eller false. hvis den er true vil vi kun have tre cards i stedet for fire, og omvendt hvis den er false vil have fire. Grunden til at vi gør det, er fordi vi kan genbruge funktionen. I forsiden skal der vises tre cards udover øl messe, og ved fx arrangementer siden skal alle cards vises.
+        if(checker){
+            if(post.acf.titel === "Øl messe"){
+                return;
+            }
+        }
         const aLink = document.createElement("a");
         aLink.href = `selvearrangement.html?id=${post.id}`
         divEL.append(aLink);
@@ -118,7 +124,7 @@ function GetSinglePost(id){
 }
 
 getPostsByCategory(categoryIds.Arrangementer)
-.then(data => RenderCards(data))
+.then(data => RenderCards(data,false))
 
 
 

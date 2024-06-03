@@ -68,7 +68,7 @@ export function getPostsByCategory(categoryId)
 }
 
 export function GetSinglePost(id){
-    fetch(baseUrl+`posts/${id}?status=private`,{
+    return fetch(baseUrl+`posts/${id}?status=private`,{
         headers:{
             Authorization: "Bearer"+sessionStorage.getItem("apiToken")
         }   

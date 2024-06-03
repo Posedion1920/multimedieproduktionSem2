@@ -168,13 +168,15 @@ main{
     }
     .wrapper{
         display: grid;
-        grid-template-columns: 1;
+        grid-template-columns: 1fr;
         row-gap: 2rem;
         justify-items: center;
     }
     .desktopVersion{
         display: none;
     }
+
+
 
 /* vedtægter */
         

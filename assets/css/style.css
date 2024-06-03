@@ -107,6 +107,21 @@ justify-content: space-around;
 .fa-solid{
     color: var(--gul);
 }
+.sponsgrid{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+justify-content: space-between;
+}
+.sponsor{
+    margin-top: 2rem;
+    width: 85px;
+    height: 40px;
+    background-color: var(--graa);
+}
+.sponsImg{
+    max-width:85px;
+    max-height: 40px;
+}
 
 main{
     padding: 0rem 2rem 0rem 2rem; 
@@ -197,7 +212,7 @@ main{
         }
         .vedteagter p {
         margin-top: 0;
-        margin-bottom: 25 px;
+        margin-bottom: 25px;
         }
         .vedteagtSection {
         display: flex;

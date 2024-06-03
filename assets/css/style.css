@@ -33,6 +33,10 @@ box-sizing: border-box;
     justify-content: center;
 }
 
+.textAlignCenter {
+    text-align: center;
+    }
+
 .alignCenter {
     align-items: center;
 }
@@ -88,11 +92,16 @@ nav a{
     text-decoration: none;
     color: var(--white);
 }
-nav ul{
+
+.navListe{
+    display: none;
     padding: 1vh;
     gap: 2vh;
     list-style: none;
-    margin: 0 auto;    
+    margin: 0 auto; 
+}
+.mobileNav{
+justify-content: space-between;
 }
 .fa-solid{
     color: var(--gul);
@@ -114,7 +123,7 @@ main{
     font-size: 60px;
     padding: 10px;
     }
-    img{
+    .textBillede{
     max-width: 100%;
     height: auto;
     }
@@ -135,7 +144,7 @@ main{
     /* arrangement */
     }
 
-    header{
+    .arrangementHeader{
         background-image: url(/Arrangementer\ header_mobil.jpg);
         background-repeat: no-repeat;
         background-size: contain;
@@ -165,6 +174,34 @@ main{
     .desktopVersion{
         display: none;
     }
+
+/* vedtægter */
+        
+        .vedteagter span {
+        margin-right: 20px;
+        max-width: 16px;
+        }
+        .vedteagter ul {
+        padding: 15px;
+        }
+        .vedteagter p {
+        margin-top: 0;
+        margin-bottom: 25 px;
+        }
+        .vedteagtSection {
+        display: flex;
+        }
+        .vedteagter {
+        margin-block: 50px;
+        margin-inline: 25px;
+        }
+
+
+
+
+
+
+/* media queries */
     
     @media screen and (min-width: 1000px){
         header{
@@ -191,108 +228,4 @@ main{
        
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Styling arrangementer siden og selve siden */
-
-header{
-    background-image: url(/Arrangementer\ header_mobil.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 18vh;
-}
-.arrangementCard{
-    background-color: var(--blaa);
-    text-align: center;
-    color: white;
-    border-radius: 8px;
-}
-.wrapper a{
-    text-decoration: none;
-    max-width: 273.1px;
-    max-height: 347.29px;
-}
-
-.arrangementCard img{
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-.wrapper{
-    display: grid;
-    grid-template-columns: 1;
-    row-gap: 2rem;
-    justify-items: center;
-}
-.desktopVersion{
-    display: none;
-}
-
-
-@media screen and (min-width: 1000px){
-    header{
-        display: none;
-    } 
-    .desktopVersion{
-        display: flex;
-        flex-direction: row-reverse;
-    }
-    .mobileVersion{
-        display: none;
-    }
-    .wrapper{
-        grid-template-columns: repeat(3,1fr);
-        
-    }
-    .wrapper a{
-        max-width: none;
-        max-height: none;
-    }
-
-    .arrangementCard p{
-        padding-bottom: 8px;
-    }
-    .arrangementCard p, h4 {
-        width: 30ch;
-    }
-
-}

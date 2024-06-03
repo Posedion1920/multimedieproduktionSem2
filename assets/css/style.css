@@ -166,6 +166,10 @@ main{
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
     }
+    .arrangementCard p{
+        width: 30ch;
+        margin: 0 auto;
+    }
     .wrapper{
         display: grid;
         grid-template-columns: 1fr;
@@ -220,7 +224,6 @@ main{
         }
         .wrapper{
             grid-template-columns: repeat(3,1fr);
-           
         }
        
         .arrangementCard p{
@@ -228,8 +231,8 @@ main{
         }
         .arrangementCard p, h4 {
             width: 30ch;
+            margin: 0 auto;
         }
-       
     }
 
 

@@ -127,7 +127,7 @@ export function RenderCards(posts, checker){
 
 export function RenderEvent(posts){
     posts.forEach(function(post){
-
+        
     })
 }
 

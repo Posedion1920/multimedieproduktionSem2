@@ -37,7 +37,7 @@ function storeToken(){
     .then(data => {
         // gemmer token i en variable
         let apiToken = data.data.token;
-        console.log(apiToken);
+        // console.log(apiToken);
         // gemmer værdien i en key value i sessionstorage, da den skal bruges senere.
         sessionStorage.setItem("apiToken",apiToken);
         
@@ -50,9 +50,9 @@ storeToken()
 // Main funktioner som skal bruges i andre js filer:
 
 // denne funktion fetcher posts som har et specifikt kategori id
-function getPostsByCategory(categoryId)
+export function getPostsByCategory(categoryId)
 {
-    console.log(sessionStorage.getItem("apiToken"))
+    // console.log(sessionStorage.getItem("apiToken"))
     return fetch(baseUrl+`posts?status=private&categories=${categoryId}`,{
         headers:{
             Authorization: "Bearer"+sessionStorage.getItem("apiToken")
@@ -72,11 +72,11 @@ function getPostsByCategory(categoryId)
 export function GetSinglePost(id){
     return fetch(baseUrl+`posts/${id}?status=private`,{
         headers:{
-            Authorization: "Bearer"+sessionStorage.getItem("apiToken")
+            Authorization: "Bearer "+sessionStorage.getItem("apiToken")
         }   
     })
     .then(res => res.json())
-    .then(data => data)
+    .then(data => console.log(data))
     .catch(err => err)
 }
 
@@ -122,7 +122,12 @@ export function RenderCards(posts, checker){
         const pEl2 = document.createElement("p");
         pEl2.textContent = post.acf.disclouretekst;
         articleEL.append(pEl2);
-    
+    })
+}
+
+export function RenderEvent(posts){
+    posts.forEach(function(post){
+        
     })
 }
 

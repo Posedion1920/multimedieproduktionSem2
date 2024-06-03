@@ -179,6 +179,8 @@ main{
     .arrangementCard img{
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
+        width: 273px;
+        height: 173px;
     }
     .arrangementCard p{
         width: 30ch;
@@ -239,6 +241,9 @@ main{
         .wrapper{
             grid-template-columns: repeat(3,1fr);
         }
+        .arrangementCard{
+            height: 500px;
+        }
        
         .arrangementCard p{
             padding-bottom: 8px;
@@ -246,6 +251,10 @@ main{
         .arrangementCard p, h4 {
             width: 30ch;
             margin: 0 auto;
+        }
+        .arrangementCard img{
+            width: 100%;
+            height: auto;
         }
         .navListe{
             display: flex;

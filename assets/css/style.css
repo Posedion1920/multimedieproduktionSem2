@@ -66,8 +66,8 @@ font-size: 1.3rem;
 }
 
 .Logo{
-    width: 17vh;
-    margin-right: 20vh;
+    width: 12vh;
+    margin-right: 3vh;
 }
 
 
@@ -87,10 +87,13 @@ font-size: 1.3rem;
 nav{
     background-color: var(--blaa);
     width: 100%;
+    color: var(--white);
 }
 nav a{
     text-decoration: none;
-    color: var(--white);
+}
+.fa-bars{
+    margin: 1rem 1.5rem 1rem 2rem;
 }
 
 .navListe{
@@ -101,7 +104,7 @@ nav a{
     margin: 0 auto; 
 }
 .mobileNav{
-justify-content: space-between;
+justify-content: space-around;
 }
 .fa-solid{
     color: var(--gul);

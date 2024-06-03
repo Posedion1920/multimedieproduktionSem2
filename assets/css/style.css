@@ -149,6 +149,7 @@ main{
     }
     .wrapper a{
         text-decoration: none;
+        display: block;
         /* max-width: 273.1px;
         max-height: 347.29px; */
     }

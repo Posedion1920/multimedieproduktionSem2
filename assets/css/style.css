@@ -43,8 +43,10 @@ h3,
 h4,
 h5,
 h6,
-a {
-    font-family: "Roboto+Condensed", sans-serif;
+a,
+p,
+span {
+    font-family: "Roboto Condensed", sans-serif;
 }
 body{
     margin: 0;
@@ -53,11 +55,17 @@ h1{
 font-size: 1.8rem;
 }
 h2{
-font-size: ;
+font-size: 1.5rem;
 }
 h3{
-font-size: ;
+font-size: 1.3rem;
 }
+
+.Logo{
+    width: 17vh;
+    margin-right: 20vh;
+}
+
 
 .btn {
     margin: 15px;
@@ -82,11 +90,13 @@ nav a{
        
 }
 nav ul{
-    padding: var(--mediumSpacing);
+    padding: 1vh;
     gap: 2rem;
     list-style: none;
-    margin-top: 0;
-    
+    margin: 0 auto;    
+}
+.fa-solid{
+    color: var(--gul);
 }
 
 main{

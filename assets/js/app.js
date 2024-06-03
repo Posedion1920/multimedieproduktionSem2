@@ -72,11 +72,11 @@ export function getPostsByCategory(categoryId)
 export function GetSinglePost(id){
     return fetch(baseUrl+`posts/${id}?status=private`,{
         headers:{
-            Authorization: "Bearer"+sessionStorage.getItem("apiToken")
+            Authorization: "Bearer "+sessionStorage.getItem("apiToken")
         }   
     })
     .then(res => res.json())
-    .then(data => data)
+    .then(data => console.log(data))
     .catch(err => err)
 }
 
@@ -122,7 +122,12 @@ export function RenderCards(posts, checker){
         const pEl2 = document.createElement("p");
         pEl2.textContent = post.acf.disclouretekst;
         articleEL.append(pEl2);
-    
+    })
+}
+
+export function RenderEvent(posts){
+    posts.forEach(function(post){
+
     })
 }
 

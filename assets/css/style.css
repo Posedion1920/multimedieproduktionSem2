@@ -108,15 +108,17 @@ justify-content: space-around;
     color: var(--gul);
 }
 .sponsgrid{
-
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+justify-content: space-between;
 }
 .sponsor{
+    margin-top: 2rem;
     width: 85px;
     height: 40px;
     background-color: var(--graa);
 }
 .sponsImg{
- 
     max-width:85px;
     max-height: 40px;
 }

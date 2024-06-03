@@ -229,7 +229,7 @@ main{
             grid-template-columns: repeat(3,1fr);
         }
         .arrangementCard{
-            height: 542px;
+            height: 500px;
         }
        
         .arrangementCard p{

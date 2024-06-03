@@ -66,7 +66,7 @@ font-size: 1.3rem;
 }
 
 .Logo{
-    width: 12vh;
+    width: 8vh;
     margin-right: 3vh;
 }
 
@@ -91,18 +91,16 @@ nav{
 }
 nav a{
     text-decoration: none;
+    color: var(--white);
 }
 .fa-bars{
     margin: 1rem 1.5rem 1rem 2rem;
+    
 }
-
 .navListe{
     display: none;
-    padding: 1vh;
-    gap: 2vh;
-    list-style: none;
-    margin: 0 auto; 
 }
+
 .mobileNav{
 justify-content: space-around;
 }
@@ -235,6 +233,19 @@ main{
         .arrangementCard p, h4 {
             width: 30ch;
             margin: 0 auto;
+        }
+        .navListe{
+            display: flex;
+            padding: 1vh;
+            gap: 8vh;
+            list-style: none;
+            margin: 0 auto; 
+        }
+        .mobileNav{
+            display: none;
+        }
+        .Logo{
+            width: 12vh;
         }
     }
 

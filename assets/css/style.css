@@ -259,3 +259,18 @@ main{
     }
 
 
+
+
+
+
+
+
+.eventsection h1, h3{
+    text-align: center;
+}
+
+.salg{
+    display: flex;
+    gap: 2rem;
+}
+

@@ -76,7 +76,7 @@ export function GetSinglePost(id){
         }   
     })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => data)
     .catch(err => err)
 }
 
@@ -125,12 +125,52 @@ export function RenderCards(posts, checker){
     })
 }
 
-export function RenderEvent(posts){
-    posts.forEach(function(post){
-        
-    })
-}
+export function RenderEvent(post){
+    const secEl = document.querySelector(".eventsection");
+    const articleEl = document.createElement("article");
+    secEl.append(articleEl);
+    const heading = document.createElement("h1");
+    heading.textContent = post.acf.titel;
+    articleEl.append(heading)
 
+    const heading3 = document.createElement("h3");
+    heading3.textContent = post.acf.overskrift;
+    articleEl.append(heading3)
+
+    for(let text in post.acf.brodtekster){
+
+        if(post.acf.brodtekster[text] === ""){
+            continue
+        }
+        else{
+            let pEl = document.createElement("p");
+            pEl.textContent = post.acf.brodtekster[text];
+            articleEl.append(pEl)
+        }
+    }
+
+    const lokationEl = document.createElement("p");
+    lokationEl.textContent = post.acf.lokation;
+    articleEl.append(lokationEl);
+
+    const tidspunkt = document.createElement("p");
+    tidspunkt.textContent = post.acf.tidspunkt;
+    articleEl.append(tidspunkt);
+
+    const pris = document.createElement("p");
+    pris.textContent = post.acf.pris+",- kr";
+
+    const divSalg = document.createElement("div");
+    articleEl.append(divSalg);
+
+    const btnEL = document.createElement("button");
+    btnEL.textContent = "KØB BILLET TIL "+ post.acf.titel;
+
+    divSalg.classList.add("salg");
+    divSalg.append(pris)
+    divSalg.append(btnEL);
+  
+}
 
 
 

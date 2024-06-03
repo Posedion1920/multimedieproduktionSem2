@@ -107,6 +107,19 @@ justify-content: space-around;
 .fa-solid{
     color: var(--gul);
 }
+.sponsgrid{
+
+}
+.sponsor{
+    width: 85px;
+    height: 40px;
+    background-color: var(--graa);
+}
+.sponsImg{
+ 
+    max-width:85px;
+    max-height: 40px;
+}
 
 main{
     padding: 0rem 2rem 0rem 2rem; 

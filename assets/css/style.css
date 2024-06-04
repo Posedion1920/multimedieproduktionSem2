@@ -41,12 +41,7 @@ box-sizing: border-box;
     align-items: center;
 }
 
-button{
-    border-radius: 8px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
-}
+
 
 h1,
 h2,
@@ -89,6 +84,7 @@ font-size: 1.3rem;
     text-align: center;
     width: 10rem;
     display: inline-block;
+    border: none;
 }
 
 nav{
@@ -242,8 +238,8 @@ main{
             display: none;
         }
         .desktopVersion{
-            display: flex;
-            flex-direction: row-reverse;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
         }
         .mobileVersion{
             display: none;
@@ -286,6 +282,15 @@ main{
         .eventImage{
             justify-self: end;
             align-self: center;
+        }
+        .imgcontainer{
+            max-width: 952px;
+            max-height: 800px;
+            justify-self: end;
+        }
+        .imgcontainer img{
+            width: 100%;
+            height: auto;
         }
     }
 

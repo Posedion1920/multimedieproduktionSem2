@@ -127,6 +127,8 @@ export function RenderCards(posts, checker){
 }
 
 export function RenderEvent(post){
+    const titleEL = document.querySelector("title");
+    titleEL.textContent = post.acf.titel;
     const secEl = document.querySelector(".eventsection");
     const articleEl = document.createElement("article");
     secEl.append(articleEl);
@@ -178,6 +180,7 @@ export function RenderEvent(post){
     articleEl.append(divSalg);
 
     const btnEL = document.createElement("button");
+    btnEL.classList.add("btn")
     btnEL.textContent = "KØB BILLET TIL "+ post.acf.titel;
     
     const linkSalg = document.createElement("a");
@@ -189,8 +192,6 @@ export function RenderEvent(post){
     divSalg.append(pris)
     divSalg.append(linkSalg);
 
-    const titleEL = document.querySelector("title");
-    titleEL.textContent = post.acf.titel;
   
 }
 

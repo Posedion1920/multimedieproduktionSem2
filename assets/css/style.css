@@ -57,6 +57,25 @@ span {
 body{
     margin: 0;
 }
+footer{
+    display: flex;
+    margin-top: 3rem;
+    color: var(--white);
+    background-color: var(--blaa);
+    justify-content: space-between;
+}
+footer div{
+    flex-direction: column;
+    margin: 0 1rem 0 1rem;
+}
+footer p{
+ display: inline-block;
+
+}
+.footer_link{
+    align-items: baseline;
+}
+
 h1{
 font-size: 1.8rem;
 }
@@ -98,8 +117,12 @@ nav a{
 }
 .fa-bars{
     margin: 1rem 1.5rem 1rem 2rem;
-    
 }
+.fa-brands{
+    color: var(--gul);
+margin: 0.2rem;
+}
+
 .navListe{
     display: none;
 }

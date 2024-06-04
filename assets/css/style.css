@@ -344,6 +344,10 @@ height: 100%;
             width: 100%;
             height: auto;
         }
+        .desktopVersion article{
+            padding-left: 5rem;
+            max-width: 74ch;
+        }
     }
 
 

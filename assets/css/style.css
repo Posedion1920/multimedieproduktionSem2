@@ -272,6 +272,13 @@ main{
         .Logo{
             width: 12vh;
         }
+        .eventsection{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        .eventImage{
+            justify-self: end;
+        }
     }
 
 
@@ -288,5 +295,10 @@ main{
 .salg{
     display: flex;
     gap: 2rem;
+    align-items: center;
+}
+
+.eventImage img{
+    width: 100%;
 }
 

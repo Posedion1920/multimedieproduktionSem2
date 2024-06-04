@@ -150,6 +150,19 @@ export function RenderEvent(post){
         }
     }
 
+    const divContainer = document.createElement("div");
+    divContainer.classList.add("eventImage");
+    secEl.append(divContainer);
+    const imgEl = document.createElement("img");
+    if(window.innerWidth<1000){
+        imgEl.src = post.acf.arrangementbillede.sizes.medium;
+    }
+    else{
+        imgEl.src = post.acf.arrangementbillede.url;
+    }
+    divContainer.append(imgEl);
+
+
     const lokationEl = document.createElement("p");
     lokationEl.textContent = post.acf.lokation;
     articleEl.append(lokationEl);

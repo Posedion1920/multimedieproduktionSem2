@@ -70,6 +70,7 @@ export function getPostsByCategory(categoryId)
 }
 
 export function GetSinglePost(id){
+    // console.log(sessionStorage.getItem("apiToken"));
     return fetch(baseUrl+`posts/${id}?status=private`,{
         headers:{
             Authorization: "Bearer "+sessionStorage.getItem("apiToken")
@@ -165,10 +166,18 @@ export function RenderEvent(post){
 
     const btnEL = document.createElement("button");
     btnEL.textContent = "KØB BILLET TIL "+ post.acf.titel;
+    
+    const linkSalg = document.createElement("a");
+    linkSalg.href = post.acf.linksalg;
+    linkSalg.setAttribute("target","_blank");
+    linkSalg.append(btnEL);
 
     divSalg.classList.add("salg");
     divSalg.append(pris)
-    divSalg.append(btnEL);
+    divSalg.append(linkSalg);
+
+    const titleEL = document.querySelector("title");
+    titleEL.textContent = post.acf.titel;
   
 }
 

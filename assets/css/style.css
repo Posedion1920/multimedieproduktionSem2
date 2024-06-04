@@ -111,6 +111,7 @@ justify-content: space-around;
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 justify-content: space-between;
+justify-items: center;
 }
 .sponsor{
     margin-top: 2rem;

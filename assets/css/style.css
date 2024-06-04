@@ -348,11 +348,15 @@ height: 100%;
             padding-left: 5rem;
             max-width: 74ch;
         }
+        .gridOmOs{
+            display: flex;
+        }
     }
 
 
 .eventsection h1, h3{
     text-align: center;
+    height: 70vh;
 }
 
 .salg{

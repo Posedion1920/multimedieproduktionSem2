@@ -278,14 +278,9 @@ main{
         }
         .eventImage{
             justify-self: end;
+            align-self: center;
         }
     }
-
-
-
-
-
-
 
 
 .eventsection h1, h3{
@@ -302,3 +297,7 @@ main{
     width: 100%;
 }
 
+
+video{
+    object-fit: cover;
+}

@@ -286,7 +286,7 @@ height: 100%;
 /* media queries */
     
     @media screen and (min-width: 1000px){
-        header{
+        .arrangementHeader, .traeningHeader{
             display: none;
         }
         .desktopVersion{
@@ -366,6 +366,39 @@ height: 100%;
 }
 
 
-video{
-    object-fit: cover;
+
+
+/* Sommertræning */
+.traeningHeader{
+    background-image: url(../billeder/sommertraeningHeader.jpg);
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    height: 18vh; 
 }
+.sommertraening{
+    display: none;
+}
+
+.centerbtn{
+    display: block;
+    margin: auto;
+}
+
+.mandag{
+    display: grid;
+    grid-template-columns: 110px 248px;
+    /* gap: 3rem; */
+}
+
+.dag{
+    text-align: center;
+    background-color: var(--lysBlaa);
+    color: white;
+    max-width: 110px;
+}
+
+
+
+
+
+

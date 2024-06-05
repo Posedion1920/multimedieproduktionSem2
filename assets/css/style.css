@@ -386,6 +386,7 @@ height: 100%;
 .centerbtn{
     display: block;
     margin: auto;
+    margin-bottom: 5rem;
 }
 
 .mandag{
@@ -399,6 +400,7 @@ height: 100%;
     background-color: var(--lysBlaa);
     color: white;
     max-width: 110px;
+    margin-bottom: 1px;
 }
 
 

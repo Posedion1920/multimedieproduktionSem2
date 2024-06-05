@@ -18,6 +18,10 @@
     --xLargeSpacing: 50px;
 }
 
+body{
+    background-color: #F2F2F2;   
+}
+
 
 *,
 *::after,
@@ -354,13 +358,23 @@ height: 100%;
         .gridOmOs{
             display: flex;
         }
-        
+        .traeningHeader{
+            display: none;
+        }
+        .sommertraeningUngdom{
+            display: none;
+        }
+        #traeningSOm{
+            display: block;
+        }
+        #ungdomDesk{
+            display: block;
+        }
     }
 
 
 .eventsection h1, h3{
     text-align: center;
-    height: 70vh;
 }
 
 .salg{
@@ -390,6 +404,7 @@ height: 100%;
 .centerbtn{
     display: block;
     margin: auto;
+    margin-bottom: 5rem;
 }
 
 .mandag{
@@ -403,7 +418,28 @@ height: 100%;
     background-color: var(--lysBlaa);
     color: white;
     max-width: 110px;
+    margin-bottom: 1px;
 }
+
+.radius{
+    border-top-left-radius: 10px;
+}
+
+.daybox{
+    background-color: white;
+    border-radius: 6px;
+    padding-bottom: 1rem;
+    margin-left: 6px;
+    margin-bottom: 6px
+}
+.daybox p {
+    margin-top: 0px;
+}
+
+.sommertraeningUngdomDesk{
+    display: none;
+}
+
 
 
 

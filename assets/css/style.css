@@ -313,9 +313,13 @@ height: 100%;
         .arrangementCard p{
             padding-bottom: 8px;
         }
-        .arrangementCard p, h4 {
+        .arrangementCard p{
             width: 30ch;
             margin: 0 auto;
+        }
+        .arrangementCard h4{
+            width: 30ch;
+            margin: 0 auto;    
         }
         .arrangementCard img{
             width: 100%;
@@ -416,7 +420,20 @@ height: 100%;
         .ungdomTraening .btn{
             margin: 0px;
         }
-        
+
+        .traeningstider{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+        }
+        #dag1,#dag2,#dag3,#dag4,#dag5{
+            margin-right: 6px;
+            display: flex;
+            flex-direction: column;
+        }
+        .dag {
+            max-width: 100% !important;
+            border-radius: 0px !important;
+        }    
     }
 
 

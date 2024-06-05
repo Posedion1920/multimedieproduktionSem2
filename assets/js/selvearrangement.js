@@ -4,6 +4,5 @@ import {RenderEvent} from "./app.js"
 
 GetSinglePost(getQueryParameter())
 .then(data => {
-    console.log(data);
-    RenderEvent(data)
+    RenderEvent(data);
 })

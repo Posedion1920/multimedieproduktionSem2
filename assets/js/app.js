@@ -32,27 +32,24 @@ function GetApiToken(){
     // catch tjekker om hvis der er noget som går galt i selve requesten og fanger den og udskriver
     .catch(err => console.log("noget gik galt i anmodningen request:", err))
 }
+
 function storeToken(){
     GetApiToken()
     .then(data => {
         // gemmer token i en variable
         let apiToken = data.data.token;
-        // console.log(apiToken);
         // gemmer værdien i en key value i sessionstorage, da den skal bruges senere.
-        sessionStorage.setItem("apiToken",apiToken);
-        
+        sessionStorage.setItem("apiToken",apiToken);  
     })
 }
 storeToken()
 
 
-
 // Main funktioner som skal bruges i andre js filer:
 
 // denne funktion fetcher posts som har et specifikt kategori id
-export function getPostsByCategory(categoryId)
+export async function getPostsByCategory(categoryId)
 {
-    // console.log(sessionStorage.getItem("apiToken"))
     return fetch(baseUrl+`posts?status=private&categories=${categoryId}`,{
         headers:{
             Authorization: "Bearer"+sessionStorage.getItem("apiToken")
@@ -68,9 +65,8 @@ export function getPostsByCategory(categoryId)
     .then(data => data)
     .catch(err => console.log("Noget gik galt:",err))
 }
-
-export function GetSinglePost(id){
-    // console.log(sessionStorage.getItem("apiToken"));
+//
+export async function GetSinglePost(id){
     return fetch(baseUrl+`posts/${id}?status=private`,{
         headers:{
             Authorization: "Bearer "+sessionStorage.getItem("apiToken")
@@ -86,8 +82,6 @@ export function getQueryParameter(){
     let query = queryParamter.split("=")[1];
     return query;
 }
-
-
 
 
 
@@ -194,7 +188,6 @@ export function RenderEvent(post){
 
   
 }
-
 
 
 

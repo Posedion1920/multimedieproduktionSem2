@@ -529,8 +529,54 @@ height: 100%;
 
 /* Selve holdsiden */
 
-.holdheader{
-    
+.tilmeldHold{
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 8px;
+}
+.tilmeldHold h4{
+    margin: 0px;
+    padding-top: 1.5rem;
+}
+
+.btncontainer{
+    display: flex;
+    justify-content: center;
+}
+.flexhold{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.tiderHold h4{
+    text-align: center;
+}
+
+.tid{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.traeningsdag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 17px;
+    width: 114px;
+    height: 102px;
+    background-color: green;
+}
+
+.trænigstid1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 

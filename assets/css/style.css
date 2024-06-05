@@ -426,14 +426,23 @@ height: 100%;
             grid-template-columns: repeat(5,1fr);
         }
         #dag1,#dag2,#dag3,#dag4,#dag5{
-            margin-right: 6px;
+            margin-right: 1px;
             display: flex;
             flex-direction: column;
         }
         .dag {
             max-width: 100% !important;
             border-radius: 0px !important;
-        }    
+        }
+        #dag1 .daybox{
+            margin-left: 0px !important;
+        }
+        
+
+
+
+
+        
     }
 
 

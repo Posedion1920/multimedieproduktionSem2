@@ -375,11 +375,27 @@ height: 100%;
             display: grid;
             grid-template-columns: repeat(2,1fr);
             padding: 0rem 0rem 0rem 2rem;
+            margin-bottom: 2rem;
         }
         .TraeningSeciton article{
             padding-right: 5rem;
             width: 60ch;
         }
+        .ungdomTraening{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        .gap{
+            display: block;
+            margin: 8px 0px 8px 0px;
+        }
+        .ungdomTraening p:first-of-type{
+            padding-bottom: 1.5rem;
+        }
+        .gap:last-of-type{
+            padding-bottom: 1.5rem; 
+        }
+        
     }
 
 

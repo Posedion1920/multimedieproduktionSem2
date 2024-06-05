@@ -411,6 +411,17 @@ height: 100%;
     border-top-left-radius: 10px;
 }
 
+.daybox{
+    background-color: white;
+    border-radius: 6px;
+    padding-bottom: 1rem;
+    margin-left: 6px;
+    margin-bottom: 6px
+}
+.daybox p {
+    margin-top: 0px;
+}
+
 
 
 

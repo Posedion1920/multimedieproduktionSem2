@@ -374,6 +374,11 @@ height: 100%;
         .TraeningSeciton{
             display: grid;
             grid-template-columns: repeat(2,1fr);
+            padding: 0rem 0rem 0rem 2rem;
+        }
+        .TraeningSeciton article{
+            padding-right: 5rem;
+            width: 60ch;
         }
     }
 

@@ -366,9 +366,14 @@ height: 100%;
         }
         #traeningSOm{
             display: block;
+            justify-self: end;
         }
         #ungdomDesk{
             display: block;
+        }
+        .TraeningSeciton{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
         }
     }
 

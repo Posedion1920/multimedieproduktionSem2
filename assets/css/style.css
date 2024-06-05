@@ -18,6 +18,10 @@
     --xLargeSpacing: 50px;
 }
 
+body{
+    background-color: #F2F2F2;   
+}
+
 
 *,
 *::after,
@@ -402,6 +406,11 @@ height: 100%;
     max-width: 110px;
     margin-bottom: 1px;
 }
+
+.radius{
+    border-top-left-radius: 10px;
+}
+
 
 
 

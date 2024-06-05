@@ -50,7 +50,6 @@ storeToken()
 // denne funktion fetcher posts som har et specifikt kategori id
 export async function getPostsByCategory(categoryId)
 {
-    await new Promise (resolve => setTimeout(resolve,1000))
     return fetch(baseUrl+`posts?status=private&categories=${categoryId}`,{
         headers:{
             Authorization: "Bearer"+sessionStorage.getItem("apiToken")
@@ -68,7 +67,6 @@ export async function getPostsByCategory(categoryId)
 }
 //
 export async function GetSinglePost(id){
-    await new Promise (resolve => setTimeout(resolve,500))
     return fetch(baseUrl+`posts/${id}?status=private`,{
         headers:{
             Authorization: "Bearer "+sessionStorage.getItem("apiToken")
@@ -84,8 +82,6 @@ export function getQueryParameter(){
     let query = queryParamter.split("=")[1];
     return query;
 }
-
-
 
 
 

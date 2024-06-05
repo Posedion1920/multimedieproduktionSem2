@@ -579,6 +579,12 @@ height: 100%;
     justify-content: space-around;
 }
 
+.trænereSektion div{
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 1rem;
+}
+
 
 
 

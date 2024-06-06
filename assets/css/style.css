@@ -603,6 +603,7 @@ height: 100%;
         display: grid;
         grid-template-columns: repeat(2,1fr);
         column-gap: 4rem;
+        row-gap: 4rem;
     }
     .column1row1{
         grid-column: 1;
@@ -645,6 +646,9 @@ height: 100%;
     }
     .mobilHold{
         display: none;
+    }
+    .tilmeldHold{
+        grid-row: span 2;
     }
     
     

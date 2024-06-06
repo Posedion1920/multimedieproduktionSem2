@@ -111,14 +111,75 @@ img{
     height: auto;
 }
 
-.btnSen, .btnUng{
-   height: 60%;
-   border: none;
-   border-radius: 5px;
-   font-size: 0.8rem;
-   text-align: center;
-   margin: 15px;
-   padding: 10px;
-   text-decoration: none;
-   background-image: ;
+/* Kalender */ 
+
+.kalender{
+    background-color: #f2f2f2;
+    border-radius: 7px;
+    margin: 10px;
+    text-align: center;
+padding-top: 5px;
+
 }
+.kalender ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  
+}
+
+.måned {
+    padding-bottom:  10px;
+    text-align: center;
+  }
+
+  .måned ul {
+    display: flex; /* Tilføjet display: flex; */
+    justify-content: center; /* Centrerer indholdet horisontalt */
+    align-items: center; /* Centrerer indholdet vertikalt */
+    position: relative;}
+
+    .måned li {
+        padding:  10px;
+      }
+    
+
+  .ugedage{
+    display: flex; 
+  }
+
+ 
+  .ugedage li{
+    padding: 10px;
+    letter-spacing: 3px;
+    
+ }
+
+ .dage{
+    display: flex;
+    flex-wrap: wrap;
+  
+ }
+
+
+ .dage li{
+    width: 14.28%; 
+    text-align: center; 
+    padding: 10px 0; 
+    box-sizing: border-box;
+    letter-spacing: 3px;
+    
+ }
+
+  .tilbage{
+    float: left;
+ }
+
+ .næste{
+    float: right;
+ }
+
+
+ .dagensaktivitet {
+    display: flex;
+ }

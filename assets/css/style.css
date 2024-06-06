@@ -577,7 +577,8 @@ height: 100%;
     border-radius: 17px;
     width: 114px;
     height: 102px;
-    background-color: green;
+    background-color: #BAD97C;
+    color: #657B3D;
 }
 
 .trænigstid1{
@@ -586,9 +587,10 @@ height: 100%;
     justify-content: space-around;
 }
 
+
 .trænereSektion div{
     background-color: white;
-    border-radius: 5px;
+    border-radius: 4px;
     padding-left: 1rem;
 }
 
@@ -618,11 +620,21 @@ height: 100%;
     .tid{
         margin-bottom: 1rem;
         justify-content: flex-start;
-        padding-left: 1rem;
+        padding-left: 14px;
         max-width: 636px;
+        max-height: 180px;
     }
     .tiderHold h4{
         text-align: left;
+    }
+    .trænereSektion div {
+        max-width: 430px;
+        max-height: 186px;
+    }
+    .trænereSektion{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 1rem;
     }
     
 }

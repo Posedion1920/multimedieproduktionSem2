@@ -590,3 +590,41 @@ height: 100%;
 
 
 
+/* Faciliteter */ 
+.faciliteter img{
+    max-width: 100%;
+}
+
+.faciliteter p, h2, .btn {
+    margin: 2rem;
+}
+
+@media screen and (min-width: 1000px) {
+    .faciliteter {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 2rem;
+
+    }
+
+    
+    .faciliteter img{
+        min-width: 100%;
+        max-height: 500px;
+        object-fit: contain;
+      
+    }
+
+    .faciTekst{
+        padding: 2rem;
+        align-items: center;
+    }
+    
+    .headtext{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 50%;
+    padding: 3.3rem;
+    } 
+
+}

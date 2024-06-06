@@ -597,9 +597,32 @@ height: 100%;
     .holdesideGrid{
         display: grid;
         grid-template-columns: repeat(2,1fr);
+        column-gap: 4rem;
     }
     .column1row1{
-    
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .tiderHold{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .tilmeldHold{
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .trænereSektion{
+        grid-column: 1;
+    }
+    .tid{
+        margin-bottom: 1rem;
+        justify-content: flex-start;
+        padding-left: 1rem;
+        max-width: 636px;
+    }
+    .tiderHold h4{
+        text-align: left;
     }
     
 }

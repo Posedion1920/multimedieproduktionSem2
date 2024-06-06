@@ -185,10 +185,11 @@ export function RenderEvent(post){
     divSalg.classList.add("salg");
     divSalg.append(pris)
     divSalg.append(linkSalg);
-
-  
 }
 
+function RenderTeam(post){
+    
+}
 
 
 

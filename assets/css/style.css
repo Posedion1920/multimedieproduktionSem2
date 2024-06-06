@@ -649,6 +649,13 @@ height: 100%;
     }
     .tilmeldHold{
         grid-row: span 2;
+        max-width: 636px;
+        padding-left: 1rem;
+        /* padding-top: 2rem; */
+    }
+    .flexhold{
+        justify-content: flex-start;
+        gap: 10rem;
     }
     
     

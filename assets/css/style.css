@@ -261,6 +261,7 @@ height: 100%;
     .desktopVersion{
         display: none;
     }
+/* trænere */
 
 
 
@@ -449,8 +450,14 @@ height: 100%;
             margin-left: 0px !important;
         }
         
+        .gridTrænere{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 90%;
+            }
+            .gridTrænere article{
 
-
+            }
 
 
         

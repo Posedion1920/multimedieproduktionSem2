@@ -620,7 +620,7 @@ height: 100%;
 @media screen and (min-width: 1000px){
     .holdesideGrid{
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(1fr 0.5fr);
         column-gap: 4rem;
         row-gap: 4rem;
     }
@@ -630,11 +630,7 @@ height: 100%;
     }
     .tiderHold{
         grid-column: 2;
-        grid-row: 1;
-    }
-    .tilmeldHold{
-        grid-column: 2;
-        grid-row: 3;
+        grid-row: 2;
     }
 
     .trænereSektion{
@@ -651,30 +647,34 @@ height: 100%;
         text-align: left;
     }
     .trænereSektion div {
-        max-width: 430px;
+        /* max-width: 430px; */
         max-height: 186px;
     }
     .trænereSektion{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         row-gap: 1rem;
+        column-gap: 0.5rem;
     }
+
     .deskHold{
         display:block;
-        padding-left: 14px;
     }
     .mobilHold{
         display: none;
     }
     .tilmeldHold{
-        grid-row: span 2;
         max-width: 636px;
+        max-height: 656px;
         padding-left: 1rem;
-        /* padding-top: 2rem; */
+
     }
     .flexhold{
         justify-content: flex-start;
         gap: 10rem;
+    }
+    .alignself{
+        align-self: end;
     }
     
     

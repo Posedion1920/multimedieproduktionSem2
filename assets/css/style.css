@@ -723,10 +723,19 @@ height: 100%;
 }
 
 
-.årsplan{
+
+iframe {
     display: flex;
-    justify-content: center;
+    margin: auto;
+    width: 700px;
+    height: 1056px;
 }
+
+.årsplanHeading{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
 
 
 

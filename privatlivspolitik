@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Årsplan</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <h1 class="årsplanHeading">Årsplan</h1>
+    <a class= "fuldscreen"href="https://aalborghk.dk/wp-content/uploads/2019/12/Aalborg-HK-Privatlivspolitik-December-2019.pdf" target="_blank"><button>Se Privatlivpolitik i fuld skærm</button></a>
+    <iframe class ="årsplan" src="https://aalborghk.dk/wp-content/plugins/pdf-poster/pdfjs-new/web/viewer.html?file=https://aalborghk.dk/wp-content/uploads/2023/10/Aarsplan-2023-2024-Opdateret-041023.pdf&nobaki=false&z=auto&stdono=&onlypdf=&raw=&fullscreen=1&sidebarOpen=false&side=false&open=false&hrscroll=#page=0" frameborder="0"></iframe>
+
+</body>
+</html>

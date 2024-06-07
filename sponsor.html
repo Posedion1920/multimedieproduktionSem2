@@ -64,27 +64,42 @@
     </div>
     <main>
       <section>
-        <img src="" alt="" />
-        <h1>Sponsorer</h1>
-        <p>
-          På denne side finder du Aalborg HKs sponsorer. De er opdelt i
-          hovedsponsorer og øvrige sponsorer. Vores sponsorer hjælper os med at
-          vedligeholde klubben ved at yde økonomisk støtte.
-        </p>
-        <p>
-          Udover at yde direkte økonomisk støtte til Aalborg HK, hjælper de også
-          med at skabe arrangementer og begivenheder for klubbens medlemmer og
-          andre, som kunne have interesse i at deltage i et arrangement hos os.
-          Stort tak til alle vores sponsorer!
-        </p>
-      </section>
-      <section>
-        <h1>hovedsponsorer</h1>
-        <div>
-          <img
-            src="./assets/Billeder/Sponsor/sparekassen-danmark.jpg"
-            alt="sparekassen danmark logo"
+        <picture>
+          <source
+            media="(min-width:1000px)"
+            srcset="./assets/Billeder/Sponsor/SponserImg.png"
           />
+
+          <img
+            class="hovedSponsorImg"
+            src="./assets/Billeder/Sponsor/SponserImgMobile.png"
+            alt="sparekassen donation"
+          />
+        </picture>
+        <div>
+          <h1>Sponsorer</h1>
+          <p>
+            På denne side finder du Aalborg HKs sponsorer. De er opdelt i
+            hovedsponsorer og øvrige sponsorer. Vores sponsorer hjælper os med
+            at vedligeholde klubben ved at yde økonomisk støtte.
+          </p>
+          <p>
+            Udover at yde direkte økonomisk støtte til Aalborg HK, hjælper de
+            også med at skabe arrangementer og begivenheder for klubbens
+            medlemmer og andre, som kunne have interesse i at deltage i et
+            arrangement hos os. Stort tak til alle vores sponsorer!
+          </p>
+        </div>
+      </section>
+      <h1>hovedsponsorer</h1>
+      <section class="hovedSponsor">
+        <img
+          id="hovedSponsor1"
+          class="hovedSponsorImg"
+          src="./assets/Billeder/Sponsor/sparekassen-danmark.jpg"
+          alt="sparekassen danmark logo"
+        />
+        <div id="hovedSponsor2">
           <h3>Sparekassen Danmark</h3>
           <p>
             Sparekassen Danmark er vores første hovedsponsor i Aalborg HK.
@@ -94,11 +109,14 @@
             vedligeholde vores klub.
           </p>
         </div>
-        <div>
-          <img
-            src="./assets/Billeder/Sponsor/Intersport.png"
-            alt="Intersport logo"
-          />
+
+        <img
+          id="hovedSponsor4"
+          class="hovedSponsorImg"
+          src="./assets/Billeder/Sponsor/Intersport.png"
+          alt="Intersport logo"
+        />
+        <div id="hovedSponsor3">
           <h3>Intersport</h3>
           <p>
             Intersport er vores anden hovedsponsor. Intersport er en
@@ -110,8 +128,14 @@
             diverse ting relateret til håndbold.
           </p>
         </div>
-        <div>
-          <img src="./assets/Billeder/Sponsor/Hummel.jpg" alt="Hummel logo" />
+
+        <img
+          id="hovedSponsor5"
+          class="hovedSponsorImg"
+          src="./assets/Billeder/Sponsor/Hummel.jpg"
+          alt="Hummel logo"
+        />
+        <div id="hovedSponsor6">
           <h3>Hummel</h3>
           <p>
             Intersport er vores anden hovedsponsor. Intersport er en

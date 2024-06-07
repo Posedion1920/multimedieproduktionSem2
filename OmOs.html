@@ -16,7 +16,17 @@
     <script src=""></script>
   </head>
   <body>
-    <img src="./assets/" alt="" />
+    <picture>
+      <source
+        media="(min-width:1000px)"
+        srcset="./assets/Billeder/OmOs/OmOsHeaderbilledeDesktop.png"
+      />
+      <img
+        src="./assets/Billeder/OmOs/OmOsHeaderbillede.png"
+        alt="2 spillere fejrer en scoring"
+      />
+    </picture>
+
     <main>
       <h1>Om OS</h1>
       <p>
@@ -54,11 +64,27 @@
         </div>
       </section>
       <section class="gridOmOs">
-        <img id="OmOsBil1" src="https://unsplash.it/100/150" alt="" /><img
-          id="OmOsBil2"
-          src="https://unsplash.it/100/150"
-          alt=""
-        /><img id="OmOsBil3" src="https://unsplash.it/100/150" alt="" />
+        <picture id="OmOsBil1">
+          <source
+            media="(min-width:1000px)"
+            srcset="./assets/Billeder/OmOs/Galleri1Desktop.png"
+          />
+          <img src="./assets/Billeder/OmOs/Galleri1.png" alt="" />
+        </picture>
+        <picture id="OmOsBil2">
+          <source
+            media="(min-width:1000px)"
+            srcset="./assets/Billeder/OmOs/Galleri2Desktop.jpeg"
+          />
+          <img src="./assets/Billeder/OmOs/Galleri2.png" alt="" />
+        </picture>
+        <picture id="OmOsBil3">
+          <source
+            media="(min-width:1000px)"
+            srcset="./assets/Billeder/OmOs/Galleri3Desktop.jpeg"
+          />
+          <img src="./assets/Billeder/OmOs/Galleri3.png" alt="" />
+        </picture>
       </section>
     </main>
   </body>

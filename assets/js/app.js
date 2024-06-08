@@ -133,8 +133,158 @@ export function RenderEvent(post){
     divSalg.append(linkSalg);
 }
 
-function RenderTeam(post){
+export function RenderTeam(post){
+    const mainEL = document.querySelector(".holdesideGrid");
+
+    const articleEL= document.createElement("article");
+    articleEL.classList.add("column1row1")
+    mainEL.append(articleEL);
+
+    const imgEL = document.createElement("img");
+    imgEL.src = post.acf.image.url;
+    articleEL.append(imgEL);
+
+    const teamTitel = document.createElement("h3");
+    teamTitel.textContent = post.acf.holdnavn;
+    articleEL.append(teamTitel);
+
+    const teamDesc = document.createElement("p");
+    teamDesc.src = post.acf.holdbeskrivelse;
+    articleEL.append(teamDesc);
+
+    const divEL = document.createElement("div");
+    divEL.classList.add("tilbyder");
+    articleEL.append(divEL);
+
+    const communityHeading = document.createElement("p");
+    communityHeading.classList.add("fremhæveTekst");
+    communityHeading.textContent = "Fællesskab:";
+    const communityText = document.createElement("p");
+    communityText.textContent = "Vær en del af et stærkt hold, hvor vi støtter og inspirerer hinanden både på og uden for banen.";
+
+    divEL.append(communityHeading);
+    divEL.append(communityText);
+
+    const personalDevHeading = document.createElement("p");
+    personalDevHeading.classList.add("fremhæveTekst");
+    personalDevHeading.textContent = "Selvudvikling:";
+    const personalDevText = document.createElement("p");
+    personalDevText.textContent = "Udvikle dine tekniske færdigheder og fysiske form gennem professionel træning og engagerende øvelser.";
+
+    divEL.append(personalDevHeading);
+    divEL.append(personalDevText);
+
+    const activitiesHeading = document.createElement("p");
+    activitiesHeading.classList.add("fremhæveTekst");
+    activitiesHeading.textContent = "Sjove aktiviteter:";
+    const activitiesText = document.createElement("p");
+    activitiesText.textContent = "Udover træning og kampe arrangerer vi sociale arrangementer og ture, der styrker sammenholdet og skaber uforglemmelige oplevelser.";
+
+    divEL.append(activitiesHeading);
+    divEL.append(activitiesText);
+
+    const trialTraining = document.createElement("p");
+    trialTraining.textContent = "Hvis du har spørgsmål eller problemer med indmeldelse, eller vil meldes ud skal du skrive til Jørgen Østeraa på:";
+    divEL.append(trialTraining);
+
+    const articleEL2 = document.createElement("article");
+    articleEL2.classList.add("tilmeldHold");
+    mainEL.append(articleEL2);
+
+    const registerTeam = document.createElement("h4");
+    registerTeam.textContent = `Tilmeld ${post.acf.holdnavn}`;
+    articleEL2.append(registerTeam);
+
+    const subscription = document.createElement("h5");
+    subscription.textContent = "Kontigent";
+    articleEL2.append(subscription);
+
+    const divEL2 = document.createElement("div");
+    divEL2.classList.add("flexhold");
+    articleEL2.append(divEL2);
+
+    const teamName = document.createElement("p");
+    teamName.textContent = post.acf.holdnavn;
+    divEL2.append(teamName);
+
+    const teamYear = document.createElement("p");
+    teamYear.textContent = post.acf.argang;
+
+    const price = document.createElement("p");
+    price.textContent = post.acf.pris;
+    price.classList.add();
+    articleEL2.append(price);
+
+    const subscriptionInfo = document.createElement("p");
+    subscriptionInfo.textContent = "Der betales kontingent to gange om året.";
+    articleEL2.append(subscriptionInfo);
+
+    const subscriptionInfo2 = document.createElement("p");
+    subscriptionInfo2.textContent = "Efter indmeldelse betales fremtidige kontingenter ved at tilmelde sig holdet igen hver halve år, hvor holdet får et nyt sæsonnavn";
+    articleEL2.append(subscriptionInfo2);
+
+    const divEL3 = document.createElement("div");
+    divEL3.classList.add(btncontainer);
+    articleEL2.append(divEL3);
+
+    const subscribeBtn = document.createElement("button");
+    subscribeBtn.textContent = `Tilmeld ${post.acf.holdnavn}`
+    divEL3.append(subscribeBtn);
+
+    const articleEL3 = document.createElement("article");
+    mainEL.append(articleEL3);
+    articleEL3.classList.add("mobilHold");
+
+    const expectations = document.createElement("h4");
+    expectations.textContent = "Forventninger til forældre";
+    articleEL3.append(expectations);
+
+    const expectationInfo = document.createElement("p");
+    expectationInfo.textContent = "Her kan du læse om, hvilke forventninger klubben har til forældre.";
+    articleEL3.append(expectationInfo);
+
+    const aside = document.createElement("aside");
+    aside.classList.add("medlemansvarlig");
+    mainEL.append(aside);
+
+    const divEL4 = document.createElement("div");
+    aside.append(divEL4);
+
+    const contactPerson = document.createElement("h4");
+    contactPerson.textContent = "Kontakt medlemansvarlig";
+    divEL4.append(contactPerson);
+
+    const questions = document.createElement("p");
+    questions.textContent = "Hvis du har spørgsmål eller problemer med indmeldelse, eller vil meldes ud skal du skrive til Jørgen Østeraa på:";
+    divEL4.append(questions);
+
+    const mail = document.createElement("p");
+    mail.textContent = "kontingent@aalborg-hk.dk";
+    const phoneNumber = document.createElement("p");
+    phoneNumber.textContent = "61665966";
+
+    const mailIcon = document.createElement("i");
+    mailIcon.classList.add("fa-solid fa-envelope");
+    const iphoneIcon = document.createElement("i");
+    iphoneIcon.classList.add("fa-solid fa-phone");
+
+    mail.append(mailIcon);
+    phoneNumber.append(iphoneIcon);
+
+    divEL4.append(mailIcon);
+    divEL4.append(iphoneIcon);
+
+    const imgEL2 = document.createElement("img");
+    imgEL2.src = "./assets/Billeder/medlemansvarlig/joergen.jpeg";
+    imgEL2.alt = "Jørgen";
+    aside.append(imgEL2);
     
+
+    
+
+
+
+
 }
 
 

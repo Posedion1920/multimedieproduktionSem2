@@ -552,17 +552,57 @@ height: 100%;
 
 
 /* Selve holdsiden */
+.holdesideGrid h3{
+    text-align: left;
 
+}
+
+.fremhæveTekst{
+    font-weight: bold;
+    margin:0;
+}
+
+.tilbyder p{
+    margin-top: 0;
+}
+
+.medlemansvarlig{
+display: flex;
+background-color: white;
+border-radius: 10px;
+padding: 1rem;
+}
+
+.medlemansvarlig img{
+    padding: 0;
+    object-fit: contain;
+    }
+
+.medlemansvarlig i, .tiderHold i, .trænereSektion i{
+    color: var(--blaa);
+    margin-right: 0.5rem;
+}
+
+.holdesideGrid img{
+    max-width: 100%;
+    height: auto
+}
 .tilmeldHold{
     background-color: white;
     border-radius: 10px;
-    padding-left: 8px;
+    padding: 1rem;
 }
 .tilmeldHold h4{
     margin: 0px;
     padding-top: 1.5rem;
 }
 
+.tilmeldHold .fremhæveTekst{
+    text-align: right;
+}
+.mobilHold{
+    padding: 1rem;
+}
 .btncontainer{
     display: flex;
     justify-content: center;
@@ -582,9 +622,9 @@ height: 100%;
     border-radius: 10px;
     display: flex;
     margin-bottom: 1.5rem;
+    padding: 1rem;
     align-items: center;
-    justify-content: space-around;
-    gap: 2rem;
+  gap: 2rem;
 }
 
 .traeningsdag{
@@ -605,35 +645,45 @@ height: 100%;
 }
 
 
-.trænereSektion div{
+.trænere div{
     background-color: white;
     border-radius: 4px;
-    padding-left: 1rem;
+    padding: 1rem;
 }
-.deskHold{
-    display:none;
-}
+
 
 /* Holdsiden  desktop*/
 @media screen and (min-width: 1000px){
     .holdesideGrid{
         display: grid;
-        grid-template-columns: repeat(1fr 0.5fr);
         column-gap: 4rem;
         row-gap: 4rem;
     }
     .column1row1{
         grid-column: 1;
-        grid-row: 1;
-    }
-    .tiderHold{
-        grid-column: 2;
-        grid-row: 2;
+        grid-row: 1/4;
     }
 
-    .trænereSektion{
-        grid-column: 1;
+    .tilmeldHold{
+        grid-column: 2/3;
+        grid-row: 1;
     }
+
+    .mobilHold{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    } 
+
+    .medlemansvarlig{
+        grid-row: 3/4;
+        grid-column: 2/3;
+    }
+
+     .tiderHold{
+        grid-row: 4/5;
+        grid-column: 2/3;
+    } 
+  
     .tid{
         margin-bottom: 1rem;
         justify-content: flex-start;
@@ -641,26 +691,16 @@ height: 100%;
         max-width: 636px;
         max-height: 180px;
     }
-    .tiderHold h4{
-        text-align: left;
-    }
-    .trænereSektion div {
-        /* max-width: 430px; */
-        max-height: 186px;
-    }
-    .trænereSektion{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        row-gap: 1rem;
-        column-gap: 0.5rem;
-    }
+   
+    
+  .trænere{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0.5rem; /* Tilføj gap her */
+    margin: 0;
+  }
 
-    .deskHold{
-        display:block;
-    }
-    .mobilHold{
-        display: none;
-    }
+  
     .tilmeldHold{
         max-width: 636px;
         max-height: 656px;
@@ -668,19 +708,12 @@ height: 100%;
 
     }
     .flexhold{
-        justify-content: flex-start;
+        justify-content: flex;
         gap: 10rem;
-    }
-    .alignself{
-        align-self: end;
     }
     
     
 }
-
-
-
-
 
 
 /* Faciliteter */ 

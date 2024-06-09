@@ -149,8 +149,12 @@ export function RenderTeam(post){
     articleEL.append(teamTitel);
 
     const teamDesc = document.createElement("p");
-    teamDesc.src = post.acf.holdbeskrivelse;
+    teamDesc.textContent = post.acf.holdbeskrivelse;
     articleEL.append(teamDesc);
+
+    const moreTeamDesc = document.createElement("p");
+    moreTeamDesc.textContent = "Vil du være en del af et fedt fællesskab og tage din håndbold til næste niveau? Hos Aalborg HK er vi på udkig efter nye unge talenter, der har lyst til at spille håndbold, have det sjovt og skabe nye venskaber.";
+    articleEL.append(moreTeamDesc);
 
     const divEL = document.createElement("div");
     divEL.classList.add("tilbyder");
@@ -204,15 +208,16 @@ export function RenderTeam(post){
     articleEL2.append(divEL2);
 
     const teamName = document.createElement("p");
-    teamName.textContent = post.acf.holdnavn;
+    teamName.textContent = post.acf.tilmelding.tilmeldholdnavn;
     divEL2.append(teamName);
 
     const teamYear = document.createElement("p");
-    teamYear.textContent = post.acf.argang;
+    teamYear.textContent = post.acf.tilmelding.argang;
+    divEL2.append(teamYear);
 
     const price = document.createElement("p");
-    price.textContent = post.acf.pris;
-    price.classList.add();
+    price.textContent = post.acf.tilmelding.pris;
+    price.classList.add("fremhæveTekst");
     articleEL2.append(price);
 
     const subscriptionInfo = document.createElement("p");
@@ -224,11 +229,12 @@ export function RenderTeam(post){
     articleEL2.append(subscriptionInfo2);
 
     const divEL3 = document.createElement("div");
-    divEL3.classList.add(btncontainer);
+    divEL3.classList.add("btncontainer");
     articleEL2.append(divEL3);
 
     const subscribeBtn = document.createElement("button");
-    subscribeBtn.textContent = `Tilmeld ${post.acf.holdnavn}`
+    subscribeBtn.classList.add("btn")
+    subscribeBtn.textContent = post.acf.tilmelding.knapholdnavn;
     divEL3.append(subscribeBtn);
 
     const articleEL3 = document.createElement("article");
@@ -242,6 +248,11 @@ export function RenderTeam(post){
     const expectationInfo = document.createElement("p");
     expectationInfo.textContent = "Her kan du læse om, hvilke forventninger klubben har til forældre.";
     articleEL3.append(expectationInfo);
+
+    const readMoreLink = document.createElement("a");
+    readMoreLink.textContent = "Læs om forældre-pjece, her";
+    readMoreLink.href = "#"
+    articleEL3.append(readMoreLink);
 
     const aside = document.createElement("aside");
     aside.classList.add("medlemansvarlig");
@@ -263,16 +274,20 @@ export function RenderTeam(post){
     const phoneNumber = document.createElement("p");
     phoneNumber.textContent = "61665966";
 
-    const mailIcon = document.createElement("i");
-    mailIcon.classList.add("fa-solid fa-envelope");
-    const iphoneIcon = document.createElement("i");
-    iphoneIcon.classList.add("fa-solid fa-phone");
+    
+    const tlfIcon = document.createElement("i");
+    tlfIcon.classList.add("fa-solid");
+    tlfIcon.classList.add("fa-phone");
+    phoneNumber.append(tlfIcon);
 
-    mail.append(mailIcon);
-    phoneNumber.append(iphoneIcon);
+    const emailIcon = document.createElement("i");
+    emailIcon.classList.add("fa-solid");
+    emailIcon.classList.add("fa-envelope");
+    mail.append(emailIcon);
 
-    divEL4.append(mailIcon);
-    divEL4.append(iphoneIcon);
+
+    divEL4.append(mail);
+    divEL4.append(phoneNumber);
 
     const imgEL2 = document.createElement("img");
     imgEL2.src = "./assets/Billeder/medlemansvarlig/joergen.jpeg";
@@ -284,19 +299,47 @@ export function RenderTeam(post){
     mainEL.append(articleEL4);
 
     const upcomingActivites = document.createElement("h3");
-    upcomingActivites.textContent = "Kommende aktiviteter   ";
-    articleEL4.classList.add(upcomingActivites);
+    upcomingActivites.textContent = "Kommende aktiviteter";
+    articleEL4.append(upcomingActivites);
 
-    const divEL5 = document.createElement("div");
-    divEL5.classList.add("tid");
-    articleEL4.append(divEL5);
-
-    // const divEL6 = document.createElement("div");
-    // divEL6.classList.add("traeningsdag")
-    // const day = document.createElement("p");
-
-    // divEL5.append(divEL6);
-
+    
+    for(let tid in post.acf.fastetraeningsdage){
+        const divEL5 = document.createElement("div");
+        divEL5.classList.add("tid");
+        articleEL4.append(divEL5);
+    
+        const divEL6 = document.createElement("div");
+        divEL5.append(divEL6);
+        divEL6.classList.add("traeningsdag")
+    
+        const day = document.createElement("p");
+        day.textContent = post.acf.fastetraeningsdage[tid].dag
+        divEL6.append(day);
+        
+        const trainingDay = document.createElement("div");
+        divEL5.append(trainingDay);
+    
+        const teamHeaiding = document.createElement("p");
+        teamHeaiding.classList.add("fremhæveTekst");
+        teamHeaiding.textContent = `Træning ${post.acf.holdnavn}`;
+        trainingDay.append(teamHeaiding);
+    
+        const timeIcon = document.createElement("i");
+        const timeLocation = document.createElement("i");
+        timeIcon.classList.add("fa-solid");
+        timeIcon.classList.add("fa-clock");
+        timeLocation.classList.add("fa-solid");
+        timeLocation.classList.add("fa-location-pin"); 
+        const time = document.createElement("p");
+        time.textContent = post.acf.fastetraeningsdage[tid].tidsrum;
+        time.append(timeIcon);
+        trainingDay.append(time)
+        const location = document.createElement("p");
+        location.textContent = post.acf.fastetraeningsdage[tid].lokation;
+        trainingDay.append(location)
+        location.append(timeLocation);
+    }
+    
 
     const articleEL5 = document.createElement("article");
     mainEL.append(articleEL5);
@@ -309,10 +352,66 @@ export function RenderTeam(post){
     const divEL7 = document.createElement("div");
     articleEL5.append(divEL7);
     divEL7.classList.add("trænere");
+      
     
+    for (let trainPerson in post.acf.traenere)
+    {
+    const trainer = document.createElement("div");
+    trainer.classList.add("alignself");
+    divEL7.append(trainer);
 
+    const trainerPerson = document.createElement("p");
+    trainerPerson.textContent = post.acf.traenere[trainPerson].rolle;
+    trainerPerson.classList.add("fremhæveTekst");
+    trainer.append(trainerPerson);
 
+    const trainerName = document.createElement("p");
+    trainerName.textContent = post.acf.traenere[trainPerson].fuldenavn;
+    trainer.append(trainerName);
+
+    const trainerPhone = document.createElement("p");
+    trainerPhone.textContent = post.acf.traenere[trainPerson].telefonnr;
+
+    const trainerMail = document.createElement("p");
+    trainerMail.textContent = post.acf.traenere[trainPerson].email;
+    const mailIcon = document.createElement("i");
+    mailIcon.classList.add("fa-solid");
+    mailIcon.classList.add("fa-envelope");
+
+    const iphoneIcon = document.createElement("i");
+    iphoneIcon.classList.add("fa-solid");
+    iphoneIcon.classList.add("fa-phone");
+    trainerPhone.append(iphoneIcon);
+    trainerMail.append(mailIcon);
+    trainer.append(trainerPhone);
+    trainer.append(trainerMail);  
+    }
+    let counter = 0;
+    for(let teen in post.acf.teentraener){
+        if(post.acf.teentraener[teen] !== ""){
+            counter++;
+            if(counter ==1){
+                var trainer = document.createElement("div");
+                trainer.classList.add("alignself");
+                divEL7.append(trainer);  
+            }
+            const trainerName = document.createElement("p");
+            trainerName.textContent = post.acf.teentraener[teen];
+            trainer.append(trainerName);
+
+        }
+        else{
+            continue
+        }
+    }
+
+    
 }
+
+
+
+
+
 
 
 

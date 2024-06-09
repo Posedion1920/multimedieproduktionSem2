@@ -1,3 +1,7 @@
 import { getPost} from "./app.js"
-getPost(346)
-.then(data=> console.log(data))
+import { RenderTeam} from "./app.js"
+getPost(420)
+.then(data=> {
+    console.log(data);
+    RenderTeam(data);
+})

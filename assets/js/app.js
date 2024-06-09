@@ -278,11 +278,38 @@ export function RenderTeam(post){
     imgEL2.src = "./assets/Billeder/medlemansvarlig/joergen.jpeg";
     imgEL2.alt = "Jørgen";
     aside.append(imgEL2);
+
+    const articleEL4 = document.createElement("article");
+    articleEL4.classList.add("tiderHold");
+    mainEL.append(articleEL4);
+
+    const upcomingActivites = document.createElement("h3");
+    upcomingActivites.textContent = "Kommende aktiviteter   ";
+    articleEL4.classList.add(upcomingActivites);
+
+    const divEL5 = document.createElement("div");
+    divEL5.classList.add("tid");
+    articleEL4.append(divEL5);
+
+    // const divEL6 = document.createElement("div");
+    // divEL6.classList.add("traeningsdag")
+    // const day = document.createElement("p");
+
+    // divEL5.append(divEL6);
+
+
+    const articleEL5 = document.createElement("article");
+    mainEL.append(articleEL5);
+    articleEL5.classList.add("trænereSektion");
+
+    const trainers = document.createElement("h3");
+    trainers.textContent = `Trænere for ${post.acf.holdnavn}`
+    articleEL5.append(trainers);
+
+    const divEL7 = document.createElement("div");
+    articleEL5.append(divEL7);
+    divEL7.classList.add("trænere");
     
-
-    
-
-
 
 
 }

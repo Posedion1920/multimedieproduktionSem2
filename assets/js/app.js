@@ -389,6 +389,10 @@ function RenderTeam(post){
     
     for (let trainPerson in post.acf.traenere)
     {
+        // hvis der ikke er et navn på en træner, kan vi formode at den er tom og bare gå videre til næste iteration med i objektet
+        if(post.acf.traenere[trainPerson].fuldenavn === ""){
+            continue
+        }
     const trainer = document.createElement("div");
     trainer.classList.add("alignself");
     divEL7.append(trainer);
@@ -441,34 +445,110 @@ function RenderTeam(post){
     }
 }
 
-function UpdateLabels(posts){
+function makeLabelsNdUpdate(posts){
     const youthTeam = document.querySelector(".ungdomsholdListe");
     const boyTeamList = document.createElement("ul");
     youthTeam.append(boyTeamList);
     const boyParagraph = document.createElement("p");
     boyParagraph.textContent = "Ungdom Drenge";
+    boyParagraph.style.fontWeight = "bold";
     boyTeamList.append(boyParagraph);
+
+    const girlTeamList = document.createElement("ul");
+    youthTeam.append(girlTeamList);
+    const girlPararaph = document.createElement("p");
+    girlPararaph.textContent = "Ungdom Piger";
+    girlPararaph.style.fontWeight = "bold";
+    girlTeamList.append(girlPararaph);
+
+    const childrenTeamList = document.createElement("ul");
+    youthTeam.append(childrenTeamList);
+    const childrenPararaph = document.createElement("p");
+    childrenPararaph.textContent = "De små hold";
+    childrenPararaph.style.fontWeight = "bold";
+    childrenTeamList.append(childrenPararaph);
+
+    const seniorTeams = document.querySelector(".seniorholdListe");
+
+    const menTeamList = document.createElement("ul");
+    seniorTeams.append(menTeamList);
+    const menPararaph = document.createElement("p");
+    menPararaph.textContent = "Herrer hold";
+    menPararaph.style.fontWeight = "bold";
+    menTeamList.append(menPararaph)
+
+    const womenTeamList = document.createElement("ul");
+    seniorTeams.append(womenTeamList);
+    const womenPararaph = document.createElement("p");
+    womenPararaph.textContent = "Kvinde hold";
+    womenPararaph.style.fontWeight = "bold";
+    womenTeamList.append(womenPararaph);
+
+    const otherTeams = document.querySelector(".øvrigeHold");
+    const otherTeamsList = document.createElement("ul");
+    const otherPararaph = document.createElement("p");
+    otherPararaph.textContent = "Øvrige hold";
+    otherPararaph.style.fontWeight = "bold";
+    otherTeams.append(otherTeamsList);
+    otherTeamsList.append(otherPararaph);
+
+
 
     posts.forEach(function(post){
         if(post.categories.includes(14)){
             const boyTeamLink = document.createElement("a");
-            boyTeamLink.href = `holdsiden.html?id=${post.id}`
+            boyTeamLink.href = `holdsiden.html?id=${post.id}`;
             boyTeamList.append(boyTeamLink);
             const boyTeamLabel = document.createElement("li")
             boyTeamLabel.textContent = post.acf.holdnavn;
             boyTeamLink.append(boyTeamLabel);
         }
         else if(post.categories.includes(15)){
-            console.log(post.acf.holdnavn+"PIGER");
+            const girlTeamLink = document.createElement("a");
+            girlTeamLink.href = `holdsiden.html?id=${post.id}`;
+            girlTeamList.append(girlTeamLink);
+            const girlTeamLabel = document.createElement("li")
+            girlTeamLabel.textContent = post.acf.holdnavn;
+            girlTeamLink.append(girlTeamLabel);
         }
         else if(post.categories.includes(17)){
-            console.log(post.acf.holdnavn+"DESMÅ")
+            const childrenTeamLink = document.createElement("a");
+            childrenTeamLink.href = `holdsiden.html?id=${post.id}`;
+            childrenTeamList.append(childrenTeamLink);
+            const childrenTeamLabel = document.createElement("li")
+            childrenTeamLabel.textContent = post.acf.holdnavn;
+            childrenTeamLink.append(childrenTeamLabel);
+        }
+        else if(post.categories.includes(18)){
+            const menTeamLink = document.createElement("a");
+            menTeamLink.href = `holdsiden.html?id=${post.id}`;
+            menTeamList.append(menTeamLink);
+            const menTeamLabel = document.createElement("li")
+            menTeamLabel.textContent = post.acf.holdnavn;
+            menTeamLink.append(menTeamLabel);
+        }
+        else if(post.categories.includes(19)){
+            const womenTeamLink = document.createElement("a");
+            womenTeamLink.href = `holdsiden.html?id=${post.id}`;
+            womenTeamList.append(womenTeamLink);
+            const womenTeamLabel = document.createElement("li")
+            womenTeamLabel.textContent = post.acf.holdnavn;
+            womenTeamLink.append(womenTeamLabel);
+        }
+
+        else if(post.categories.includes(21)){
+            const otherTeamLink = document.createElement("a");
+            otherTeamLink.href = `holdsiden.html?id=${post.id}`;
+            otherTeamsList.append(otherTeamLink);
+            const otherTeamLabel = document.createElement("li")
+            otherTeamLabel.textContent = post.acf.holdnavn;
+            otherTeamLink.append(otherTeamLabel);
         }
     })
 }
 
-getCategory(13)
-.then(data => UpdateLabels(data))
+// getCategory(13)
+// .then(data => makeLabelsNdUpdate(data))
 
 
 

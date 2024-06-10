@@ -161,6 +161,10 @@ justify-items: center;
     margin-left: auto;
     margin-right: auto;
 }
+.overskriftH1{
+    text-align: center;
+    margin: 1rem auto;
+}
 
 main{
     padding: 0rem 2rem 0rem 2rem; 
@@ -298,8 +302,55 @@ height: 100%;
         margin-inline: 25px;
         }
 
-
-
+/* udvalg */
+#accordion {
+    margin: 100px auto;
+    }
+    #accordion li {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #004494;
+    padding: 10px;
+    border-radius: 0.5rem;
+    }
+    #accordion li label {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    }
+    #accordion li label i {
+    transform: rotate(90deg);
+    }
+    #accordion label+input[type="radio"] {
+    display: none;
+    }
+    #accordion .content {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    }
+    #accordion li label+input[type="radio"]:checked+.content {
+    max-height: 100%;
+    background-color: #D8DEE5;
+    }
+    .cardsUdvalg {
+    background-color: white;
+    border-radius: 0.5rem;
+    }
+    .cardsUdvalg img {
+    width: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    }
+    .cardsUdvalg p {
+    margin: 0;
+    margin-inline: 15px;
+    padding-bottom: 15px;
+    }
 
 
 
@@ -394,6 +445,7 @@ height: 100%;
             max-width: 827px;
             max-height: 500px;
             margin-bottom: 4rem;
+            /* sponsor */
         }
         .sponsImg{
             max-width: 100%;
@@ -405,6 +457,12 @@ height: 100%;
             height: auto;
             width: auto;
         }
+        .sponsHeader{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+      
+        /*  */
         #ungdomDesk img{
             max-width: 100%;
             height: 100%;
@@ -473,14 +531,8 @@ height: 100%;
             #TrænereMedie1{
                 grid-column: 2 / 2;
             }
-            #TrænereMedie2{
-                
-            }
             #TrænereMedie3{
                 grid-column: 2 /2;
-            }
-            #TrænereMedie4{
-                
             }
             #TrænereArticle1{
                 grid-column: 1 / 1;

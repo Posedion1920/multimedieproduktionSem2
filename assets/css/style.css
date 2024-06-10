@@ -202,26 +202,138 @@ height: 100%;
 }
 .vaerdier{
     display: grid;
-    grid-template-rows: (2 1fr);
+    grid-template-columns: repeat(2, 1fr);
     text-align: center;
     align-items: center;
     }
 
-    .vaerdier i{
+ .vaerdier i{
     font-size: 60px;
-    color: (--blaa);
-    
+    color: var(--blaa)
 }
-    .textBillede{
+
+.textBillede{
     max-width: 100%;
     height: auto;
     }
 
 
+/* Kalender */ 
 
+.kalender{
+    background-color: white;
+    border-radius: 7px;
+    margin: 10px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
 
-    /* arrangement */
+}
+
+.kalender i{
+    color: black;
+}
+.kalender ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  
+}
+
+.måned {
+    padding-bottom:  10px;
+    text-align: center;
+  }
+
+  .måned ul {
+    display: flex; /* Tilføjet display: flex; */
+    justify-content: center; /* Centrerer indholdet horisontalt */
+    align-items: center; /* Centrerer indholdet vertikalt */
+    position: relative;}
+
+    .måned li {
+        padding:  10px;
+      }
     
+
+  .ugedage{
+    display: flex; 
+  }
+
+ 
+  .ugedage li{
+    padding: 10px;
+    letter-spacing: 3px;
+    
+ }
+
+ .dage{
+    display: flex;
+    flex-wrap: wrap;
+  
+ }
+
+
+ .dage li{
+    width: 14.28%; 
+    text-align: center; 
+    padding: 10px 0; 
+    box-sizing: border-box;
+    letter-spacing: 3px;
+    
+ }
+
+  .tilbage{
+    float: left;
+ }
+
+ .næste{
+    float: right;
+ }
+
+.dagensaktivitet{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+}
+
+.dagensaktivitet i{
+    color: var(--lysBlaa);
+    padding-right: 2px;
+}
+
+.fremhævelse{
+    font-weight: bold;
+    color: var(--lysBlaa);
+}
+
+.arrangementStyle{
+    display: flex;
+    border-radius: 4px;
+    background-color: var(--blaa);
+    color: white ;
+    max-width: 100%;
+}
+
+.arrangementStyle img{
+    max-width: 160px;
+    object-fit: conver;
+}
+
+.ArrangementIndhold{
+    padding-left: 1rem;
+}
+
+
+.ArrangementIndhold h2, p{
+    margin: 0;
+    padding-top: 0.5rem;
+}
+
+.kommendeArrange div{
+    margin-bottom: 1rem;
+}
+    /* arrangement */
 
     .arrangementHeader{
         background-image: url(/Arrangementer\ header_mobil.jpg);
@@ -260,6 +372,62 @@ height: 100%;
     .desktopVersion{
         display: none;
     }
+
+   
+    .sponsorForside img{
+        max-width: 70%;  
+        
+    }
+    
+  
+    .sponsorForside {
+          display: flex; 
+          flex-direction: column;
+          align-items: center;
+      }
+
+      .centerForside h2{
+        text-align: center;
+      }
+
+    @media screen and (min-width: 1000px){
+        .desktopForside{
+            display: grid;
+            grid-template-columns: [first] 2fr [line2] 1fr [end];
+        }
+
+      .herovideo{
+    width:100%;
+    height: 85vh;
+    object-fit: cover;
+     
+      }
+      
+     .aalbrogHKForside{
+        grid-row-start: 1;
+        grid-row-end:2 ;
+     }
+    .blivTræner{
+        grid-column-start: 1;
+        grid-template-rows: 3;
+    }
+
+    .kalender{
+        grid-row-start: 1;
+        grid-row-end:2 ;
+    }
+
+    .kommendeArrange h2{
+        text-align: left;
+    }
+
+    .sponsorForside{
+        flex-direction: row;
+        gap: 3rem;
+        justify-content: center;
+    }
+}
+
 /* trænere */
 
 

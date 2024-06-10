@@ -5,26 +5,26 @@ const baseUrl = "https://0x.mohafh.dk/wp-json/wp/v2/posts";
 
 //burger menu
 
-const dropDowns = document.querySelectorAll(".fa-arrow-down");
-const dropDownElements1 = document.querySelector(".tilmeldDropdown");
-const dropDownElements2 = document.querySelector(".praktiskDropdown");
+// const dropDowns = document.querySelectorAll(".fa-arrow-down");
+// const dropDownElements1 = document.querySelector(".tilmeldDropdown");
+// const dropDownElements2 = document.querySelector(".praktiskDropdown");
 
-const navBar = document.querySelector(".navBurger");
+// const navBar = document.querySelector(".navBurger");
 
-dropDowns[0].addEventListener("click",function(e){
-    dropDownElements1.classList.toggle("show");
-})
+// dropDowns[0].addEventListener("click",function(e){
+//     dropDownElements1.classList.toggle("show");
+// })
 
-dropDowns[1].addEventListener("click",function(e){
-    dropDownElements2.classList.toggle("show");
-})
+// dropDowns[1].addEventListener("click",function(e){
+//     dropDownElements2.classList.toggle("show");
+// })
 
 
-const burgerMenuIkon = document.querySelector(".fa-bars");
-const nav = document.querySelector(".mobileNav");
-burgerMenuIkon.addEventListener("click",function(e){
-    navBar.classList.toggle("show")
-})
+// const burgerMenuIkon = document.querySelector(".fa-bars");
+// const nav = document.querySelector(".mobileNav");
+// burgerMenuIkon.addEventListener("click",function(e){
+//     navBar.classList.toggle("show")
+// })
 
 
 
@@ -445,6 +445,49 @@ function RenderTeam(post){
     }
 }
 
+function renderEntryPoints(posts){
+    const aside = document.querySelector(".kommendeArrange");
+    // array af de arrangementers id, som vi vil bruge som entry points
+    const entryPointsID = [211,226,216];
+    // et foreach som tjekker alle arrangementer igennem.
+    posts.forEach(function(post){
+        const idTempHolder = post.id;
+        // hvis idtempholder ikke er i vores entrypointsid array, er det ikke det arrangementer vi vil bruge som entrypoints, og vi skipper den
+        if(entryPointsID.includes(idTempHolder)){
+            const divEl = document.createElement("div");
+            divEl.classList.add("arrangementStyle");
+            const imgEL = document.createElement("img");
+            imgEL.src = post.acf.cardimage.url;
+            divEl.append(imgEL);
+
+            const divEl2 = document.createElement("div");
+            divEl2.classList.add("ArrangementIndhold");
+            divEl.append(divEl2);
+            const eventTitel = document.createElement("h2");
+            eventTitel.textContent = post.acf.titel;
+            divEl2.append(eventTitel);
+
+            const date = document.createElement("p");
+            date.classList.add("dato");
+            date.textContent = post.acf.tidspunkt;
+            divEl2.append(date);
+
+            const text = document.createElement("p");
+            text.textContent = post.acf.overskrift;
+            divEl2.append(text);
+
+            aside.append(divEl);
+
+
+        }
+        else{
+            return
+        }
+    })
+}
+
+
+
 function makeLabelsNdUpdate(posts){
     const youthTeam = document.querySelector(".ungdomsholdListe");
     const boyTeamList = document.createElement("ul");
@@ -547,8 +590,8 @@ function makeLabelsNdUpdate(posts){
     })
 }
 
-// getCategory(13)
-// .then(data => makeLabelsNdUpdate(data))
+getCategory(11)
+.then(data => renderEntryPoints(data))
 
 
 

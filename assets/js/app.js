@@ -7,23 +7,23 @@ const baseUrl = "https://0x.mohafh.dk/wp-json/wp/v2/posts";
 
 
 // denne funktion fetcher posts som har et specifikt kategori id
-export function getCategory(categoryId){
+function getCategory(categoryId){
     return fetch(baseUrl+`?categories=${categoryId}&per_page=100`)
     .then(res => res.json())
     .then(data => data)
-    .catch(err => console.log("Something went wrong:",err))
+    .catch(err => console.log("Something went wrong: ",err))
 }
 
 // denne funktion fetcher et specifikt post
-export function getPost(id){
+function getPost(id){
     return fetch(baseUrl+`/${id}`)
     .then(res => res.json())
     .then(data=> data)
-    .catch(err => console.log("Something went wrong",err))
+    .catch(err => console.log("Something went wrong: ",err))
 }
 
 // denne funktion fanger en query paramter i url og returnere det.
-export function getQueryParameter(){
+function getQueryParameter(){
     let queryParamter = window.location.search;
     let query = queryParamter.split("=")[1];
     return query;
@@ -31,7 +31,7 @@ export function getQueryParameter(){
 
 
 
-export function RenderCards(posts, checker){
+function RenderCards(posts, checker){
     const divEL = document.querySelector(".wrapper");
     posts.forEach(function(post){
         // kontrolstruktur hvor vi tjekker om en checker er true eller false. hvis den er true vil vi kun have tre cards i stedet for fire, og omvendt hvis den er false vil have fire. Grunden til at vi gør det, er fordi vi kan genbruge funktionen. I forsiden skal der vises tre cards udover øl messe, og ved fx arrangementer siden skal alle cards vises.
@@ -66,7 +66,7 @@ export function RenderCards(posts, checker){
     })
 }
 
-export function RenderEvent(post){
+function RenderEvent(post){
     const titleEL = document.querySelector("title");
     titleEL.textContent = post.acf.titel;
     const secEl = document.querySelector(".eventsection");
@@ -133,7 +133,7 @@ export function RenderEvent(post){
     divSalg.append(linkSalg);
 }
 
-export function RenderTeam(post){
+function RenderTeam(post){
     const mainEL = document.querySelector(".holdesideGrid");
 
     const articleEL= document.createElement("article");
@@ -270,20 +270,22 @@ export function RenderTeam(post){
     divEL4.append(questions);
 
     const mail = document.createElement("p");
-    mail.textContent = "kontingent@aalborg-hk.dk";
+    const MailText = document.createTextNode("kontingent@aalborg-hk.dk");
     const phoneNumber = document.createElement("p");
-    phoneNumber.textContent = "61665966";
+    const phoneText = document.createTextNode("61665966");
 
     
     const tlfIcon = document.createElement("i");
     tlfIcon.classList.add("fa-solid");
     tlfIcon.classList.add("fa-phone");
     phoneNumber.append(tlfIcon);
+    phoneNumber.appendChild(phoneText);
 
     const emailIcon = document.createElement("i");
     emailIcon.classList.add("fa-solid");
     emailIcon.classList.add("fa-envelope");
     mail.append(emailIcon);
+    mail.appendChild(MailText);
 
 
     divEL4.append(mail);
@@ -330,14 +332,19 @@ export function RenderTeam(post){
         timeIcon.classList.add("fa-clock");
         timeLocation.classList.add("fa-solid");
         timeLocation.classList.add("fa-location-pin"); 
+
         const time = document.createElement("p");
-        time.textContent = post.acf.fastetraeningsdage[tid].tidsrum;
+        const timeText = document.createTextNode(post.acf.fastetraeningsdage[tid].tidsrum);
         time.append(timeIcon);
-        trainingDay.append(time)
+        time.appendChild(timeText);
+        trainingDay.append(time);
+
         const location = document.createElement("p");
-        location.textContent = post.acf.fastetraeningsdage[tid].lokation;
-        trainingDay.append(location)
+        const locationText = document.createTextNode(post.acf.fastetraeningsdage[tid].lokation);
+
+        trainingDay.append(location);
         location.append(timeLocation);
+        location.appendChild(locationText);
     }
     
 
@@ -370,10 +377,10 @@ export function RenderTeam(post){
     trainer.append(trainerName);
 
     const trainerPhone = document.createElement("p");
-    trainerPhone.textContent = post.acf.traenere[trainPerson].telefonnr;
+    const trainerPhoneText = document.createTextNode(post.acf.traenere[trainPerson].telefonnr);
 
     const trainerMail = document.createElement("p");
-    trainerMail.textContent = post.acf.traenere[trainPerson].email;
+    const trainerMailText = document.createTextNode(post.acf.traenere[trainPerson].email);
     const mailIcon = document.createElement("i");
     mailIcon.classList.add("fa-solid");
     mailIcon.classList.add("fa-envelope");
@@ -382,7 +389,9 @@ export function RenderTeam(post){
     iphoneIcon.classList.add("fa-solid");
     iphoneIcon.classList.add("fa-phone");
     trainerPhone.append(iphoneIcon);
+    trainerPhone.appendChild(trainerPhoneText);
     trainerMail.append(mailIcon);
+    trainerMail.appendChild(trainerMailText)
     trainer.append(trainerPhone);
     trainer.append(trainerMail);  
     }

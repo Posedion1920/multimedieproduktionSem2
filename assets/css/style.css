@@ -197,37 +197,31 @@ height: 100%;
 
 /* forside */
 
+.herovideo{
+    max-width: 100%;
+}
 .vaerdier{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-rows: (2 1fr);
     text-align: center;
-    margin: 2rem;
     align-items: center;
     }
+
     .vaerdier i{
     font-size: 60px;
-    padding: 10px;
-    }
+    color: (--blaa);
+    
+}
     .textBillede{
     max-width: 100%;
     height: auto;
     }
-    .btnSen, .btnUng{
-    height: 60%;
-    border: none;
-    border-radius: 5px;
-    font-size: 0.8rem;
-    text-align: center;
-    margin: 15px;
-    padding: 10px;
-    text-decoration: none;
-    background-image: ;
 
 
 
 
     /* arrangement */
-    }
+    
 
     .arrangementHeader{
         background-image: url(/Arrangementer\ header_mobil.jpg);

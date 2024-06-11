@@ -857,6 +857,11 @@ p {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
     }
+    .arrangementCard p{
+        font-size: 20px;
+        text-align: left;
+        margin-left: 2rem
+    }
 
     #dag1,
     #dag2,

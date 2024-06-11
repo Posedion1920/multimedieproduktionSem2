@@ -470,10 +470,13 @@ p {
 }
 
 @media screen and (min-width: 1000px) {
+    .traeningstider{
+        padding: 0px 3rem 0px 3rem;
+    }
     .desktopForside {
         display: grid;
         grid-template-columns: [first] 2fr [line2] 1fr [end];
-        padding: 0px 2rem 0px 2rem;
+        padding: 0px 3rem 0px 3rem;
     }
 
     .herovideo {
@@ -701,6 +704,7 @@ p {
         display: none;
     }
 
+
     #traeningSOm {
         display: block;
         justify-self: end;
@@ -794,7 +798,7 @@ p {
     .TraeningSeciton {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        padding: 0rem 0rem 0rem 2rem;
+        padding: 0rem 0rem 0rem 4.5rem;
         margin-bottom: 2rem;
     }
 
@@ -806,6 +810,7 @@ p {
     .ungdomTraening {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        padding: 0px 0px 0px 3rem;
     }
 
     .gap {
@@ -826,7 +831,10 @@ p {
     }
 
     .ungdomTraening .btn {
-        margin: 0px;
+        margin-left: 0px !important;
+    }
+    .centerGrid{
+        justify-self: center;
     }
 
     .traeningstider {

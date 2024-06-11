@@ -3,7 +3,7 @@
 // import {RenderCards} from "./app.js"
 getCategory(11)
 .then(data => {
-    RenderCards(data,false);
+    RenderCards(data);
 })
 .catch(err => console.log(err))
 

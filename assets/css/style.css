@@ -862,6 +862,15 @@ p {
         text-align: left;
         margin-left: 2rem
     }
+    .desktopVersion>div>article p{
+        font-size: 20px;
+    }
+    .desktopVersion h1{
+        margin-bottom: 0px;
+    }
+    .desktopVersion{
+        margin-bottom: 4rem;
+    }
 
     #dag1,
     #dag2,

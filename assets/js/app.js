@@ -631,8 +631,7 @@ function makeLabelsNdUpdate(posts){
     })
 }
 
-getCategory(11)
-.then(data => renderEntryPoints(data))
+
 
 
 

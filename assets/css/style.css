@@ -583,8 +583,38 @@ p {
     margin: 0;
     margin-inline: 15px;
     padding-bottom: 15px;
+<<<<<<< HEAD
 }
 
+=======
+    }
+    .accordion {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #004494;
+        color: var(--white);
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        border-radius: 0.5rem;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+    .panel {
+        background-color: white;
+        display: none;
+        overflow: hidden;
+        padding: 0 15px;   
+        transition: max-height 0.5s;
+      }
+      .accordion i{
+        transform: rotate(90deg);
+      }
+>>>>>>> 5581754e12ac0f089a05c3cbd9f9566fa93f5130
 
 
 /* media queries */

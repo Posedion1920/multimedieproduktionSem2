@@ -788,7 +788,7 @@ p {
 
     .gridOmOs {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .gridOmOs img {
@@ -797,9 +797,13 @@ p {
 
     .OmOsVærdier {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        text-align: center;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
         align-items: center;
+    }
+    .values{
+        text-align: center;
+        padding-bottom: 4rem;
     }
 
     .OmOsVærdier i {

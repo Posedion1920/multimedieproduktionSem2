@@ -3,10 +3,36 @@
 const baseUrl = "https://0x.mohafh.dk/wp-json/wp/v2/posts";
 
 
+//burger menu
+
+// const dropDowns = document.querySelectorAll(".fa-arrow-down");
+// const dropDownElements1 = document.querySelector(".tilmeldDropdown");
+// const dropDownElements2 = document.querySelector(".praktiskDropdown");
+
+// const navBar = document.querySelector(".navBurger");
+
+// dropDowns[0].addEventListener("click",function(e){
+//     dropDownElements1.classList.toggle("show");
+// })
+
+// dropDowns[1].addEventListener("click",function(e){
+//     dropDownElements2.classList.toggle("show");
+// })
+
+
+// const burgerMenuIkon = document.querySelector(".fa-bars");
+// const nav = document.querySelector(".mobileNav");
+// burgerMenuIkon.addEventListener("click",function(e){
+//     navBar.classList.toggle("show")
+// })
+
+
+
 // Main funktioner som skal bruges i andre js filer:
 
-
 // denne funktion fetcher posts som har et specifikt kategori id
+
+
 function getCategory(categoryId){
     return fetch(baseUrl+`?categories=${categoryId}&per_page=100`)
     .then(res => res.json())
@@ -363,6 +389,10 @@ function RenderTeam(post){
     
     for (let trainPerson in post.acf.traenere)
     {
+        // hvis der ikke er et navn på en træner, kan vi formode at den er tom og bare gå videre til næste iteration med i objektet
+        if(post.acf.traenere[trainPerson].fuldenavn === ""){
+            continue
+        }
     const trainer = document.createElement("div");
     trainer.classList.add("alignself");
     divEL7.append(trainer);
@@ -413,9 +443,155 @@ function RenderTeam(post){
             continue
         }
     }
-
-    
 }
+
+function renderEntryPoints(posts){
+    const aside = document.querySelector(".kommendeArrange");
+    // array af de arrangementers id, som vi vil bruge som entry points
+    const entryPointsID = [211,226,216];
+    // et foreach som tjekker alle arrangementer igennem.
+    posts.forEach(function(post){
+        const idTempHolder = post.id;
+        // hvis idtempholder ikke er i vores entrypointsid array, er det ikke det arrangementer vi vil bruge som entrypoints, og vi skipper den
+        if(entryPointsID.includes(idTempHolder)){
+            const divEl = document.createElement("div");
+            divEl.classList.add("arrangementStyle");
+            const imgEL = document.createElement("img");
+            imgEL.src = post.acf.cardimage.url;
+            divEl.append(imgEL);
+
+            const divEl2 = document.createElement("div");
+            divEl2.classList.add("ArrangementIndhold");
+            divEl.append(divEl2);
+            const eventTitel = document.createElement("h2");
+            eventTitel.textContent = post.acf.titel;
+            divEl2.append(eventTitel);
+
+            const date = document.createElement("p");
+            date.classList.add("dato");
+            date.textContent = post.acf.tidspunkt;
+            divEl2.append(date);
+
+            const text = document.createElement("p");
+            text.textContent = post.acf.overskrift;
+            divEl2.append(text);
+
+            aside.append(divEl);
+
+
+        }
+        else{
+            return
+        }
+    })
+}
+
+
+
+function makeLabelsNdUpdate(posts){
+    const youthTeam = document.querySelector(".ungdomsholdListe");
+    const boyTeamList = document.createElement("ul");
+    youthTeam.append(boyTeamList);
+    const boyParagraph = document.createElement("p");
+    boyParagraph.textContent = "Ungdom Drenge";
+    boyParagraph.style.fontWeight = "bold";
+    boyTeamList.append(boyParagraph);
+
+    const girlTeamList = document.createElement("ul");
+    youthTeam.append(girlTeamList);
+    const girlPararaph = document.createElement("p");
+    girlPararaph.textContent = "Ungdom Piger";
+    girlPararaph.style.fontWeight = "bold";
+    girlTeamList.append(girlPararaph);
+
+    const childrenTeamList = document.createElement("ul");
+    youthTeam.append(childrenTeamList);
+    const childrenPararaph = document.createElement("p");
+    childrenPararaph.textContent = "De små hold";
+    childrenPararaph.style.fontWeight = "bold";
+    childrenTeamList.append(childrenPararaph);
+
+    const seniorTeams = document.querySelector(".seniorholdListe");
+
+    const menTeamList = document.createElement("ul");
+    seniorTeams.append(menTeamList);
+    const menPararaph = document.createElement("p");
+    menPararaph.textContent = "Herrer hold";
+    menPararaph.style.fontWeight = "bold";
+    menTeamList.append(menPararaph)
+
+    const womenTeamList = document.createElement("ul");
+    seniorTeams.append(womenTeamList);
+    const womenPararaph = document.createElement("p");
+    womenPararaph.textContent = "Kvinde hold";
+    womenPararaph.style.fontWeight = "bold";
+    womenTeamList.append(womenPararaph);
+
+    const otherTeams = document.querySelector(".øvrigeHold");
+    const otherTeamsList = document.createElement("ul");
+    const otherPararaph = document.createElement("p");
+    otherPararaph.textContent = "Øvrige hold";
+    otherPararaph.style.fontWeight = "bold";
+    otherTeams.append(otherTeamsList);
+    otherTeamsList.append(otherPararaph);
+
+
+
+    posts.forEach(function(post){
+        if(post.categories.includes(14)){
+            const boyTeamLink = document.createElement("a");
+            boyTeamLink.href = `holdsiden.html?id=${post.id}`;
+            boyTeamList.append(boyTeamLink);
+            const boyTeamLabel = document.createElement("li")
+            boyTeamLabel.textContent = post.acf.holdnavn;
+            boyTeamLink.append(boyTeamLabel);
+        }
+        else if(post.categories.includes(15)){
+            const girlTeamLink = document.createElement("a");
+            girlTeamLink.href = `holdsiden.html?id=${post.id}`;
+            girlTeamList.append(girlTeamLink);
+            const girlTeamLabel = document.createElement("li")
+            girlTeamLabel.textContent = post.acf.holdnavn;
+            girlTeamLink.append(girlTeamLabel);
+        }
+        else if(post.categories.includes(17)){
+            const childrenTeamLink = document.createElement("a");
+            childrenTeamLink.href = `holdsiden.html?id=${post.id}`;
+            childrenTeamList.append(childrenTeamLink);
+            const childrenTeamLabel = document.createElement("li")
+            childrenTeamLabel.textContent = post.acf.holdnavn;
+            childrenTeamLink.append(childrenTeamLabel);
+        }
+        else if(post.categories.includes(18)){
+            const menTeamLink = document.createElement("a");
+            menTeamLink.href = `holdsiden.html?id=${post.id}`;
+            menTeamList.append(menTeamLink);
+            const menTeamLabel = document.createElement("li")
+            menTeamLabel.textContent = post.acf.holdnavn;
+            menTeamLink.append(menTeamLabel);
+        }
+        else if(post.categories.includes(19)){
+            const womenTeamLink = document.createElement("a");
+            womenTeamLink.href = `holdsiden.html?id=${post.id}`;
+            womenTeamList.append(womenTeamLink);
+            const womenTeamLabel = document.createElement("li")
+            womenTeamLabel.textContent = post.acf.holdnavn;
+            womenTeamLink.append(womenTeamLabel);
+        }
+
+        else if(post.categories.includes(21)){
+            const otherTeamLink = document.createElement("a");
+            otherTeamLink.href = `holdsiden.html?id=${post.id}`;
+            otherTeamsList.append(otherTeamLink);
+            const otherTeamLabel = document.createElement("li")
+            otherTeamLabel.textContent = post.acf.holdnavn;
+            otherTeamLink.append(otherTeamLabel);
+        }
+    })
+}
+
+getCategory(11)
+.then(data => renderEntryPoints(data))
 
 
 

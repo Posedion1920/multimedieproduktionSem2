@@ -180,6 +180,15 @@ nav a {
 
 .hovedSponsorImg {
     display: block;
+
+    max-height: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.hovedSponsorImgHeader {
+    display: block;
+    object-fit: cover;
     max-height: 60vh;
     margin-left: auto;
     margin-right: auto;
@@ -902,7 +911,7 @@ p {
         grid-column: 2 / 2;
         grid-row: 6 / 6;
     }
-
+/* sponsor */
     .hovedSponsor {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

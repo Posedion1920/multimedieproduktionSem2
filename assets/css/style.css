@@ -455,9 +455,18 @@ p {
     flex-direction: column;
     align-items: center;
 }
+.kalender{
+    margin: 0px;
+}
 
 .centerForside h2 {
     text-align: center;
+}
+.desktopForside{
+    padding: 0px 1.5rem 0px 1.5rem;
+}
+.blivTræner>.btn{
+    margin-left: 0px !important
 }
 
 @media screen and (min-width: 1000px) {
@@ -488,9 +497,6 @@ p {
     }
     .blivTræner h2 {
         margin-left: 0px;
-    }
-    .blivTræner>.btn{
-        margin-left: 0px !important
     }
   
     

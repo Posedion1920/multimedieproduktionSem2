@@ -184,6 +184,7 @@ nav a {
     max-height: 60vh;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
 }
 
 .overskriftH1 {
@@ -583,11 +584,8 @@ p {
     margin: 0;
     margin-inline: 15px;
     padding-bottom: 15px;
-<<<<<<< HEAD
-}
-
-=======
     }
+
     .accordion {
         display: flex;
         align-items: center;
@@ -614,7 +612,6 @@ p {
       .accordion i{
         transform: rotate(90deg);
       }
->>>>>>> 5581754e12ac0f089a05c3cbd9f9566fa93f5130
 
 
 /* media queries */

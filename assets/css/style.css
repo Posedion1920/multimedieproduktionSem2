@@ -464,6 +464,7 @@ p {
     .desktopForside {
         display: grid;
         grid-template-columns: [first] 2fr [line2] 1fr [end];
+        padding: 0px 2rem 0px 2rem;
     }
 
     .herovideo {
@@ -477,6 +478,22 @@ p {
         grid-row-start: 1;
         grid-row-end: 2;
     }
+    .aalbrogHKForside p {
+        max-width: 85ch;
+        font-size: 20px;
+    }
+    .blivTræner p{
+        max-width: 85ch;
+        font-size: 20px;   
+    }
+    .blivTræner h2 {
+        margin-left: 0px;
+    }
+    .blivTræner>.btn{
+        margin-left: 0px !important
+    }
+  
+    
 
     .blivTræner {
         grid-column-start: 1;

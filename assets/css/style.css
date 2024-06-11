@@ -690,6 +690,9 @@ p {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+    .eventsection>article p{
+        max-width: 75ch;
+    }
 
     .eventImage {
         justify-self: end;
@@ -958,8 +961,8 @@ h3 {
 
 .salg {
     display: flex;
-    gap: 2rem;
-    /* align-items: center; */
+    /* gap: 2rem; */
+    align-items: center;
 }
 
 .eventImage img {

@@ -476,7 +476,13 @@ p {
 }
 
 @media screen and (min-width: 1000px) {
-    
+    .centerGrid{
+        font-size: 20px;
+    }
+    .utility{
+        font-size: 20px;
+        padding-inline: 0px;
+    }
     .utility:last-of-type{
         margin-bottom: 0px;
     }
@@ -814,7 +820,7 @@ p {
 
     .TraeningSeciton article {
         padding-right: 5rem;
-        width: 60ch;
+        max-width: 80ch;
     }
 
     .ungdomTraening {
@@ -844,7 +850,7 @@ p {
         margin-left: 0px !important;
     }
     .centerGrid{
-        justify-self: center;
+        justify-self: end;
     }
 
     .traeningstider {

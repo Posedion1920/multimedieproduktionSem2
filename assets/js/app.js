@@ -30,42 +30,49 @@ const baseUrl = "https://0x.mohafh.dk/wp-json/wp/v2/posts";
 
 // Main funktioner som skal bruges i andre js filer:
 
-// denne funktion fetcher posts som har et specifikt kategori id
-
-
+// denne funktion fetcher posts som har et specifikt kategori id og returner et promise
 function getCategory(categoryId){
     return fetch(baseUrl+`?categories=${categoryId}&per_page=100`)
-    .then(res => res.json())
+    .then(res => {
+        if(res.status === 404){
+            console.log("Could not find it");
+        }
+        return res.json()
+        //normal vil en arrow funktion selv retuner, men hvis der er flere linje, skal man selv sætte return keyword på respons
+    })
     .then(data => data)
     .catch(err => console.log("Something went wrong: ",err))
+    //hvis der går noget galt her i selve fetch request, vil det komme her.
 }
 
-// denne funktion fetcher et specifikt post
+// denne funktion fetcher et specifikt post og returner et promoise
 function getPost(id){
     return fetch(baseUrl+`/${id}`)
-    .then(res => res.json())
+    .then(res => {
+        if(res.status === 404){
+            console.log("Could not find it");
+        }
+        return res.json()
+    })
     .then(data=> data)
     .catch(err => console.log("Something went wrong: ",err))
+    //hvis der går noget galt her i selve fetch request, vil det komme her.
 }
 
 // denne funktion fanger en query paramter i url og returnere det.
 function getQueryParameter(){
     let queryParamter = window.location.search;
+    // query parameterne er gemt ved variabelen og vi bruger split funktionen til det dele stringen op i et rray. vi er dog kun interesseret i det efter = så vi indexer i array.
     let query = queryParamter.split("=")[1];
     return query;
 }
 
 
 
-function RenderCards(posts, checker){
+function RenderCards(posts){
     const divEL = document.querySelector(".wrapper");
+    // der fåes et array af objekter, som vi skal foreach igennem og derefter skabe html elementer med doom manipulation, som vi derefter skal spytte ud på siden. For hver iteration af vores foreach, bliver der skabt de html elementer der skal skabes.
     posts.forEach(function(post){
-        // kontrolstruktur hvor vi tjekker om en checker er true eller false. hvis den er true vil vi kun have tre cards i stedet for fire, og omvendt hvis den er false vil have fire. Grunden til at vi gør det, er fordi vi kan genbruge funktionen. I forsiden skal der vises tre cards udover øl messe, og ved fx arrangementer siden skal alle cards vises.
-        if(checker){
-            if(post.acf.titel === "Øl messe"){
-                return;
-            }
-        }
         const aLink = document.createElement("a");
         aLink.href = `selvearrangement.html?id=${post.id}`
         divEL.append(aLink);
@@ -93,6 +100,7 @@ function RenderCards(posts, checker){
 }
 
 function RenderEvent(post){
+    // en funktion som skal vise et arrangement. funktionen fåes et objekt som parameter og derfter skal skabe html elementer og bruge objektets værdier som indhold.
     const titleEL = document.querySelector("title");
     titleEL.textContent = post.acf.titel;
     const secEl = document.querySelector(".eventsection");
@@ -106,12 +114,16 @@ function RenderEvent(post){
     heading3.textContent = post.acf.overskrift;
     articleEl.append(heading3)
 
+    // for in loop, som kører ind i gennem post.acf.brodtekster
+    //overordnet skal den tjekke om nogle tekster er tomme.
     for(let text in post.acf.brodtekster){
 
         if(post.acf.brodtekster[text] === ""){
+            // hvis post.acf.brodtekster[text] er tom, betyder det at den ikke har en tekst og vil skippe den her iteration
             continue
         }
         else{
+            // her er det omvendt. hvis den ikke er tom, betyder det at vi har noget tekst og vi vil gerne skabe html elementer og putte dens værdi ind som indhold.
             let pEl = document.createElement("p");
             pEl.textContent = post.acf.brodtekster[text];
             articleEl.append(pEl)
@@ -122,6 +134,9 @@ function RenderEvent(post){
     divContainer.classList.add("eventImage");
     secEl.append(divContainer);
     const imgEl = document.createElement("img");
+
+    // kontrolstruktur som tjekker om brugerens width er mindre end 1000px. Hvis den er det, så vil vi bruge et mindre billede. Hvis ikke denne betingelse er sandt, vil vi bruge det originale billede fra vores objekt.
+    // den tjekker kun en gang om ens windows width når siden starter op, så det ikke 100% responsiv. Nok bedre at bruge media query med javascript.
     if(window.innerWidth<1000){
         imgEl.src = post.acf.arrangementbillede.sizes.medium;
     }
@@ -160,6 +175,9 @@ function RenderEvent(post){
 }
 
 function RenderTeam(post){
+    //funktion som tager et objekt som parameter og udfra det objekt tager værdier og værdier fra keys fra det objekt og skaber html elementer.
+    // overordnet skaber denne funktion vores hold side fra indhold fra wordpress med doom manipulation.
+    // det er en lang funktion, som den kan godt være ulæseligt. Man kunne nok havde undladt at skabe alle elementer med javascript, da det ikke er alt som kommer fra wordpress, men man var allerede i gang.
     const mainEL = document.querySelector(".holdesideGrid");
 
     const articleEL= document.createElement("article");
@@ -330,7 +348,8 @@ function RenderTeam(post){
     upcomingActivites.textContent = "Kommende aktiviteter";
     articleEL4.append(upcomingActivites);
 
-    
+    //Overordnet for in loop som tjekker hvor mange træningsdage der er.
+    //Hvis der er foreksempel tre træningsdage, så vil alt indenfor dette for in loop ske tre gange.
     for(let tid in post.acf.fastetraeningsdage){
         const divEL5 = document.createElement("div");
         divEL5.classList.add("tid");
@@ -386,10 +405,10 @@ function RenderTeam(post){
     articleEL5.append(divEL7);
     divEL7.classList.add("trænere");
       
-    
+    // for in loop som tjekker hvor mange trænere et hold har. Hvis den har for for eksepel to trænere, som vil alt indenfor dette for in loop ske to gange
     for (let trainPerson in post.acf.traenere)
     {
-        // hvis der ikke er et navn på en træner, kan vi formode at den er tom og bare gå videre til næste iteration med i objektet
+        // hvis der ikke er et navn på en træner, kan vi formode at den er tom og vi kan bare gå videre til næste iteration i vores for in.
         if(post.acf.traenere[trainPerson].fuldenavn === ""){
             continue
         }
@@ -426,6 +445,10 @@ function RenderTeam(post){
     trainer.append(trainerMail);  
     }
     let counter = 0;
+    // for in loop som tjekker hvor mange teen træner der er inde i dette objekt.
+    // vi bruger en counter for at undgå at skabe bokse til hver træning. alle teen trænere skal være under en boks.
+    // hvis post.acf.teentraener[teen] har en værdi så vil counter blive initialiseret med 1. 
+    // vi har så en kontrolstruktur som tjekker om counter lig med en 1. Hvis der er mindst en træner i vores objekt, så vil counter være mindst 1 og vores betingelse vil være sandt en gang FØRSTE GANG, så den boks bliver kun skabt en gang og antallet af trænere vil blive sat på den samme boks.
     for(let teen in post.acf.teentraener){
         if(post.acf.teentraener[teen] !== ""){
             counter++;
@@ -440,6 +463,7 @@ function RenderTeam(post){
 
         }
         else{
+            //hvis der slet ikke er en træner i nuværende iteration, så skipper vi.
             continue
         }
     }
@@ -452,7 +476,7 @@ function renderEntryPoints(posts){
     // et foreach som tjekker alle arrangementer igennem.
     posts.forEach(function(post){
         const idTempHolder = post.id;
-        // hvis idtempholder ikke er i vores entrypointsid array, er det ikke det arrangementer vi vil bruge som entrypoints, og vi skipper den
+        // hvis idtempholder nuværende id matcher med en af dem i vores entrypointsid, har vi fat i det rigtige objekt, og ud fra det objekts værdier og keys:values skaber vi html elementer til at lave vores entrypoint.
         if(entryPointsID.includes(idTempHolder)){
             const divEl = document.createElement("div");
             divEl.classList.add("arrangementStyle");
@@ -481,6 +505,7 @@ function renderEntryPoints(posts){
 
         }
         else{
+            // hvis idtempholder ikke er i vores entrypointsid array, er det ikke det rigtige arrangement vi vil bruge som entrypoints, og vi skipper nuværende iteration
             return
         }
     })
@@ -489,14 +514,19 @@ function renderEntryPoints(posts){
 
 
 function makeLabelsNdUpdate(posts){
+    //funktionen som skal lave vores holdoversigt labels og dynamisk opdaterer dem
+
     const youthTeam = document.querySelector(".ungdomsholdListe");
+
+    // laver en liste for ungdom drenge hold og tilføjer den til ungdomsholdliste.
     const boyTeamList = document.createElement("ul");
     youthTeam.append(boyTeamList);
     const boyParagraph = document.createElement("p");
     boyParagraph.textContent = "Ungdom Drenge";
     boyParagraph.style.fontWeight = "bold";
     boyTeamList.append(boyParagraph);
-
+    
+    // laver en liste for ungdom piger hold og tilføjer den til ungdomsholdliste.
     const girlTeamList = document.createElement("ul");
     youthTeam.append(girlTeamList);
     const girlPararaph = document.createElement("p");
@@ -504,6 +534,7 @@ function makeLabelsNdUpdate(posts){
     girlPararaph.style.fontWeight = "bold";
     girlTeamList.append(girlPararaph);
 
+    // laver en liste for ungdom de små hold og tilføjer den til ungdomsholdliste.
     const childrenTeamList = document.createElement("ul");
     youthTeam.append(childrenTeamList);
     const childrenPararaph = document.createElement("p");
@@ -513,13 +544,15 @@ function makeLabelsNdUpdate(posts){
 
     const seniorTeams = document.querySelector(".seniorholdListe");
 
+    // laver en liste for herrer hold og tilføjer den til seniorholdliste.
     const menTeamList = document.createElement("ul");
     seniorTeams.append(menTeamList);
     const menPararaph = document.createElement("p");
     menPararaph.textContent = "Herrer hold";
     menPararaph.style.fontWeight = "bold";
-    menTeamList.append(menPararaph)
+    menTeamList.append(menPararaph);
 
+    // laver en liste for kvinde hold og tilføjer den til seniorholdliste.
     const womenTeamList = document.createElement("ul");
     seniorTeams.append(womenTeamList);
     const womenPararaph = document.createElement("p");
@@ -528,6 +561,8 @@ function makeLabelsNdUpdate(posts){
     womenTeamList.append(womenPararaph);
 
     const otherTeams = document.querySelector(".øvrigeHold");
+
+    // laver en liste for øvrige hold og tilføjer den til øvrigeHold
     const otherTeamsList = document.createElement("ul");
     const otherPararaph = document.createElement("p");
     otherPararaph.textContent = "Øvrige hold";
@@ -538,6 +573,12 @@ function makeLabelsNdUpdate(posts){
 
 
     posts.forEach(function(post){
+        //foreacher igennem et array af objekter.
+        //post.categories består af et eller flere id, som et objekt har.
+
+        //hvert hold har en kategori, som fortæller hvilket type af hold det er. For eksempel drenge hold har en kategori, som er id 14 og er et drenge hold. Pige hold har 15 osv osv.
+        //vi har så en kontrolstruktur der foreksempel tjekker om et objekt id har id 14. Hvis den har det, så ved vi at det er et drenge hold, og vi kan tilføje det til drenge hold listen. Den vil tjekke ved hvert hold.
+
         if(post.categories.includes(14)){
             const boyTeamLink = document.createElement("a");
             boyTeamLink.href = `holdsiden.html?id=${post.id}`;
@@ -590,8 +631,7 @@ function makeLabelsNdUpdate(posts){
     })
 }
 
-getCategory(11)
-.then(data => renderEntryPoints(data))
+
 
 
 

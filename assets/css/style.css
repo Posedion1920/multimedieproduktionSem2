@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
+:root {
     /*colors */
     --white: #fff;
     --lysBlaa: #004494;
@@ -18,15 +18,15 @@
     --xLargeSpacing: 50px;
 }
 
-body{
-    background-color: #F2F2F2;   
+body {
+    background-color: #F2F2F2;
 }
 
 
 *,
 *::after,
-*::before{
-box-sizing: border-box;
+*::before {
+    box-sizing: border-box;
 }
 
 .flex {
@@ -39,7 +39,7 @@ box-sizing: border-box;
 
 .textAlignCenter {
     text-align: center;
-    }
+}
 
 .alignCenter {
     align-items: center;
@@ -58,42 +58,50 @@ p,
 span {
     font-family: "Roboto Condensed", sans-serif;
 }
-body{
+
+body {
     margin: 0;
 }
-footer{
+
+footer {
     display: flex;
     margin-top: 3rem;
     color: var(--white);
     background-color: var(--blaa);
     justify-content: space-between;
 }
-footer div{
+
+footer div {
     flex-direction: column;
     margin: 0 1rem 0 1rem;
 }
-footer p{
- display: inline-block;
+
+footer p {
+    display: inline-block;
 }
-.footer_link{
+
+.footer_link {
     align-items: baseline;
 }
 
-h1{
-font-size: 1.8rem;
-}
-h2{
-font-size: 1.5rem;
-}
-h3{
-font-size: 1.3rem;
+h1 {
+    font-size: 1.8rem;
 }
 
-.Logo{
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+.Logo {
     width: 8vh;
     margin-right: 3vh;
 }
 
+/*styling af botton*/
 .btn {
     margin: 15px;
     padding: 10px;
@@ -108,41 +116,55 @@ font-size: 1.3rem;
     border: none;
 }
 
-nav{
+/*styling af nav*/
+nav {
     background-color: var(--blaa);
     width: 100%;
     color: var(--white);
 }
-nav a{
+
+nav a {
     text-decoration: none;
     color: var(--white);
 }
-.fa-bars{
+
+.fa-bars {
     margin: 1rem 1.5rem 1rem 2rem;
 }
-.fa-brands{
+
+.fa-brands {
     color: var(--gul);
-margin: 0.2rem;
+    margin: 0.2rem;
 }
 
-.navListe{
+.navListe {
     display: none;
 }
 
-.mobileNav{
-justify-content: space-around;
+.mobileNav {
+    justify-content: space-around;
 }
-.fa-solid{
+
+.fa-solid {
     color: var(--gul);
 }
+
 /* sponsor */
-.sponsgrid{
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-justify-content: space-between;
-justify-items: center;
+
+.sponsHeader h1 {
+    margin-top: var(--mediumSpacing);
+    margin-bottom: var(--smallSpacing);
 }
-.sponsor{
+
+
+.sponsgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.sponsor {
     margin-top: 2rem;
     width: 85px;
     height: 40px;
@@ -150,82 +172,103 @@ justify-items: center;
     display: flex;
     justify-content: space-evenly;
 }
-.sponsImg{
-    max-width:85px;
+
+.sponsImg {
+    max-width: 85px;
     max-height: 40px;
-    
+
 }
-.hovedSponsorImg{
+
+.hovedSponsorImg {
     display: block;
     max-height: 60vh;
     margin-left: auto;
     margin-right: auto;
 }
-.overskriftH1{
-    text-align: center;
-    margin: 1rem auto;
+
+.overskriftH1 {
+    margin-top: var(--largeSpacing);
+    margin-bottom: var(--mediumSpacing);
 }
 
-main{
-    padding: 0rem 2rem 0rem 2rem; 
+main {
+    padding-inline: var(--mediumSpacing);
+}
+
+.commonStyleH3 {
+    margin-top: var(--mediumSpacing);
+    margin-bottom: var(--smallSpacing);
+}
+
+.sponsHeader p {
+    padding: 0;
+    margin-bottom: var(--smallSpacing);
+}
+
+.commonStyleP {
+    padding: 0;
+    margin-bottom: var(--largeSpacing);
 }
 
 /* Om Os */
-.gridOmOs{
+.gridOmOs {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(7,1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     max-width: 90%;
     margin: 2rem auto;
     grid-column-gap: 1rem;
 }
 
-#OmOsBil1{
-grid-row: 1 / 4;
-grid-column: 2 / 2;
-max-width: 100%;
-max-height: 100%;
+#OmOsBil1 {
+    grid-row: 1 / 4;
+    grid-column: 2 / 2;
+    max-width: 100%;
+    max-height: 100%;
 }
-#OmOsBil2{
+
+#OmOsBil2 {
     grid-row: 3 / 6;
     grid-column: 1 / 1;
     max-width: 100%;
     max-height: 100%;
 }
-#OmOsBil3{
+
+#OmOsBil3 {
     grid-row: 5 / end;
     grid-column: 2 / 2;
     max-width: 100%;
     max-height: 100%;
-    }
+}
 
 
 /* forside */
 
-.herovideo{
+.herovideo {
     max-width: 100%;
 }
-.vaerdier{
+
+.vaerdier {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     text-align: center;
     align-items: center;
-    }
+}
 
- .vaerdier i{
+.vaerdier i {
     font-size: 60px;
     color: var(--blaa)
 }
 
-.textBillede{
+.textBillede {
     max-width: 100%;
     height: auto;
-    }
+}
 
 
-/* Kalender */ 
+/* Kalender */
 
-.kalender{
+.kalender {
     background-color: white;
     border-radius: 7px;
     margin: 10px;
@@ -235,198 +278,212 @@ max-height: 100%;
 
 }
 
-.kalender i{
+.kalender i {
     color: black;
 }
-.kalender ul{
+
+.kalender ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-  
+
 }
 
 .måned {
-    padding-bottom:  10px;
+    padding-bottom: 10px;
     text-align: center;
-  }
+}
 
-  .måned ul {
-    display: flex; /* Tilføjet display: flex; */
-    justify-content: center; /* Centrerer indholdet horisontalt */
-    align-items: center; /* Centrerer indholdet vertikalt */
-    position: relative;}
+.måned ul {
+    display: flex;
+    /* Tilføjet display: flex; */
+    justify-content: center;
+    /* Centrerer indholdet horisontalt */
+    align-items: center;
+    /* Centrerer indholdet vertikalt */
+    position: relative;
+}
 
-    .måned li {
-        padding:  10px;
-      }
-    
+.måned li {
+    padding: 10px;
+}
 
-  .ugedage{
-    display: flex; 
-  }
 
- 
-  .ugedage li{
+.ugedage {
+    display: flex;
+}
+
+
+.ugedage li {
     padding: 10px;
     letter-spacing: 3px;
-    
- }
 
- .dage{
+}
+
+.dage {
     display: flex;
     flex-wrap: wrap;
-  
- }
+
+}
 
 
- .dage li{
-    width: 14.28%; 
-    text-align: center; 
-    padding: 10px 0; 
+.dage li {
+    width: 14.28%;
+    text-align: center;
+    padding: 10px 0;
     box-sizing: border-box;
     letter-spacing: 3px;
-    
- }
 
-  .tilbage{
+}
+
+.tilbage {
     float: left;
- }
+}
 
- .næste{
+.næste {
     float: right;
- }
+}
 
-.dagensaktivitet{
+.dagensaktivitet {
     display: flex;
     gap: 2rem;
     justify-content: space-around;
 }
 
-.dagensaktivitet i{
+.dagensaktivitet i {
     color: var(--lysBlaa);
     padding-right: 2px;
 }
 
-.fremhævelse{
+.fremhævelse {
     font-weight: bold;
     color: var(--lysBlaa);
 }
 
-.arrangementStyle{
+.arrangementStyle {
     display: flex;
     border-radius: 4px;
     background-color: var(--blaa);
-    color: white ;
+    color: white;
     max-width: 100%;
 }
 
-.arrangementStyle img{
+.arrangementStyle img {
     max-width: 160px;
     object-fit: conver;
 }
 
-.ArrangementIndhold{
+.ArrangementIndhold {
     padding-left: 1rem;
 }
 
 
-.ArrangementIndhold h2, p{
+.ArrangementIndhold h2,
+p {
     margin: 0;
     padding-top: 0.5rem;
 }
 
-.kommendeArrange div{
+.kommendeArrange div {
     margin-bottom: 1rem;
 }
-    /* arrangement */
 
-    .arrangementHeader{
-        background-image: url(/Arrangementer\ header_mobil.jpg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 18vh;
-    }
-    .arrangementCard{
-        background-color: var(--blaa);
-        text-align: center;
-        color: white;
-        border-radius: 8px;
-    }
-    .wrapper a{
-        text-decoration: none;
-        display: block;
-        /* max-width: 273.1px;
+/* arrangement */
+
+.arrangementHeader {
+    background-image: url(/Arrangementer\ header_mobil.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 18vh;
+}
+
+.arrangementCard {
+    background-color: var(--blaa);
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+}
+
+.wrapper a {
+    text-decoration: none;
+    display: block;
+    /* max-width: 273.1px;
         max-height: 347.29px; */
-    }
-    .arrangementCard img{
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-        width: 273px;
-        height: 173px;
-    }
-    .arrangementCard p{
-        width: 30ch;
-        margin: 0 auto;
-    }
-    .wrapper{
+}
+
+.arrangementCard img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 273px;
+    height: 173px;
+}
+
+.arrangementCard p {
+    width: 30ch;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    justify-items: center;
+}
+
+.desktopVersion {
+    display: none;
+}
+
+
+.sponsorForside img {
+    max-width: 70%;
+
+}
+
+
+.sponsorForside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.centerForside h2 {
+    text-align: center;
+}
+
+@media screen and (min-width: 1000px) {
+    .desktopForside {
         display: grid;
-        grid-template-columns: 1fr;
-        row-gap: 2rem;
-        justify-items: center;
-    }
-    .desktopVersion{
-        display: none;
+        grid-template-columns: [first] 2fr [line2] 1fr [end];
     }
 
-   
-    .sponsorForside img{
-        max-width: 70%;  
-        
+    .herovideo {
+        width: 100%;
+        height: 85vh;
+        object-fit: cover;
+
     }
-    
-  
-    .sponsorForside {
-          display: flex; 
-          flex-direction: column;
-          align-items: center;
-      }
 
-      .centerForside h2{
-        text-align: center;
-      }
-
-    @media screen and (min-width: 1000px){
-        .desktopForside{
-            display: grid;
-            grid-template-columns: [first] 2fr [line2] 1fr [end];
-        }
-
-      .herovideo{
-    width:100%;
-    height: 85vh;
-    object-fit: cover;
-     
-      }
-      
-     .aalbrogHKForside{
+    .aalbrogHKForside {
         grid-row-start: 1;
-        grid-row-end:2 ;
-     }
-    .blivTræner{
+        grid-row-end: 2;
+    }
+
+    .blivTræner {
         grid-column-start: 1;
         grid-template-rows: 3;
     }
 
-    .kalender{
+    .kalender {
         grid-row-start: 1;
-        grid-row-end:2 ;
+        grid-row-end: 2;
     }
 
-    .kommendeArrange h2{
+    .kommendeArrange h2 {
         text-align: left;
     }
 
-    .sponsorForside{
+    .sponsorForside {
         flex-direction: row;
         gap: 3rem;
         justify-content: center;
@@ -434,7 +491,7 @@ max-height: 100%;
 }
 
 /* trænere */
-.kontaktOsWrapper{
+.kontaktOsWrapper {
     background-color: var(--white);
     margin: 1rem auto;
     padding: 1rem;
@@ -445,343 +502,410 @@ max-height: 100%;
 
 
 /* vedtægter */
-        
-        .vedteagter span {
-        margin-right: 20px;
-        max-width: 16px;
-        }
-        .vedteagter ul {
-        padding: 15px;
-        }
-        .vedteagter p {
-        margin-top: 0;
-        margin-bottom: 25px;
-        }
-        .vedteagtSection {
-        display: flex;
-        }
-        .vedteagter {
-        margin-block: 50px;
-        margin-inline: 25px;
-        }
+
+.vedteagter span {
+    margin-right: 20px;
+    max-width: 16px;
+}
+
+.vedteagter ul {
+    padding: 15px;
+}
+
+.vedteagter p {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.vedteagtSection {
+    display: flex;
+}
+
+.vedteagter {
+    margin-block: 50px;
+    margin-inline: 25px;
+}
 
 /* udvalg */
 #accordion {
     margin: 100px auto;
-    }
-    #accordion li {
+}
+
+#accordion li {
     list-style: none;
     width: 100%;
     margin-bottom: 10px;
     background-color: #004494;
     padding: 10px;
     border-radius: 0.5rem;
-    }
-    #accordion li label {
+}
+
+#accordion li label {
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: white;
-    }
-    #accordion li label i {
+}
+
+#accordion li label i {
     transform: rotate(90deg);
-    }
-    #accordion label+input[type="radio"] {
+}
+
+#accordion label+input[type="radio"] {
     display: none;
-    }
-    #accordion .content {
+}
+
+#accordion .content {
     padding: 0 15px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s;
-    }
-    #accordion li label+input[type="radio"]:checked+.content {
+}
+
+#accordion li label+input[type="radio"]:checked+.content {
     max-height: 100%;
     background-color: #D8DEE5;
-    }
-    .cardsUdvalg {
+}
+
+.cardsUdvalg {
     background-color: white;
     border-radius: 0.5rem;
-    }
-    .cardsUdvalg img {
+}
+
+.cardsUdvalg img {
     width: 100%;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    }
-    .cardsUdvalg p {
+}
+
+.cardsUdvalg p {
     margin: 0;
     margin-inline: 15px;
     padding-bottom: 15px;
-    }
+}
 
 
 
 /* media queries */
-    
-    @media screen and (min-width: 1000px){
-        .arrangementHeader, .traeningHeader{
-            display: none;
-        }
-        .desktopVersion{
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-        }
-        .mobileVersion{
-            display: none;
-        }
-        .wrapper{
-            grid-template-columns: repeat(3,1fr);
-        }
-        .arrangementCard{
-            height: 500px;
-        }
-       
-        .arrangementCard p{
-            padding-bottom: 8px;
-        }
-        .arrangementCard p{
-            width: 30ch;
-            margin: 0 auto;
-        }
-        .arrangementCard h4{
-            width: 30ch;
-            margin: 0 auto;    
-        }
-        .arrangementCard img{
-            width: 100%;
-            height: auto;
-        }
-        .navListe{
-            display: flex;
-            padding: 1vh;
-            gap: 8vh;
-            list-style: none;
-            margin: 0 auto; 
-        }
-        .mobileNav{
-            display: none;
-        }
-        .Logo{
-            width: 12vh;
-        }
-        .eventsection{
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-        }
-        .eventImage{
-            justify-self: end;
-            align-self: center;
-        }
-        .imgcontainer{
-            max-width: 952px;
-            max-height: 800px;
-            justify-self: end;
-        }
-        .imgcontainer img{
-            width: 100%;
-            height: auto;
-        }
-        .desktopVersion article{
-            padding-left: 5rem;
-            max-width: 74ch;
-        }
-     
-        .traeningHeader{
-            display: none;
-        }
-        .sommertraeningUngdom{
-            display: none;
-        }
-        #traeningSOm{
-            display: block;
-            justify-self: end;
-            max-width: 952px;
-            max-height: 500px;
-        }
-        #traeningSOm img{
-            max-width: 100%;
-            height: 100%; 
-        }
-        #ungdomDesk{
-            display: block;
-            max-width: 827px;
-            max-height: 500px;
-            margin-bottom: 4rem;
-            /* sponsor */
-        }
-        .sponsImg{
-            max-width: 100%;
-            max-height: 100%;
-        }
-        .sponsor{
-            max-width: 10rem;
-            max-height: 5rem;
-            height: auto;
-            width: auto;
-        }
-        .sponsHeader{
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: space-around;
-            margin-top: 2rem;
-        }
-        .sponsHeader div{
-            max-width: 40%;
-         
-  
-        }
-        /* om os */
-        .omOsHeader{
-            display: flex;
-            flex-direction: row-reverse;
-            margin-top: 2rem;
-        }
-        .omOsHeader div{
-            max-width: 35%;
-            margin-left: 16vh;
-  
-        }
-        .omOsHeader img{
-            max-width: 70%;
-        }
-        .gridOmOs{
-            display: flex;
-            justify-content: center;
-        }
-        .gridOmOs img{
-            width: 25vw;
-        }
-        .OmOsVærdier{
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            text-align: center;
-            align-items: center;
-            }
-        
-         .OmOsVærdier i{
-            font-size: 60px;
-            color: var(--blaa)
-        }
-        /*  */
-        #ungdomDesk img{
-            max-width: 100%;
-            height: 100%;
-        }
-   
 
-        .TraeningSeciton{
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            padding: 0rem 0rem 0rem 2rem;
-            margin-bottom: 2rem;
-        }
-        .TraeningSeciton article{
-            padding-right: 5rem;
-            width: 60ch;
-        }
-        .ungdomTraening{
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-        }
-        .gap{
-            display: block;
-            margin: 8px 0px 8px 0px;
-        }
-        .ungdomTraening p:first-of-type{
-            padding-bottom: 1.5rem;
-        }
-        
-        .gap:last-of-type{
-            padding-bottom: 1.5rem; 
-        }
-        .ungdomTraening article{
-            width: 60ch;
-        }
-        .ungdomTraening .btn{
-            margin: 0px;
-        }
+@media screen and (min-width: 1000px) {
 
-        .traeningstider{
-            display: grid;
-            grid-template-columns: repeat(5,1fr);
-        }
-        #dag1,#dag2,#dag3,#dag4,#dag5{
-            margin-right: 1px;
-            display: flex;
-            flex-direction: column;
-        }
-        .dag {
-            max-width: 100% !important;
-            border-radius: 0px !important;
-        }
-        #dag1 .daybox{
-            margin-left: 0px !important;
-        }
-        /* Trænere */
-        .gridTrænere{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            max-width: 80%;
-            margin: 1rem auto;
-            align-items: center;
-            column-gap: 2rem;
-            }
-            .gridTrænere img {
-                max-width: 85%;
-            }
-            #TrænereMedie1{
-                grid-column: 2 / 2;
-            }
-            #TrænereMedie3{
-                grid-column: 2 /2;
-            }
-            #TrænereArticle1{
-                grid-column: 1 / 1;
-                grid-row: 1 / 1;
-            }
-            #TrænereArticle3{
-                grid-row: 3 / 3;
-            }
+    .arrangementHeader,
+    .traeningHeader {
+        display: none;
+    }
 
-            #TrænereArticle5{
-                grid-column: 1 / 1;
-                grid-row: 5 / 5;
-            }
-            #TrænereArticle6{
-                grid-column: 2 / 2;
-                grid-row: 6 / 6;
-            }
-            .hovedSponsor{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            align-items: center;
-            max-width: 80%;
-            margin: 2rem auto;
-            }
+    .desktopVersion {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-        #hovedSponsor3{
-            grid-column: 1;
-            grid-row: 2;
-        }
-        
-        #hovedSponsor4{
-            grid-column: 2;
-        }
+    .mobileVersion {
+        display: none;
+    }
+
+    .wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .arrangementCard {
+        height: 500px;
+    }
+
+    .arrangementCard p {
+        padding-bottom: 8px;
+    }
+
+    .arrangementCard p {
+        width: 30ch;
+        margin: 0 auto;
+    }
+
+    .arrangementCard h4 {
+        width: 30ch;
+        margin: 0 auto;
+    }
+
+    .arrangementCard img {
+        width: 100%;
+        height: auto;
+    }
+
+    .navListe {
+        display: flex;
+        padding: 1vh;
+        gap: 8vh;
+        list-style: none;
+        margin: 0 auto;
+    }
+
+    .mobileNav {
+        display: none;
+    }
+
+    .Logo {
+        width: 12vh;
+    }
+
+    .eventsection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .eventImage {
+        justify-self: end;
+        align-self: center;
+    }
+
+    .imgcontainer {
+        max-width: 952px;
+        max-height: 800px;
+        justify-self: end;
+    }
+
+    .imgcontainer img {
+        width: 100%;
+        height: auto;
+    }
+
+    .desktopVersion article {
+        padding-left: 5rem;
+        max-width: 74ch;
+    }
+
+    .traeningHeader {
+        display: none;
+    }
+
+    .sommertraeningUngdom {
+        display: none;
+    }
+
+    #traeningSOm {
+        display: block;
+        justify-self: end;
+        max-width: 952px;
+        max-height: 500px;
+    }
+
+    #traeningSOm img {
+        max-width: 100%;
+        height: 100%;
+    }
+
+    #ungdomDesk {
+        display: block;
+        max-width: 827px;
+        max-height: 500px;
+        margin-bottom: 4rem;
+        /* sponsor */
+    }
+
+    .sponsImg {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .sponsor {
+        max-width: 10rem;
+        max-height: 5rem;
+        height: auto;
+        width: auto;
+    }
+
+    .sponsHeader {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        margin-top: 2rem;
+    }
+
+    .sponsHeader div {
+        max-width: 40%;
+
+
+    }
+
+    /* om os */
+    .omOsHeader {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 2rem;
+    }
+
+    .omOsHeader div {
+        max-width: 35%;
+        margin-left: 16vh;
+
+    }
+
+    .omOsHeader img {
+        max-width: 70%;
+    }
+
+    .gridOmOs {
+        display: flex;
+        justify-content: center;
+    }
+
+    .gridOmOs img {
+        width: 25vw;
+    }
+
+    .OmOsVærdier {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        text-align: center;
+        align-items: center;
+    }
+
+    .OmOsVærdier i {
+        font-size: 60px;
+        color: var(--blaa)
+    }
+
+    /*  */
+    #ungdomDesk img {
+        max-width: 100%;
+        height: 100%;
     }
 
 
-.eventsection h1, h3{
+    .TraeningSeciton {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0rem 0rem 0rem 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .TraeningSeciton article {
+        padding-right: 5rem;
+        width: 60ch;
+    }
+
+    .ungdomTraening {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gap {
+        display: block;
+        margin: 8px 0px 8px 0px;
+    }
+
+    .ungdomTraening p:first-of-type {
+        padding-bottom: 1.5rem;
+    }
+
+    .gap:last-of-type {
+        padding-bottom: 1.5rem;
+    }
+
+    .ungdomTraening article {
+        width: 60ch;
+    }
+
+    .ungdomTraening .btn {
+        margin: 0px;
+    }
+
+    .traeningstider {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    #dag1,
+    #dag2,
+    #dag3,
+    #dag4,
+    #dag5 {
+        margin-right: 1px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dag {
+        max-width: 100% !important;
+        border-radius: 0px !important;
+    }
+
+    #dag1 .daybox {
+        margin-left: 0px !important;
+    }
+
+    /* Trænere */
+    .gridTrænere {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 80%;
+        margin: 1rem auto;
+        align-items: center;
+        column-gap: 2rem;
+    }
+
+    .gridTrænere img {
+        max-width: 85%;
+    }
+
+    #TrænereMedie1 {
+        grid-column: 2 / 2;
+    }
+
+    #TrænereMedie3 {
+        grid-column: 2 /2;
+    }
+
+    #TrænereArticle1 {
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
+    }
+
+    #TrænereArticle3 {
+        grid-row: 3 / 3;
+    }
+
+    #TrænereArticle5 {
+        grid-column: 1 / 1;
+        grid-row: 5 / 5;
+    }
+
+    #TrænereArticle6 {
+        grid-column: 2 / 2;
+        grid-row: 6 / 6;
+    }
+
+    .hovedSponsor {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        max-width: 80%;
+        margin: 2rem auto;
+    }
+
+    #hovedSponsor3 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #hovedSponsor4 {
+        grid-column: 2;
+    }
+}
+
+
+.eventsection h1,
+h3 {
     text-align: center;
 }
 
-.salg{
+.salg {
     display: flex;
     gap: 2rem;
     /* align-items: center; */
 }
 
-.eventImage img{
+.eventImage img {
     width: 100%;
 }
 
@@ -789,29 +913,30 @@ max-height: 100%;
 
 
 /* Sommertræning */
-.traeningHeader{
+.traeningHeader {
     background-image: url(../billeder/sommertraeningHeader.jpg);
     background-repeat: no-repeat;
     /* background-size: contain; */
-    height: 18vh; 
+    height: 18vh;
 }
-.sommertraening{
+
+.sommertraening {
     display: none;
 }
 
-.centerbtn{
+.centerbtn {
     display: block;
     margin: auto;
     margin-bottom: 5rem;
 }
 
-.mandag{
+.mandag {
     display: grid;
     grid-template-columns: 110px 248px;
     /* gap: 3rem; */
 }
 
-.dag{
+.dag {
     text-align: center;
     background-color: var(--lysBlaa);
     color: white;
@@ -819,22 +944,23 @@ max-height: 100%;
     margin-bottom: 1px;
 }
 
-.radius{
+.radius {
     border-top-left-radius: 10px;
 }
 
-.daybox{
+.daybox {
     background-color: white;
     border-radius: 6px;
     padding-bottom: 1rem;
     margin-left: 6px;
     margin-bottom: 6px
 }
+
 .daybox p {
     margin-top: 0px;
 }
 
-.sommertraeningUngdomDesk{
+.sommertraeningUngdomDesk {
     display: none;
 }
 
@@ -842,82 +968,89 @@ max-height: 100%;
 
 
 /* Selve holdsiden */
-.holdesideGrid h3{
+.holdesideGrid h3 {
     text-align: left;
 
 }
 
-.fremhæveTekst{
+.fremhæveTekst {
     font-weight: bold;
-    margin:0;
+    margin: 0;
 }
 
-.tilbyder p{
+.tilbyder p {
     margin-top: 0;
 }
 
-.medlemansvarlig{
-display: flex;
-background-color: white;
-border-radius: 10px;
-padding: 1rem;
-}
-
-.medlemansvarlig img{
-    padding: 0;
-    object-fit: contain;
-    }
-
-.medlemansvarlig i, .tiderHold i, .trænereSektion i{
-    color: var(--blaa);
-    margin-right: 0.5rem;
-}
-
-.holdesideGrid img{
-    max-width: 100%;
-    height: auto
-}
-.tilmeldHold{
+.medlemansvarlig {
+    display: flex;
     background-color: white;
     border-radius: 10px;
     padding: 1rem;
 }
-.tilmeldHold h4{
+
+.medlemansvarlig img {
+    padding: 0;
+    object-fit: contain;
+}
+
+.medlemansvarlig i,
+.tiderHold i,
+.trænereSektion i {
+    color: var(--blaa);
+    margin-right: 0.5rem;
+}
+
+.holdesideGrid img {
+    max-width: 100%;
+    height: auto
+}
+
+.tilmeldHold {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.tilmeldHold h4 {
     margin: 0px;
     padding-top: 1.5rem;
 }
 
-.tilmeldHold .fremhæveTekst{
+.tilmeldHold .fremhæveTekst {
     text-align: right;
 }
-.mobilHold{
+
+.mobilHold {
     padding: 1rem;
 }
-.btncontainer{
+
+.btncontainer {
     display: flex;
     justify-content: center;
 }
-.flexhold{
+
+.flexhold {
     display: flex;
     justify-content: space-around;
     gap: 1rem;
 }
 
-.tiderHold h4{
+.tiderHold h4 {
     text-align: center;
 }
 
-.tid{
+.tid {
     background-color: white;
     border-radius: 10px;
     display: flex;
     margin-bottom: 1.5rem;
     padding: 1rem;
     align-items: center;
-  gap: 2rem;
+    gap: 2rem;
 }
 
-.traeningsdag{
+.traeningsdag {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -928,14 +1061,14 @@ padding: 1rem;
     color: #657B3D;
 }
 
-.trænigstid1{
+.trænigstid1 {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
 
-.trænere div{
+.trænere div {
     background-color: white;
     border-radius: 4px;
     padding: 1rem;
@@ -943,75 +1076,80 @@ padding: 1rem;
 
 
 /* Holdsiden  desktop*/
-@media screen and (min-width: 1000px){
-    .holdesideGrid{
+@media screen and (min-width: 1000px) {
+    .holdesideGrid {
         display: grid;
         column-gap: 4rem;
         row-gap: 4rem;
     }
-    .column1row1{
+
+    .column1row1 {
         grid-column: 1;
         grid-row: 1/4;
     }
 
-    .tilmeldHold{
+    .tilmeldHold {
         grid-column: 2/3;
         grid-row: 1;
     }
 
-    .mobilHold{
+    .mobilHold {
         grid-column: 2/3;
         grid-row: 2/3;
-    } 
+    }
 
-    .medlemansvarlig{
+    .medlemansvarlig {
         grid-row: 3/4;
         grid-column: 2/3;
     }
 
-     .tiderHold{
+    .tiderHold {
         grid-row: 4/5;
         grid-column: 2/3;
-    } 
-  
-    .tid{
+    }
+
+    .tid {
         margin-bottom: 1rem;
         justify-content: flex-start;
         padding-left: 14px;
         max-width: 636px;
         max-height: 180px;
     }
-   
-    
-  .trænere{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 0.5rem; /* Tilføj gap her */
-    margin: 0;
-  }
 
-  
-    .tilmeldHold{
+
+    .trænere {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        /* Tilføj gap her */
+        margin: 0;
+    }
+
+
+    .tilmeldHold {
         max-width: 636px;
         max-height: 656px;
         padding-left: 1rem;
 
     }
-    .flexhold{
+
+    .flexhold {
         justify-content: flex;
         gap: 10rem;
     }
-    
-    
+
+
 }
 
 
-/* Faciliteter */ 
-.faciliteter img{
+/* Faciliteter */
+.faciliteter img {
     max-width: 100%;
 }
 
-.faciliteter p, h2, .btn {
+.faciliteter p,
+h2,
+.btn {
     margin: 2rem;
 }
 
@@ -1023,25 +1161,25 @@ padding: 1rem;
 
     }
 
-    
-    .faciliteter img{
+
+    .faciliteter img {
         min-width: 100%;
         max-height: 500px;
         object-fit: contain;
-      
+
     }
 
-    .faciTekst{
+    .faciTekst {
         padding: 2rem;
         align-items: center;
     }
-    
-    .headtext{
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 50%;
-    padding: 3.3rem;
-    } 
+
+    .headtext {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 50%;
+        padding: 3.3rem;
+    }
 }
 
 
@@ -1052,78 +1190,48 @@ iframe {
     height: 1056px;
 }
 
-.årsplanHeading{
+.årsplanHeading {
     text-align: center;
     margin-bottom: 3rem;
 }
 
-.mobileNav .fa-bars{
+.mobileNav .fa-bars {
     font-size: 33px;
 }
 
-.hello{
+.hello {
     height: 40vh;
     background-color: red;
 }
-.fa-arrow-down{
+
+.fa-arrow-down {
     color: white !important;
 }
-.navBurger{
+
+.navBurger {
     display: none;
     padding-right: 2rem;
 }
 
-.navBurger>ul>li{
-    list-style-type: none; 
+.navBurger>ul>li {
+    list-style-type: none;
 }
 
 
-.show{
+.show {
     display: block !important;
 }
 
-.tilmeldDropdown{
+.tilmeldDropdown {
     display: none;
 }
 
-.praktiskDropdown{
+.praktiskDropdown {
     display: none;
 }
-.menU{
+
+.menU {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -183,7 +183,6 @@ nav a {
 
 .hovedSponsorImg {
     display: block;
-
     max-height: 60vh;
     margin-left: auto;
     margin-right: auto;
@@ -196,7 +195,6 @@ nav a {
     max-height: 60vh;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
 }
 
 .overskriftH1 {
@@ -239,6 +237,18 @@ main {
     grid-column-gap: 1rem;
     justify-items: center;
 }
+.OmOsVærdier{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    margin-top: var(--xLargeSpacing);
+}
+.OmOsVærdier div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 #OmOsBil1 {
     grid-row: 1 / 4;
@@ -896,7 +906,10 @@ border-radius: 0.5rem;
     .omOsHeader img {
         max-width: 70%;
     }
-
+    #galleriH1{
+    display: flex;
+    justify-content: center;
+    }
     .gridOmOs {
         display: flex;
         justify-content: space-around;
@@ -1057,6 +1070,12 @@ border-radius: 0.5rem;
         align-items: center;
         max-width: 80%;
         margin: 2rem auto;
+        gap: var(--largeSpacing);
+    }
+    .hovedSponsor div{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     #hovedSponsor3 {
@@ -1066,6 +1085,13 @@ border-radius: 0.5rem;
 
     #hovedSponsor4 {
         grid-column: 2;
+    }
+    .overskriftH1Spons{
+        display: flex;
+        justify-content: center;
+        margin-top: var(--largeSpacing);
+        margin-bottom: var(--mediumSpacing);
+
     }
 }
 

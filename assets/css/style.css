@@ -1424,6 +1424,10 @@ h2,
     .justifyCenter{
         margin-bottom: 0.7px;
     }
+    .menU{
+        display: none !important;
+    }
+
 }
 
 .megaMenu{
@@ -1482,6 +1486,10 @@ iframe {
     display: flex;
     flex-direction: column;
     gap: 4px;
+}
+
+#hideMegaMenu{
+    display: none;
 }
 
 

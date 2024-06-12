@@ -610,8 +610,58 @@ function makeLabelsMobile(posts){
 }
 
 function MakeLabelsDesc(posts){
+    const megaMenu = document.createElement("#hideMegaMenu");
+
+    const boyTeamList = document.createElement("ul");
+    megaMenu.append(boyTeamList);
+    const boyTeamParagraph = document.createElement("p");
+    boyTeamParagraph.textContent = "Ungdom Drenge";
+
+    const girlTeamList = document.createElement("ul");
+    const girlTeamParagraph = document.createElement("p");
+    girlTeamParagraph.textContent = "Ungdom Piger";
+    megaMenu.append(girlTeamList);
+
+
+    const menTeamList = document.createElement("ul");
+    megaMenu.append(menTeamList);
+    const menTeamParagraph = document.createElement("p");
+    menTeamParagraph.textContent = "Senior Mænd";
+
+    const womenTeamList = document.createElement("ul");
+    megaMenu.append(womenTeamList);
+    const womenTeamParagraph = document.createElement("p");
+    womenTeamParagraph.textContent = "Senior Kvinder";
+
+    const childrenTeamList = document.createElement("ul");
+    megaMenu.append(childrenTeamList);
+    const childrenTeamParagraph = document.createElement("p");
+    childrenTeamParagraph.textContent = "De små";
+
+    const othersTeamList = document.createElement("ul");
+    megaMenu.append(othersTeamList);
+    const otherTeamParagraph = document.createElement("p");
+    otherTeamParagraph.textContent = "Øvrige hold";
+
     posts.forEach(function(post){
-        
+        if(post.categories.includes(14)){
+
+        }   
+        else if(post.categories.includes(15)){
+
+        }
+        else if(post.categories.includes(17)){
+
+        }
+        else if(post.categories.includes(18)){
+
+        }
+        else if(post.categories.includes(19)){
+
+        }
+        else if(post.categories.includes(21)){
+
+        }
     })
 }
 
@@ -622,7 +672,40 @@ function MakeLabelsDesc(posts){
 
 
 
+const megaMenu2 = document.querySelector("#hideMegaMenu");
 
+    const boyTeamList = document.createElement("ul");
+    megaMenu2.append(boyTeamList);
+    const boyTeamParagraph = document.createElement("p");
+    boyTeamList.append(boyTeamParagraph);
+    boyTeamParagraph.textContent = "Ungdom Drenge";
+
+    const girlTeamList = document.createElement("ul");
+    const girlTeamParagraph = document.createElement("p");
+    girlTeamList.append(girlTeamParagraph);
+    girlTeamParagraph.textContent = "Ungdom Piger";
+    megaMenu2.append(girlTeamList);
+
+
+    const menTeamList = document.createElement("ul");
+    megaMenu2.append(menTeamList);
+    const menTeamParagraph = document.createElement("p");
+    menTeamParagraph.textContent = "Senior Mænd";
+
+    const womenTeamList = document.createElement("ul");
+    megaMenu2.append(womenTeamList);
+    const womenTeamParagraph = document.createElement("p");
+    womenTeamParagraph.textContent = "Senior Kvinder";
+
+    const childrenTeamList = document.createElement("ul");
+    megaMenu2.append(childrenTeamList);
+    const childrenTeamParagraph = document.createElement("p");
+    childrenTeamParagraph.textContent = "De små";
+
+    const othersTeamList = document.createElement("ul");
+    megaMenu2.append(othersTeamList);
+    const otherTeamParagraph = document.createElement("p");
+    otherTeamParagraph.textContent = "Øvrige hold";
 
 
 

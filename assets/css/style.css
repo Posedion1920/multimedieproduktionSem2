@@ -203,6 +203,12 @@ nav a {
 main {
     padding-inline: var(--mediumSpacing);
 }
+.utility{
+    padding-inline: var(--mediumSpacing);
+}
+.utility:last-of-type{
+    margin-bottom: 50px;
+}
 
 .commonStyleH3 {
     margin-top: var(--mediumSpacing);
@@ -455,15 +461,38 @@ p {
     flex-direction: column;
     align-items: center;
 }
+.kalender{
+    margin: 0px;
+}
 
 .centerForside h2 {
     text-align: center;
 }
+.desktopForside{
+    padding: 0px 1.5rem 0px 1.5rem;
+}
+.blivTræner>.btn{
+    margin-left: 0px !important
+}
 
 @media screen and (min-width: 1000px) {
+    .centerGrid{
+        font-size: 20px;
+    }
+    .utility{
+        font-size: 20px;
+        padding-inline: 0px;
+    }
+    .utility:last-of-type{
+        margin-bottom: 0px;
+    }
+    .traeningstider{
+        padding: 0px 3rem 0px 3rem;
+    }
     .desktopForside {
         display: grid;
         grid-template-columns: [first] 2fr [line2] 1fr [end];
+        padding: 0px 3rem 0px 3rem;
     }
 
     .herovideo {
@@ -477,6 +506,19 @@ p {
         grid-row-start: 1;
         grid-row-end: 2;
     }
+    .aalbrogHKForside p {
+        max-width: 78ch;
+        font-size: 20px;
+    }
+    .blivTræner p{
+        max-width: 78ch;
+        font-size: 20px;   
+    }
+    .blivTræner h2 {
+        margin-left: 0px;
+    }
+  
+    
 
     .blivTræner {
         grid-column-start: 1;
@@ -676,6 +718,9 @@ border-radius: 0.5rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+    .eventsection>article p{
+        max-width: 75ch;
+    }
 
     .eventImage {
         justify-self: end;
@@ -705,6 +750,7 @@ border-radius: 0.5rem;
     .sommertraeningUngdom {
         display: none;
     }
+
 
     #traeningSOm {
         display: block;
@@ -785,7 +831,7 @@ border-radius: 0.5rem;
 
     .gridOmOs {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .gridOmOs img {
@@ -794,9 +840,13 @@ border-radius: 0.5rem;
 
     .OmOsVærdier {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        text-align: center;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
         align-items: center;
+    }
+    .values{
+        text-align: center;
+        padding-bottom: 4rem;
     }
 
     .OmOsVærdier i {
@@ -814,18 +864,19 @@ border-radius: 0.5rem;
     .TraeningSeciton {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        padding: 0rem 0rem 0rem 2rem;
-        margin-bottom: 2rem;
+        padding: 0rem 0rem 0rem 4.5rem;
+        margin-bottom: 3rem;
     }
 
     .TraeningSeciton article {
         padding-right: 5rem;
-        width: 60ch;
+        max-width: 80ch;
     }
 
     .ungdomTraening {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        padding: 0px 0px 0px 3rem;
     }
 
     .gap {
@@ -846,12 +897,29 @@ border-radius: 0.5rem;
     }
 
     .ungdomTraening .btn {
-        margin: 0px;
+        margin-left: 0px !important;
+    }
+    .centerGrid{
+        justify-self: end;
     }
 
     .traeningstider {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
+    }
+    .arrangementCard p{
+        font-size: 20px;
+        text-align: left;
+        margin-left: 2rem
+    }
+    .desktopVersion>div>article p{
+        font-size: 20px;
+    }
+    .desktopVersion h1{
+        margin-bottom: 0px;
+    }
+    .desktopVersion{
+        margin-bottom: 4rem;
     }
 
     #dag1,
@@ -940,8 +1008,8 @@ h3 {
 
 .salg {
     display: flex;
-    gap: 2rem;
-    /* align-items: center; */
+    /* gap: 2rem; */
+    align-items: center;
 }
 
 .eventImage img {

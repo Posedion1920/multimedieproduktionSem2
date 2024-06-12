@@ -537,22 +537,24 @@ p {
 
 /* udvalg */
 .cardsUdvalg {
-    background-color: white;
     border-radius: 0.5rem;
+    color: black;
+    margin-bottom: var(--mediumSpacing);
 }
 
 .cardsUdvalg img {
     width: 100%;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+border-radius: 0.5rem;
 }
 
 .cardsUdvalg p {
     margin: 0;
     margin-inline: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
-
+.accordion p{
+    margin-bottom: var(--mediumSpacing);
+}
 
 .accordion {
     display: flex;
@@ -561,27 +563,53 @@ p {
     background-color: #004494;
     color: var(--white);
     cursor: pointer;
-    padding: 18px;
     width: 100%;
     border: none;
     outline: none;
     transition: 0.4s;
     border-radius: 0.5rem;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-top: var(--smallSpacing);
 }
-
+.active{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #D8DEE5;
+    color: black;
+}
 .panel {
-    background-color: white;
+    color: black;
+    background-color: #D8DEE5;
     display: none;
     overflow: hidden;
     padding: 0 15px;
     transition: max-height 0.5s;
+    margin-bottom: 15px;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
-
+.panel p:first-child{
+    margin-bottom: var(--mediumSpacing);
+}
+.panel h4{
+    margin: 0;
+    margin-inline: 15px;
+    padding-bottom: 15px;
+    padding-top: 0.5rem;
+}
+.cardsUdvalg  a{
+    color: var(--blaa);
+}
+.cardsUdvalg i{
+    color: var(--blaa);
+}
 .accordion i {
     transform: rotate(90deg);
+    
 }
+
 
 /* media queries */
 
@@ -696,6 +724,21 @@ p {
         max-height: 500px;
         margin-bottom: 4rem;
     }
+    /* udvalg */
+    .cardWrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--largeSpacing);
+        
+    }
+    .cardWrapper img{
+        height: 218px;
+    }
+    .panel p{
+       text-align: left;
+    }
+
 
     /* sponsor */
     .sponsImg {

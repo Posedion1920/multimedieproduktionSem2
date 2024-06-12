@@ -632,7 +632,7 @@ border-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
 }
-.panel p:first-child{
+.introtekstUdvalg{
     margin-bottom: var(--mediumSpacing);
 }
 .panel h4{

@@ -189,6 +189,7 @@ nav a {
     margin-right: auto;
     width: 100%;
 }
+
 .hovedSponsorImgHeader {
     display: block;
     object-fit: cover;
@@ -477,6 +478,66 @@ p {
 .blivTræner>.btn{
     margin-left: 0px !important
 }
+
+/*Styling af refusion og udgifter*/
+
+.imgRefusionUdgift {
+    width: 100%;
+    object-fit: cover;
+    margin-top: var(--mediumSpacing);
+}
+
+
+.overskiftRefusionUdgift {
+    margin-block: var(--smallSpacing);
+}
+
+.introRefusionUdgift {
+    margin-top: var(--smallSpacing);
+    margin-bottom: var(--smallSpacing);
+    padding: 0;
+}
+
+.h2RefusionUdgift {
+    margin-inline: 0;
+    margin-block: var(--smallSpacing);
+}
+
+.pRefusionUdgift {
+    padding: 0;
+    margin-top: var(--smallSpacing);
+    margin-bottom: var(--smallSpacing);
+}
+
+/* media queries til refusion og udgift */
+@media screen and (min-width: 1000px) {
+    .refusionUdgift {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .rødtKort {
+        grid-column: 1;
+        grid-row: 2;
+        padding-left: var(--xLargeSpacing);
+        padding-right: var(--xLargeSpacing);
+        padding-top: var(--xLargeSpacing);
+    }
+
+    .imgRefusionUdgift {
+        margin-bottom: var(--mediumSpacing);
+    }
+
+    .refusion {
+        padding-left: var(--xLargeSpacing);
+        padding-right: var(--xLargeSpacing);
+        padding-top: var(--xLargeSpacing);
+    }
+
+}
+
+
 
 @media screen and (min-width: 1000px) {
     .centerGrid{
@@ -984,7 +1045,8 @@ border-radius: 0.5rem;
         grid-column: 2 / 2;
         grid-row: 6 / 6;
     }
-/* sponsor */
+
+    /* sponsor */
     .hovedSponsor {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

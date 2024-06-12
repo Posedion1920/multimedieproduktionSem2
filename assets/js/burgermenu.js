@@ -1,6 +1,9 @@
 getCategory(13)
 .then(data=> makeLabelsMobile(data))
 
+getCategory(13)
+.then(data=> MakeLabelsDesc(data))
+
 const dropDowns = document.querySelectorAll(".fa-arrow-down");
 const dropDownElements1 = document.querySelector(".tilmeldDropdown");
 const dropDownElements2 = document.querySelector(".praktiskDropdown");

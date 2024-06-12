@@ -453,7 +453,11 @@ function renderEntryPoints(posts){
         const idTempHolder = post.id;
         // hvis idtempholder nuværende id matcher med en af dem i vores entrypointsid, har vi fat i det rigtige objekt, og ud fra det objekts værdier og keys:values skaber vi html elementer til at lave vores entrypoint.
         if(entryPointsID.includes(idTempHolder)){
+            const aLinkEL = document.createElement("a");
+            aLinkEL.href = `selvearrangement.html?id=${post.id}`;
+            aside.append(aLinkEL);
             const divEl = document.createElement("div");
+            aLinkEL.append(divEl);
             divEl.classList.add("arrangementStyle");
             const imgEL = document.createElement("img");
             imgEL.src = post.acf.cardimage.url;
@@ -475,7 +479,6 @@ function renderEntryPoints(posts){
             text.textContent = post.acf.overskrift;
             divEl2.append(text);
 
-            aside.append(divEl);
 
 
         }
@@ -488,7 +491,7 @@ function renderEntryPoints(posts){
 
 
 
-function makeLabelsNdUpdate(posts){
+function makeLabelsMobile(posts){
     //funktionen som skal lave vores holdoversigt labels og dynamisk opdaterer dem
 
     const youthTeam = document.querySelector(".ungdomsholdListe");
@@ -608,7 +611,7 @@ function makeLabelsNdUpdate(posts){
 
 
 getCategory(13)
-.then(data=> makeLabelsNdUpdate(data))
+.then(data=> makeLabelsMobile(data))
 
 
 

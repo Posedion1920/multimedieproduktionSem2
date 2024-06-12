@@ -1356,6 +1356,46 @@ h2,
         max-width: 50%;
         padding: 3.3rem;
     }
+    /* .test{
+        margin-top: 10px;
+        position: absolute;
+        background-color: black;
+        list-style-type: none;
+        padding-left: 0px;
+        border-radius: 4px;
+    }
+    
+    .kek{
+        width: 110px;
+        display: flex;
+        justify-content: start;
+        padding-left: 12px;
+        padding-bottom: 10px;
+    } */
+    .megaMenu{
+        background-color: #062142;
+        position: absolute;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        justify-items: center;
+        /* display: flex;
+        justify-content: space-evenly; */
+        color: white;
+    }
+    .megaMenu ul{
+        list-style-type: none;
+    }
+    .megaMenu p{
+        padding-bottom: 10px;
+    }
+    .megaMenu a{
+        color: white;
+        text-decoration: none;
+    }
+    .justifyCenter{
+        margin-bottom: 0.7px;
+    }
 }
 
 
@@ -1412,6 +1452,4 @@ iframe {
     gap: 4px;
 }
 
-.test{
-    position: absolute;
-}
+

@@ -408,6 +408,10 @@ p {
     margin-bottom: 1rem;
 }
 
+/* Bliv træner */ 
+.blivTræner video{
+    max-width: 100%;
+}
 /* arrangement */
 
 .arrangementHeader {

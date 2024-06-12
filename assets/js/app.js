@@ -609,9 +609,14 @@ function makeLabelsMobile(posts){
     })
 }
 
+function MakeLabelsDesc(posts){
+    posts.forEach(function(post){
+        
+    })
+}
 
-getCategory(13)
-.then(data=> makeLabelsMobile(data))
+
+
 
 
 

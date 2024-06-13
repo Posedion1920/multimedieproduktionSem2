@@ -45,7 +45,9 @@ body {
     align-items: center;
 }
 
-
+p{
+    line-height: 2rem;
+}
 
 h1,
 h2,
@@ -58,7 +60,10 @@ p,
 span {
     font-family: "Roboto Condensed", sans-serif;
 }
-
+.hoverEffekt:hover{
+    color: var(--white);
+    text-decoration: underline;
+}
 body {
     margin: 0;
     font-family: "Roboto Condensed", sans-serif;
@@ -70,23 +75,41 @@ footer {
     color: var(--white);
     background-color: var(--blaa);
     justify-content: space-between;
+    padding-bottom: 2rem;
 }
-
+.Logo {
+    width: 8vh;
+    margin-right: 3vh;
+}
 footer>* {
     max-width: 30%;
+    min-width: 20%;
 }
-
+footer a{
+    display: flex;
+    justify-content: center;
+}
 footer div {
     flex-direction: column;
-    margin: 0 1rem 0 1rem;
+    margin: 0 1rem 0 1.5rem;
 }
 
 footer p {
     display: inline-block;
+    color: var(--white);
+    margin-left: 0.5rem;
 }
-
+footer h2{
+    margin: 2rem;
+}
+#footerLeft{
+    display: flex;
+    align-items: center;
+}
 .footer_link {
     align-items: baseline;
+    color: var(--white);
+    text-decoration: none;
 }
 
 h1 {
@@ -99,11 +122,6 @@ h2 {
 
 h3 {
     font-size: 1.3rem;
-}
-
-.Logo {
-    width: 8vh;
-    margin-right: 3vh;
 }
 
 /*styling af botton*/
@@ -138,7 +156,6 @@ nav a {
 }
 
 .fa-brands {
-    color: var(--gul);
     margin: 0.2rem;
 }
 
@@ -149,11 +166,6 @@ nav a {
 .mobileNav {
     justify-content: space-around;
 }
-
-.fa-solid {
-    color: var(--blaa);
-}
-
 /* sponsor */
 
 .sponsHeader h1 {
@@ -315,11 +327,16 @@ main {
     grid-template-columns: repeat(2, 1fr);
     text-align: center;
     align-items: center;
+    padding: 1rem;
+}
+.vaerdier div{
+    margin-bottom: 1rem;
 }
 
 .vaerdier i {
     font-size: 60px;
-    color: var(--blaa)
+    color: var(--blaa);
+   
 }
 
 .textBillede {
@@ -351,13 +368,15 @@ main {
 
 }
 
-.maaned {
+.maned ul {
     padding-bottom: 10px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .maaned ul {
-    display: flex;
+    display: flex;  
     /* Tilfoejet display: flex; */
     justify-content: center;
     /* Centrerer indholdet horisontalt */
@@ -373,6 +392,7 @@ main {
 
 .ugedage {
     display: flex;
+    justify-content: space-between;
 }
 
 
@@ -429,6 +449,11 @@ main {
     color: white;
     max-width: 100%;
 }
+
+.eventA{
+    text-decoration: none;
+}
+
 .deltagerlist ul{
     list-style-type: none;
     padding: 0px;
@@ -458,13 +483,23 @@ p {
     margin-bottom: 1rem;
 }
 
+.kommendeArrange h2 {
+    margin-top: 0;
+}
+
+.kommendeArrange p{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
 /* Bliv traener */ 
-.blivTraener video{
+ .blivTraener video{
     max-width: 100%;
+    
 }
 /* arrangement */
 
-.arrangementHeader {
+ .arrangementHeader {
     background-image: url(/Arrangementer\ header_mobil.jpg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -533,8 +568,9 @@ p {
     padding: 0px 1.5rem 0px 1.5rem;
 }
 
+
 .blivTraener>.btn {
-    margin-left: 0px !important
+    margin-left: 0px;
 }
 
 /*Styling af refusion og udgifter*/
@@ -635,21 +671,34 @@ p {
 
     }
     .desktopForside{
-        column-gap: 3rem;
+        gap: 3rem;
+        
+    }
+
+    .vaerdier{
+        display:flex;
+        padding-right: 0;
+        justify-content: space-between;
+        margin-top: var(--largeSpacing);       
+        
     }
 
     .aalbrogHKForside {
         grid-row-start: 1;
         grid-row-end: 2;
+        margin-top: var(--largeSpacing);
+        padding-right: 3rem;
     }
 
+    
+    
     .aalbrogHKForside p {
-        max-width: 78ch;
+       
         font-size: 20px;
     }
 
     .blivTraener p {
-        max-width: 78ch;
+        
         font-size: 20px;
     }
 
@@ -663,9 +712,19 @@ p {
         grid-template-rows: 3;
     }
 
+    .btn {
+        padding: 1.5rem;
+        width: 20rem;
+        font-size:large;
+        line-height: 1.8rem;
+    }
+
+
     .kalender {
         grid-row-start: 1;
         grid-row-end: 2;
+        margin-top: var(--largeSpacing);
+        padding:var(--largeSpacing);
     }
 
     .kommendeArrange h2 {
@@ -682,10 +741,6 @@ p {
     }
     .vaerdi2, .vaerdi4{
         justify-self: start;
-    }
-    .vaerdier{
-        column-gap: 10rem;
-        margin-bottom: 3.5rem;
     }
 }
 
@@ -1518,11 +1573,7 @@ h3 {
     max-width: 100%;
 }
 
-.faciliteter p,
-h2,
-.btn {
-    margin: 2rem;
-}
+
 
 @media screen and (min-width: 1000px) {
     .faciliteter {

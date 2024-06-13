@@ -4,22 +4,18 @@ getCategory(11)
 
 
 
-// function stopPlay(){
-//     if(video.paused){
-//         video.play()
-//     }
-//     else{
-//         video.pause()
-//         video.setAttribute("controls", "");
-//         if(video.hasAttribute("autoplay")){
-//             video.removeAttribute("autoplay");
-//         }
-//     }
+function play(){
+    if(video.paused){
+        video.play()
+    }
+    else{
+        video.pause()
+    }
     
-// }
+}
 
 
-// const video = document.querySelector(".herovideo");
-// video.addEventListener("click",function(e){
-//     stopPlay() 
-// })
+const video = document.querySelector(".herovideo");
+video.addEventListener("click",function(e){
+    play()
+})

@@ -1,7 +1,13 @@
-//burger menu
+getCategory(13)
+.then(data=> makeLabelsMobile(data))
+
+getCategory(13)
+.then(data=> MakeLabelsDesc(data))
+
 const dropDowns = document.querySelectorAll(".fa-arrow-down");
 const dropDownElements1 = document.querySelector(".tilmeldDropdown");
 const dropDownElements2 = document.querySelector(".praktiskDropdown");
+const megaMenu = document.querySelector("#hideMegaMenu");
 
 const navBar = document.querySelector(".navBurger");
 
@@ -20,5 +26,9 @@ burgerMenuIkon.addEventListener("click",function(e){
     navBar.classList.toggle("show")
 })
 
-getCategory(13)
-.then(data=> makeLabelsNdUpdate(data))
+
+dropDowns[2].addEventListener("click",function(e){
+    console.log(e);
+    megaMenu.classList.toggle("megaMenu");
+})
+

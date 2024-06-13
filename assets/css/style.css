@@ -182,9 +182,46 @@ nav a {
     max-height: 40px;
 }
 
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes jumparrow {
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(1rem);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+#jumparrowElement{
+  display: none;
+}
+
+
+.fadeElement {
+  opacity: 0;
+  animation: fade 1s ease-out;
+  animation-fill-mode: forwards;
+}
+.animateInFade{
+
+}
+.animateInFadeText{
+	transition: 500ms;
+	transition-timing-function: ease-out;
+}   
+  .fadeIn {
+    opacity: 0;
+    transform: translateX(-50px) scale(.5);
+  }
+
 .hovedSponsorImg {
     display: block;
-
     max-height: 60vh;
     margin-left: auto;
     margin-right: auto;
@@ -197,7 +234,6 @@ nav a {
     max-height: 60vh;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
 }
 
 .overskriftH1 {
@@ -242,6 +278,18 @@ main {
     grid-column-gap: 1rem;
     justify-items: center;
 }
+.OmOsVærdier{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    margin-top: var(--xLargeSpacing);
+}
+.OmOsVærdier div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 #OmOsBil1 {
     grid-row: 1 / 4;
@@ -411,6 +459,10 @@ p {
     margin-bottom: 1rem;
 }
 
+/* Bliv træner */ 
+.blivTræner video{
+    max-width: 100%;
+}
 /* arrangement */
 
 .arrangementHeader {
@@ -576,6 +628,9 @@ p {
         object-fit: cover;
 
     }
+    .desktopForside{
+        column-gap: 3rem;
+    }
 
     .aalbrogHKForside {
         grid-row-start: 1;
@@ -595,7 +650,6 @@ p {
     .blivTræner h2 {
         margin-left: 0px;
     }
-
 
 
     .blivTræner {
@@ -772,6 +826,20 @@ img {
 
 @media screen and (min-width: 1000px) {
 
+    #jumparrowElement{
+        display: block;
+        animation: jumparrow 1.2s ease-in-out;
+        animation-iteration-count: infinite;
+        border-style: dashed;
+        border-radius: 100%;
+        padding: 7px 15px;
+        font-size: 3.5rem;
+        color: var(--gul) !important;
+        position: absolute;
+        top: 81vh;
+        right: 48vw;
+        background-color: #f2f2f2;
+    }
     .arrangementHeader,
     .traeningHeader {
         display: none;
@@ -947,7 +1015,10 @@ img {
     .omOsHeader img {
         max-width: 70%;
     }
-
+    #galleriH1{
+    display: flex;
+    justify-content: center;
+    }
     .gridOmOs {
         display: flex;
         justify-content: space-around;
@@ -1118,6 +1189,12 @@ img {
         align-items: center;
         max-width: 80%;
         margin: 2rem auto;
+        gap: var(--largeSpacing);
+    }
+    .hovedSponsor div{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     #hovedSponsor3 {
@@ -1127,6 +1204,13 @@ img {
 
     #hovedSponsor4 {
         grid-column: 2;
+    }
+    .overskriftH1Spons{
+        display: flex;
+        justify-content: center;
+        margin-top: var(--largeSpacing);
+        margin-bottom: var(--mediumSpacing);
+
     }
 }
 
@@ -1417,6 +1501,58 @@ h2,
         max-width: 50%;
         padding: 3.3rem;
     }
+    /* .test{
+        margin-top: 10px;
+        position: absolute;
+        background-color: black;
+        list-style-type: none;
+        padding-left: 0px;
+        border-radius: 4px;
+    }
+    
+    .kek{
+        width: 110px;
+        display: flex;
+        justify-content: start;
+        padding-left: 12px;
+        padding-bottom: 10px;
+    } */
+    .megaMenu{
+        background-color: #062142;
+        position: absolute;
+        width: 100%;
+        display: grid !important;
+        grid-template-columns: repeat(4,1fr);
+        justify-items: center;
+        color: white;
+    }
+    .megaMenu ul{
+        list-style-type: none;
+    }
+    .megaMenu p{
+        padding-bottom: 10px;
+    }
+    .megaMenu a{
+        color: white;
+        text-decoration: none;
+    }
+    .justifyCenter{
+        margin-bottom: 0.7px;
+    }
+    .menU{
+        display: none !important;
+    }
+    #hideMegaMenu p{
+        font-weight: bolder;
+    }
+
+}
+.megaMenu ul{
+    padding: 0px;
+}
+
+.megaMenu{
+    display: none;
 }
 
 
@@ -1472,3 +1608,9 @@ iframe {
     flex-direction: column;
     gap: 4px;
 }
+
+#hideMegaMenu{
+    display: none;
+}
+
+

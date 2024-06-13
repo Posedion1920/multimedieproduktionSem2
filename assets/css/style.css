@@ -496,7 +496,7 @@ p {
 /* arrangement */
 
  .arrangementHeader {
-    background-image: url(/Arrangementer\ header_mobil.jpg);
+    background-image: url(../billeder/Arrangementer\ header_mobil.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 18vh;

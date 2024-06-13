@@ -533,6 +533,7 @@ function renderEntryPoints(posts){
         if(entryPointsID.includes(idTempHolder)){
             const aLinkEL = document.createElement("a");
             aLinkEL.href = `selvearrangement.html?id=${post.id}`;
+            aLinkEL.classList.add("eventA");
             aside.append(aLinkEL);
             const divEl = document.createElement("div");
             aLinkEL.append(divEl);

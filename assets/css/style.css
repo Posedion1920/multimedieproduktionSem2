@@ -438,8 +438,6 @@ main {
     background-color: var(--blaa);
     color: white;
     max-width: 100%;
-
-    
 }
 
 .eventA{
@@ -473,6 +471,15 @@ p {
 
 .kommendeArrange div {
     margin-bottom: 1rem;
+}
+
+.kommendeArrange h2 {
+    margin-top: 0;
+}
+
+.kommendeArrange p{
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 /* Bliv traener */ 
@@ -694,6 +701,14 @@ p {
         grid-column-start: 1;
         grid-template-rows: 3;
     }
+
+    .btn {
+        padding: 1.5rem;
+        width: 20rem;
+        font-size:large;
+        line-height: 1.8rem;
+    }
+
 
     .kalender {
         grid-row-start: 1;

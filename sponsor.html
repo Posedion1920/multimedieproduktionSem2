@@ -13,8 +13,6 @@
       type="image/x-icon"
       href="./assets/Billeder/Favicon.png"
     />
-    <title>sponsorer</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -22,12 +20,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <title>Sponsorer</title>
+    <script src="./assets/js/app.js" defer></script>
+    <script src="./assets/js/burgermenu.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <div>
       <nav>
         <div class="mobileNav flex alignCenter">
-          <a href="./index.html"></a
+          <a href="/forside.html"></a
           ><img
             class="Logo"
             src="./assets/Billeder/ahk_gullogo.png"
@@ -36,42 +38,97 @@
           <h1>Aalborg HK</h1>
           <i class="fa-solid fa-bars"></i>
         </div>
+        <div class="navBurger">
+          <ul class="menU">
+            <li class="navDropDown">
+              <a href="#"></a>Tilmelding af hold
+              <i class="fa-solid fa-angle-down"></i>
+              <ul class="tilmeldDropdown">
+                <li class="ungdomsholdListe">Ungdomshold</li>
+
+                <li class="seniorholdListe">Senior hold</li>
+
+                <li class="øvrigeHold">Øvrige</li>
+              </ul>
+            </li>
+            <a href="/OmOs.html"> <li>Om os</li></a>
+            <a href="/trænere.html"><li>Bliv trænere</li></a>
+            <a href="/udvalg.html"><li>Udvalg</li></a>
+            <a href="/arrangementer.html"><li>Arrangementer</li></a>
+            <li class="navDropDown">
+              Praktisk info <i class="fa-solid fa-angle-down"></i>
+              <ul class="praktiskDropdown">
+                <a href="/faciliteter.html">
+                  <li>Faciliteter</li>
+                </a>
+                <a href="/refusionUdgift.html">
+                  <li>Refusion og udgifter</li>
+                </a>
+                <a href="/årsplan.html">
+                  <li>Årsplan</li>
+                </a>
+                <a href="/vedtaegter.html">
+                  <li>Vedtægter</li>
+                </a>
+                <a href="/privatlivspolitik.html">
+                  <li>Privatpolitik</li>
+                </a>
+                <a href="/sponsor.html">
+                  <li>Sponsorer</li>
+                </a>
+              </ul>
+            </li>
+          </ul>
+        </div>
         <ul class="flex justifyCenter alignCenter navListe">
           <li>
-            <a href="./index.html"
+            <a href="forside.html"
               ><img
                 class="Logo"
                 src="./assets/Billeder/ahk_gullogo.png"
                 alt="Logo"
             /></a>
           </li>
-          <li>
-            <a href="">holdoversigt</a>
+          <li class="liFlex navDropDown">
+            Tilmelding af hold<i class="fa-solid fa-angle-down"></i>
           </li>
           <li>
-            <a href="">om os</a>
+            <a href="/OmOs.html">Om os</a>
           </li>
           <li>
-            <a href="">trænere</a>
+            <a href="/trænere.html">Trænere</a>
           </li>
           <li>
-            <a href="">arrangemeter</a>
+            <a href="/arrangementer.html">Arrangemeter</a>
           </li>
           <li>
-            <a href="">kontakt udvalg</a>
+            <a href="/udvalg.html">Kontakt udvalg</a>
           </li>
-          <li>
-            <a href="">faciliteter</a>
+
+          <li class="navDropDown">
+            Praktisk info<i class="fa-solid fa-angle-down paddingquick"></i>
+            <ul id="dropDownMenu" class="gemVaeK">
+              <a href="/faciliteter.html"><li class="kek">Faciliteter</li></a>
+              <a href="/refusionUdgift.html"
+                ><li class="kek">Refusion og udgifter</li></a
+              >
+              <a href="/årsplan.html"><li class="kek">Årsplan</li></a>
+              <a href="/vedtaegter.html"> <li class="kek">Vedtægter</li></a>
+              <a href="/privatlivspolitik.html">
+                <li class="kek">Privatpolitik</li></a
+              >
+              <a href="/sponsor.html"><li class="kek">Sponsorer</li></a>
+            </ul>
           </li>
-          <li>
-            <a href="">praktisk info</a>
-          </li>
+
+          <li></li>
           <li>
             <a href=""><i class="fa-solid fa-user"></i></a>
           </li>
         </ul>
       </nav>
     </div>
+    <div id="hideMegaMenu"></div>
     <picture>
       <source
         media="(min-width:1000px)"

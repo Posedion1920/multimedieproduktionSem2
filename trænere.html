@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,11 +17,14 @@
       type="image/x-icon"
       href="./assets/Billeder/Favicon.png"
     />
-    <link rel="stylesheet" href="./assets/css/style.css" />
     <link
       rel="stylesheet"
-      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -33,7 +36,7 @@
     <div>
       <nav>
         <div class="mobileNav flex alignCenter">
-          <a href="./index.html"></a
+          <a href="/forside.html"></a
           ><img
             class="Logo"
             src="./assets/Billeder/ahk_gullogo.png"
@@ -44,40 +47,40 @@
         </div>
         <div class="navBurger">
           <ul class="menU">
-            <li class = "navDropDown"><a href="#"></a>Tilmelding af hold <i class="fa-solid fa-angle-down"></i>
-              <ul class ="tilmeldDropdown">
-              
-                  <li class="ungdomsholdListe">Ungdomshold</li>
-                
-               
-                  <li class="seniorholdListe">Senior hold</li>
-                
-                
-                  <li class="øvrigeHold">Øvrige</li>
+            <li class="navDropDown">
+              <a href="#"></a>Tilmelding af hold
+              <i class="fa-solid fa-angle-down"></i>
+              <ul class="tilmeldDropdown">
+                <li class="ungdomsholdListe">Ungdomshold</li>
+
+                <li class="seniorholdListe">Senior hold</li>
+
+                <li class="øvrigeHold">Øvrige</li>
               </ul>
             </li>
-            <li><a href="#"></a>Om os</li>
-            <li><a href="#">Bliv træner</a></li>
-            <li><a href="#"></a>Kontakt udvalg</li>
-            <li><a href="#"></a>Arrangementer</li>
-            <li class="navDropDown">Praktisk info <i class="fa-solid fa-angle-down"></i>
+            <a href="/OmOs.html"> <li>Om os</li></a>
+            <a href="/trænere.html"><li>Bliv trænere</li></a>
+            <a href="/udvalg.html"><li>Udvalg</li></a>
+            <a href="/arrangementer.html"><li>Arrangementer</li></a>
+            <li class="navDropDown">
+              Praktisk info <i class="fa-solid fa-angle-down"></i>
               <ul class="praktiskDropdown">
-                <a href="#">
+                <a href="/faciliteter.html">
                   <li>Faciliteter</li>
                 </a>
-                <a href="#">
+                <a href="/refusionUdgift.html">
                   <li>Refusion og udgifter</li>
                 </a>
-                <a href="#">
+                <a href="/årsplan.html">
                   <li>Årsplan</li>
                 </a>
-                <a href="#">
+                <a href="/vedtaegter.html">
                   <li>Vedtægter</li>
                 </a>
-                <a href="#">
+                <a href="/privatlivspolitik.html">
                   <li>Privatpolitik</li>
                 </a>
-                <a href="#">
+                <a href="/sponsor.html">
                   <li>Sponsorer</li>
                 </a>
               </ul>
@@ -86,47 +89,53 @@
         </div>
         <ul class="flex justifyCenter alignCenter navListe">
           <li>
-            <a href="./index.html"
+            <a href="forside.html"
               ><img
-                class="Logo "
+                class="Logo"
                 src="./assets/Billeder/ahk_gullogo.png"
                 alt="Logo"
             /></a>
           </li>
-          <li class="liFlex navDropDown">Tilmelding af hold<i class="fa-solid fa-angle-down"></i></li>
-          <li>
-            <a href="">Om os</a>
+          <li class="liFlex navDropDown">
+            Tilmelding af hold<i class="fa-solid fa-angle-down"></i>
           </li>
           <li>
-            <a href="">Trænere</a>
+            <a href="/OmOs.html">Om os</a>
           </li>
           <li>
-            <a href="">Arrangemeter</a>
+            <a href="/trænere.html">Trænere</a>
           </li>
           <li>
-            <a href="">Kontakt udvalg</a>
+            <a href="/arrangementer.html">Arrangemeter</a>
           </li>
           <li>
-            <a href="">Faciliteter</a>
+            <a href="/udvalg.html">Kontakt udvalg</a>
           </li>
-          <li class="navDropDown">Praktisk info<i class="fa-solid fa-angle-down paddingquick"></i> 
-            <ul id= "dropDownMenu" class="gemVaeK">
-              <li class="kek">Faciliteter</li>
-              <li class="kek">Refusion og udgifter</li>
-              <li class="kek">Årsplan</li>
-              <li class="kek">Vedtægter</li>
-              <li class="kek">Privatpolitik</li>
-              <li class="kek">Sponsorer</li>
+
+          <li class="navDropDown">
+            Praktisk info<i class="fa-solid fa-angle-down paddingquick"></i>
+            <ul id="dropDownMenu" class="gemVaeK">
+              <a href="/faciliteter.html"><li class="kek">Faciliteter</li></a>
+              <a href="/refusionUdgift.html"
+                ><li class="kek">Refusion og udgifter</li></a
+              >
+              <a href="/årsplan.html"><li class="kek">Årsplan</li></a>
+              <a href="/vedtaegter.html"> <li class="kek">Vedtægter</li></a>
+              <a href="/privatlivspolitik.html">
+                <li class="kek">Privatpolitik</li></a
+              >
+              <a href="/sponsor.html"><li class="kek">Sponsorer</li></a>
             </ul>
-            <li>
           </li>
+
+          <li></li>
+          <li>
             <a href=""><i class="fa-solid fa-user"></i></a>
           </li>
         </ul>
       </nav>
     </div>
-    <div id="hideMegaMenu">
-    </div>
+    <div id="hideMegaMenu"></div>
     <main class="gridTraenere">
       <picture id="TraenereMedie1">
         <video controls src="./assets/Billeder/TraenerVideo.mp4"></video>

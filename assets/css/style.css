@@ -181,6 +181,29 @@ nav a {
     max-height: 40px;
 }
 
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in-element {
+  opacity: 0;
+  animation: fade 1s ease-out;
+  animation-fill-mode: forwards;
+}
+.animateInFade{
+
+}
+.animateInFadeText{
+	transition: 500ms;
+	transition-timing-function: ease-out;
+}   
+  .fadeIn {
+    opacity: 0;
+    transform: translateX(-50px) scale(.5);
+  }
+
 .hovedSponsorImg {
     display: block;
     max-height: 60vh;

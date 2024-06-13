@@ -671,6 +671,17 @@ p {
         gap: 3rem;
         justify-content: center;
     }
+    .værdi1, .værdi3{
+        justify-self: end;
+    }
+    .værdi2, .værdi4{
+        justify-self: start;
+    }
+    .vaerdier{
+        column-gap: 10rem;
+        margin-bottom: 3.5rem;
+    }
+    
 }
 
 /* trænere */

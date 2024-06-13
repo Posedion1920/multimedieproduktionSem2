@@ -1607,6 +1607,9 @@ h2,
     .padGap{
         padding-right: 5px;
     }
+    .paddingquick{
+        padding-left: 6px;
+    }
 
 }
 .megaMenu ul{

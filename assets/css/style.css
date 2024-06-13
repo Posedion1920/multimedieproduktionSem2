@@ -278,18 +278,7 @@ main {
     grid-column-gap: 1rem;
     justify-items: center;
 }
-.OmOsVaerdier{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    place-items: center;
-    margin-top: var(--xLargeSpacing);
-    align-items: end;
-}
-.OmOsVaerdier div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 
 #OmOsBil1 {
@@ -310,7 +299,7 @@ main {
     grid-row: 5 / end;
     grid-column: 2 / 2;
     max-width: 100%;
-    max-height: 100%;
+    object-fit: cover;
 }
 
 
@@ -1111,6 +1100,9 @@ img {
         display: flex;
         flex-direction: row-reverse;
         margin-top: 2rem;
+        gap: 8rem;
+    
+
     }
 
     .omOsHeader div {
@@ -1135,22 +1127,17 @@ img {
         width: 25vw;
     }
 
-    .OmOsVaerdier {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        justify-items: center;
+    .omOsV{
         align-items: center;
+        justify-content: space-evenly;
     }
 
     .values {
+        margin-top: var(--xLargeSpacing);
         text-align: center;
-        padding-bottom: 4rem;
+       
     }
 
-    .OmOsVaerdier i {
-        font-size: 60px;
-        color: var(--blaa)
-    }
 
     /*  */
     #ungdomDesk img {
@@ -1320,7 +1307,6 @@ img {
 
     }
 }
-
 
 .eventsection h1,
 h3 {

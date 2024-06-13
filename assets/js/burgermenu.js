@@ -5,7 +5,6 @@ getCategory(13)
 })
 
 
-const dropDowns = document.querySelectorAll(".fa-angle-down");
 for(let i = 0;  i< dropDowns.length;i++){
     dropDowns[i].style.color= "white";
 }

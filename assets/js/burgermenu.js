@@ -1,8 +1,9 @@
 getCategory(13)
-.then(data=> makeLabelsMobile(data))
+.then(data=> {
+    makeLabelsMobile(data)
+    MakeLabelsDesc(data)
+})
 
-getCategory(13)
-.then(data=> MakeLabelsDesc(data))
 
 const dropDowns = document.querySelectorAll(".fa-angle-down");
 for(let i = 0;  i< dropDowns.length;i++){

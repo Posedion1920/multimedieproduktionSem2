@@ -681,7 +681,6 @@ p {
         column-gap: 10rem;
         margin-bottom: 3.5rem;
     }
-    
 }
 
 /* trænere */
@@ -722,6 +721,8 @@ img {
     padding-bottom: var(--largeSpacing);
     padding-left: 18px;
 }
+
+
 
 
 /* vedtægter */
@@ -1155,12 +1156,12 @@ img {
         max-width: 80%;
         margin: 1rem auto;
         align-items: center;
-        column-gap: 2rem;
+        column-gap: 4rem !important;
         gap: 1.5rem;
     }
 
     .gridTrænere img {
-        max-width: 85%;
+        max-width: 100%;
     }
 
     #TrænereMedie1 {

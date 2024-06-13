@@ -992,11 +992,6 @@ h3 {
     padding: 0px;
 }
 
-.desktopForside {
-    display: grid;
-    grid-template-columns: [first] 2fr [line2] 1fr [end];
-    padding: 0px 3rem 0px 3rem;
-}
 
 .seniorholdListe>ul, .øvrigeHold>ul{
     list-style-type: none;

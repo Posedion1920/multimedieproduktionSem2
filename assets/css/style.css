@@ -58,7 +58,10 @@ p,
 span {
     font-family: "Roboto Condensed", sans-serif;
 }
-
+.hoverEffekt:hover{
+    color: var(--white);
+    text-decoration: underline;
+}
 body {
     margin: 0;
 }
@@ -69,23 +72,41 @@ footer {
     color: var(--white);
     background-color: var(--blaa);
     justify-content: space-between;
+    padding-bottom: 2rem;
 }
-
+.Logo {
+    width: 8vh;
+    margin-right: 3vh;
+}
 footer>* {
     max-width: 30%;
+    min-width: 20%;
 }
-
+footer a{
+    display: flex;
+    justify-content: center;
+}
 footer div {
     flex-direction: column;
-    margin: 0 1rem 0 1rem;
+    margin: 0 1rem 0 1.5rem;
 }
 
 footer p {
     display: inline-block;
+    color: var(--white);
+    margin-left: 0.5rem;
 }
-
+footer h2{
+    margin: 2rem;
+}
+#footerLeft{
+    display: flex;
+    align-items: center;
+}
 .footer_link {
     align-items: baseline;
+    color: var(--white);
+    text-decoration: none;
 }
 
 h1 {
@@ -98,11 +119,6 @@ h2 {
 
 h3 {
     font-size: 1.3rem;
-}
-
-.Logo {
-    width: 8vh;
-    margin-right: 3vh;
 }
 
 /*styling af botton*/
@@ -137,7 +153,6 @@ nav a {
 }
 
 .fa-brands {
-    color: var(--gul);
     margin: 0.2rem;
 }
 
@@ -148,11 +163,6 @@ nav a {
 .mobileNav {
     justify-content: space-around;
 }
-
-.fa-solid {
-    color: var(--blaa);
-}
-
 /* sponsor */
 
 .sponsHeader h1 {

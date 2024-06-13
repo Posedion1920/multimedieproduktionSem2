@@ -10,7 +10,7 @@ function getCategory(categoryId){
     return fetch(baseUrl+`?categories=${categoryId}&per_page=100`)
     .then(res => {
         if(res.status === 404){
-            console.log("Could not find it");
+            console.log("Could not find the page you were looking for");
         }
         return res.json()
         //normal vil en arrow funktion selv retuner, men hvis der er flere linje, skal man selv sætte return keyword på respons
@@ -25,7 +25,7 @@ function getPost(id){
     return fetch(baseUrl+`/${id}`)
     .then(res => {
         if(res.status === 404){
-            console.log("Could not find it");
+            console.log("Could not find the page you were looking for");
         }
         return res.json()
     })
@@ -169,7 +169,7 @@ function RenderEvent(post){
         ulVIn.append(VinP)
         divEl9.append(ulVIn);
 
-        for(key in post.acf.vinimportorer){
+        for(let key in post.acf.vinimportorer){
             if(post.acf.vinimportorer[key] !== ""){
                 const vinKey = document.createElement("li");;
                 vinKey.textContent = "-"+post.acf.vinimportorer[key];

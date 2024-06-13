@@ -3,6 +3,4 @@
 // import {RenderEvent} from "./app.js"
 
 getPost(getQueryParameter())
-.then(data => {
-    RenderEvent(data);
-})
+.then(data =>  RenderEvent(data))

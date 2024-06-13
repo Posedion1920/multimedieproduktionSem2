@@ -428,6 +428,14 @@ main {
     color: white;
     max-width: 100%;
 }
+.deltagerlist ul{
+    list-style-type: none;
+    padding: 0px;
+}
+.deltagerlist p{
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
 
 .arrangementStyle img {
     max-width: 160px;
@@ -589,6 +597,10 @@ p {
 
 
 @media screen and (min-width: 1000px) {
+    .flexLister{
+        display: flex;
+        gap: 5rem;
+    }
     .centerGrid {
         font-size: 20px;
     }
@@ -857,6 +869,9 @@ img {
     .arrangementHeader,
     .traeningHeader {
         display: none;
+    }
+    .eventsection{
+        margin-bottom: 50px;
     }
 
     .desktopVersion {
@@ -1136,6 +1151,7 @@ img {
         text-align: left;
         margin-left: 2rem
     }
+    
 
     .desktopVersion>div>article p {
         font-size: 20px;

@@ -147,6 +147,58 @@ function RenderEvent(post){
     divSalg.classList.add("salg");
     divSalg.append(pris)
     divSalg.append(linkSalg);
+
+
+
+
+    const divEL8 = document.querySelector(".flexLister");
+
+
+    if(post.acf.vinimportorer.vinimport_1 !== ""){
+        const divEl9 = document.createElement("div");
+        divEL8.append(divEl9);
+        divEl9.classList.add("deltagerlist");
+
+        const VinP = document.createElement("p");
+        VinP.textContent = "Vinimportører";
+
+        const ulVIn = document.createElement("ul");
+        ulVIn.append(VinP)
+        divEl9.append(ulVIn);
+
+        for(key in post.acf.vinimportorer){
+            if(post.acf.vinimportorer[key] !== ""){
+                const vinKey = document.createElement("li");;
+                vinKey.textContent = "-"+post.acf.vinimportorer[key];
+                ulVIn.append(vinKey);
+            }
+            else{
+                continue
+            }
+        }
+    }
+
+    if(post.acf.delikatesser.Delikatesse_1 !== ""){
+        const divEl10 = document.createElement("div");
+        divEL8.append(divEl10);
+        divEl10.classList.add("deltagerlist");
+        const delikatesseP = document.createElement("p");
+        delikatesseP.textContent = "Delikatesser";
+        const uldelikatesse = document.createElement("ul");
+        uldelikatesse.append(delikatesseP)
+        divEl10.append(uldelikatesse);
+
+        for(let key in post.acf.delikatesser){
+            if(post.acf.delikatesser[key] !== ""){
+                const delikatesseKey = document.createElement("li");;
+                delikatesseKey.textContent = "-"+post.acf.delikatesser[key];
+                uldelikatesse.append(delikatesseKey);   
+            }
+            else{
+                continue
+            }
+        }
+    }
 }
 
 function RenderTeam(post){

@@ -1409,6 +1409,7 @@ iframe {
         gap: 8vh;
         list-style: none;
         margin: 0 auto;
+        margin-bottom: 1px;
     }
 
     .mobileNav {

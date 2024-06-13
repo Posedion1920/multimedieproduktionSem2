@@ -1667,6 +1667,11 @@ iframe {
 .tilmeldDropdown {
     display: none;
 }
+.ungdomsholdListe, .seniorholdListe, .øvrigeHold{
+    margin-top: var(--mediumSpacing);
+}
+
+
 
 .praktiskDropdown {
     display: none;

@@ -498,7 +498,7 @@ p {
  .arrangementHeader {
     background-image: url(/Arrangementer\ header_mobil.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     height: 18vh;
 }
 
@@ -682,6 +682,8 @@ img {
 .cardWrapper{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--largeSpacing);
 
 }
 

@@ -603,6 +603,9 @@ p {
         object-fit: cover;
 
     }
+    .desktopForside{
+        column-gap: 3rem;
+    }
 
     .aalbrogHKForside {
         grid-row-start: 1;
@@ -619,7 +622,17 @@ p {
     .blivTræner h2 {
         margin-left: 0px;
     }
-  
+
+    .værdi1, .værdi3{
+        justify-self: end;
+    }
+    .værdi2, .værdi4{
+        justify-self: start;
+    }
+    .vaerdier{
+        column-gap: 10rem;
+        margin-bottom: 3.5rem;
+    }
     
 
     .blivTræner {

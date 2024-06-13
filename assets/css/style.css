@@ -208,17 +208,6 @@ nav a {
   animation: fade 1s ease-out;
   animation-fill-mode: forwards;
 }
-.animateInFade{
-
-}
-.animateInFadeText{
-	transition: 500ms;
-	transition-timing-function: ease-out;
-}   
-  .fadeIn {
-    opacity: 0;
-    transform: translateX(-50px) scale(.5);
-  }
 
 .hovedSponsorImg {
     display: block;
@@ -758,7 +747,7 @@ img {
 }
 
 .cardsUdvalg img {
-    width: 100%;
+    width: 50%;
     border-radius: 0.5rem;
 }
 
@@ -974,6 +963,9 @@ img {
         justify-content: center;
         gap: var(--largeSpacing);
 
+    }
+    .cardsUdvalg img {
+        width: 100%;
     }
 
     .cardWrapper img {

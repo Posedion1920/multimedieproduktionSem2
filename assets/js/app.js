@@ -259,28 +259,31 @@ function RenderTeam(post){
     articleEL.append(divEL);
 
     const communityHeading = document.createElement("p");
-    communityHeading.classList.add("fremhæveTekst");
+    communityHeading.classList.add("boldText");
     communityHeading.textContent = "Fællesskab:";
     const communityText = document.createElement("p");
     communityText.textContent = "Vær en del af et stærkt hold, hvor vi støtter og inspirerer hinanden både på og uden for banen.";
+    communityText.style.padding = "0px";
 
     divEL.append(communityHeading);
     divEL.append(communityText);
 
     const personalDevHeading = document.createElement("p");
-    personalDevHeading.classList.add("fremhæveTekst");
+    personalDevHeading.classList.add("boldText");
     personalDevHeading.textContent = "Selvudvikling:";
     const personalDevText = document.createElement("p");
     personalDevText.textContent = "Udvikle dine tekniske færdigheder og fysiske form gennem professionel træning og engagerende øvelser.";
+    personalDevText.style.padding = "0px";
 
     divEL.append(personalDevHeading);
     divEL.append(personalDevText);
 
     const activitiesHeading = document.createElement("p");
-    activitiesHeading.classList.add("fremhæveTekst");
+    activitiesHeading.classList.add("boldText");
     activitiesHeading.textContent = "Sjove aktiviteter:";
     const activitiesText = document.createElement("p");
     activitiesText.textContent = "Udover træning og kampe arrangerer vi sociale arrangementer og ture, der styrker sammenholdet og skaber uforglemmelige oplevelser.";
+    activitiesText.style.padding = "0px";
 
     divEL.append(activitiesHeading);
     divEL.append(activitiesText);
@@ -315,7 +318,7 @@ function RenderTeam(post){
 
     const price = document.createElement("p");
     price.textContent = post.acf.tilmelding.pris;
-    price.classList.add("fremhæveTekst");
+    price.classList.add("boldText");
     articleEL2.append(price);
 
     const subscriptionInfo = document.createElement("p");
@@ -422,7 +425,7 @@ function RenderTeam(post){
         divEL5.append(trainingDay);
     
         const teamHeaiding = document.createElement("p");
-        teamHeaiding.classList.add("fremhæveTekst");
+        teamHeaiding.classList.add("boldText");
         teamHeaiding.textContent = `Træning ${post.acf.holdnavn}`;
         trainingDay.append(teamHeaiding);
     
@@ -458,7 +461,7 @@ function RenderTeam(post){
 
     const divEL7 = document.createElement("div");
     articleEL5.append(divEL7);
-    divEL7.classList.add("trænere");
+    divEL7.classList.add("trainer");
       
     // for in loop som tjekker hvor mange trænere et hold har. Hvis den har for for eksepel to trænere, som vil alt indenfor dette for in loop ske to gange
     for (let trainPerson in post.acf.traenere)
@@ -473,7 +476,7 @@ function RenderTeam(post){
 
     const trainerPerson = document.createElement("p");
     trainerPerson.textContent = post.acf.traenere[trainPerson].rolle;
-    trainerPerson.classList.add("fremhæveTekst");
+    trainerPerson.classList.add("boldText");
     trainer.append(trainerPerson);
 
     const trainerName = document.createElement("p");
@@ -486,6 +489,7 @@ function RenderTeam(post){
     const trainerMail = document.createElement("p");
     const trainerMailText = document.createTextNode(post.acf.traenere[trainPerson].email);
     const mailIcon = document.createElement("i");
+    mailIcon.style.marginRight = "6px";
     mailIcon.classList.add("fa-solid");
     mailIcon.classList.add("fa-envelope");
 
@@ -493,8 +497,10 @@ function RenderTeam(post){
     iphoneIcon.classList.add("fa-solid");
     iphoneIcon.classList.add("fa-phone");
     trainerPhone.append(iphoneIcon);
+    iphoneIcon.style.marginRight = "6px";
     trainerPhone.appendChild(trainerPhoneText);
     trainerMail.append(mailIcon);
+    trainerMail.style.marginRight = "6px";
     trainerMail.appendChild(trainerMailText)
     trainer.append(trainerPhone);
     trainer.append(trainerMail);  

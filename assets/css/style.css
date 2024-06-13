@@ -1672,6 +1672,18 @@ h3 {
         font-size: 24px;
         color: var(--gul);
     }
+    .trainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        /* Tilføj gap her */
+        margin: 0;
+    }
+    
+    
+    .boldText{
+        font-weight: bold;
+    }
 
 }
 
@@ -1687,6 +1699,22 @@ h3 {
     list-style-type: none;
     padding: 0px;
 }
+.trainer div {
+    background-color: white;
+    border-radius: 4px;
+    padding: 1rem;
+}
+.alignself{
+    padding-bottom: 500px;
+}
+.trainer p{
+    margin: 0px;
+}
+
+.alignself p{
+    padding: 0px;
+}
+
 
 
 .seniorholdListe>ul, .øvrigeHold>ul{
@@ -1787,3 +1815,114 @@ iframe {
 .downArrow{
     transform: rotate(180deg);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

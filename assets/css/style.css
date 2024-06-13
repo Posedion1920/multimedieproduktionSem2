@@ -1429,11 +1429,9 @@ h2,
         background-color: #062142;
         position: absolute;
         width: 100%;
-        display: grid;
+        display: grid !important;
         grid-template-columns: repeat(4,1fr);
         justify-items: center;
-        /* display: flex;
-        justify-content: space-evenly; */
         color: white;
     }
     .megaMenu ul{
@@ -1449,6 +1447,20 @@ h2,
     .justifyCenter{
         margin-bottom: 0.7px;
     }
+    .menU{
+        display: none !important;
+    }
+    #hideMegaMenu p{
+        font-weight: bolder;
+    }
+
+}
+.megaMenu ul{
+    padding: 0px;
+}
+
+.megaMenu{
+    display: none;
 }
 
 
@@ -1503,6 +1515,10 @@ iframe {
     display: flex;
     flex-direction: column;
     gap: 4px;
+}
+
+#hideMegaMenu{
+    display: none;
 }
 
 

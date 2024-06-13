@@ -267,7 +267,12 @@ main {
     padding: 0;
     margin-bottom: var(--largeSpacing);
 }
-
+/* årsplan */
+.aarsplan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* Om Os */
 .gridOmOs {
     display: grid;
@@ -563,7 +568,10 @@ p {
 .blivTraener>.btn {
     margin-left: 0px;
 }
-
+.fuldscreen{
+    text-decoration: none;
+    color: var(--white);
+}
 /*Styling af refusion og udgifter*/
 
 .imgRefusionUdgift {
@@ -707,7 +715,6 @@ p {
         padding: 1.5rem;
         width: 20rem;
         font-size:large;
-        line-height: 1.8rem;
     }
 
 
@@ -927,6 +934,8 @@ img {
     .desktopVersion {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
     }
 
     .mobileVersion {
@@ -1570,6 +1579,8 @@ h3 {
         grid-template-columns: repeat(2, 1fr);
         margin-bottom: 2rem;
         padding: 0px 3rem 0px 3rem;
+        align-items: center;
+        gap: 3rem;
 
     }
 
@@ -1577,8 +1588,6 @@ h3 {
     .faciliteter img {
         max-width: 100%;
         max-height: 500px;
-        object-fit: contain;
-
     }
 
     .faciTekst {
@@ -1659,6 +1668,18 @@ h3 {
         font-size: 24px;
         color: var(--gul);
     }
+    .trainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        /* Tilføj gap her */
+        margin: 0;
+    }
+    
+    
+    .boldText{
+        font-weight: bold;
+    }
 
 }
 
@@ -1674,6 +1695,22 @@ h3 {
     list-style-type: none;
     padding: 0px;
 }
+.trainer div {
+    background-color: white;
+    border-radius: 4px;
+    padding: 1rem;
+}
+.alignself{
+    margin-bottom: 10px;
+}
+.trainer p{
+    margin: 0px;
+}
+
+.alignself p{
+    padding: 0px;
+}
+
 
 
 .seniorholdListe>ul, .øvrigeHold>ul{
@@ -1774,3 +1811,114 @@ iframe {
 .downArrow{
     transform: rotate(180deg);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

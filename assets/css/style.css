@@ -70,8 +70,9 @@ footer {
     background-color: var(--blaa);
     justify-content: space-between;
 }
-footer > *{
-max-width: 30%;
+
+footer>* {
+    max-width: 30%;
 }
 
 footer div {
@@ -149,7 +150,7 @@ nav a {
 }
 
 .fa-solid {
-    color: var(--gul);
+    color: var(--blaa);
 }
 
 /* sponsor */
@@ -243,10 +244,12 @@ nav a {
 main {
     padding-inline: var(--mediumSpacing);
 }
-.utility{
+
+.utility {
     padding-inline: var(--mediumSpacing);
 }
-.utility:last-of-type{
+
+.utility:last-of-type {
     margin-bottom: 50px;
 }
 
@@ -518,17 +521,20 @@ p {
     flex-direction: column;
     align-items: center;
 }
-.kalender{
+
+.kalender {
     margin: 0px;
 }
 
 .centerForside h2 {
     text-align: center;
 }
-.desktopForside{
+
+.desktopForside {
     padding: 0px 1.5rem 0px 1.5rem;
 }
-.blivTræner>.btn{
+
+.blivTræner>.btn {
     margin-left: 0px !important
 }
 
@@ -593,19 +599,23 @@ p {
 
 
 @media screen and (min-width: 1000px) {
-    .centerGrid{
+    .centerGrid {
         font-size: 20px;
     }
-    .utility{
+
+    .utility {
         font-size: 20px;
         padding-inline: 0px;
     }
-    .utility:last-of-type{
+
+    .utility:last-of-type {
         margin-bottom: 0px;
     }
-    .traeningstider{
+
+    .traeningstider {
         padding: 0px 3rem 0px 3rem;
     }
+
     .desktopForside {
         display: grid;
         grid-template-columns: [first] 2fr [line2] 1fr [end];
@@ -626,14 +636,17 @@ p {
         grid-row-start: 1;
         grid-row-end: 2;
     }
+
     .aalbrogHKForside p {
         max-width: 78ch;
         font-size: 20px;
     }
-    .blivTræner p{
+
+    .blivTræner p {
         max-width: 78ch;
-        font-size: 20px;   
+        font-size: 20px;
     }
+
     .blivTræner h2 {
         margin-left: 0px;
     }
@@ -663,15 +676,41 @@ p {
 /* trænere */
 .kontaktOsWrapper {
     background-color: var(--white);
-    margin: 1rem auto;
     padding: 1rem;
     box-shadow: 3px 3px 5px var(--graa);
-    max-width: 60%;
-}
-#TrænereMedie1 video{
-    max-width: 90%;
+    max-width: 100%;
 }
 
+#TrænereMedie1 video {
+    max-width: 100%;
+}
+
+.TrænereMedie2,
+.TrænereMedie3,
+.TrænereMedie4,
+img {
+    width: 100%;
+}
+
+.gridTrænere h1 {
+    margin-top: var(--mediumSpacing);
+    margin-bottom: var(--smallSpacing);
+}
+
+.gridTrænere p {
+    padding: 0;
+    padding-bottom: var(--largeSpacing);
+}
+
+.gridTrænere .sammenfatningP {
+    padding-bottom: var(--smallSpacing);
+}
+
+.sammenfatningUl {
+    margin: 0;
+    padding-bottom: var(--largeSpacing);
+    padding-left: 18px;
+}
 
 
 /* vedtægter */
@@ -708,7 +747,7 @@ p {
 
 .cardsUdvalg img {
     width: 100%;
-border-radius: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 .cardsUdvalg p {
@@ -716,7 +755,8 @@ border-radius: 0.5rem;
     margin-inline: 15px;
     padding-bottom: 10px;
 }
-.accordion p{
+
+.accordion p {
     margin-bottom: var(--mediumSpacing);
 }
 
@@ -735,7 +775,8 @@ border-radius: 0.5rem;
     padding: 10px;
     margin-top: var(--smallSpacing);
 }
-.active{
+
+.active {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     border-bottom-left-radius: 0;
@@ -743,6 +784,7 @@ border-radius: 0.5rem;
     background-color: #D8DEE5;
     color: black;
 }
+
 .panel {
     color: black;
     background-color: #D8DEE5;
@@ -754,24 +796,29 @@ border-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
 }
-.introtekstUdvalg{
+
+.introtekstUdvalg {
     margin-bottom: var(--mediumSpacing);
 }
-.panel h4{
+
+.panel h4 {
     margin: 0;
     margin-inline: 15px;
     padding-bottom: 15px;
     padding-top: 0.5rem;
 }
-.cardsUdvalg  a{
+
+.cardsUdvalg a {
     color: var(--blaa);
 }
-.cardsUdvalg i{
+
+.cardsUdvalg i {
     color: var(--blaa);
 }
+
 .accordion i {
     transform: rotate(90deg);
-    
+
 }
 
 
@@ -854,7 +901,8 @@ border-radius: 0.5rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-    .eventsection>article p{
+
+    .eventsection>article p {
         max-width: 75ch;
     }
 
@@ -906,19 +954,22 @@ border-radius: 0.5rem;
         max-height: 500px;
         margin-bottom: 4rem;
     }
+
     /* udvalg */
-    .cardWrapper{
+    .cardWrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: var(--largeSpacing);
-        
+
     }
-    .cardWrapper img{
+
+    .cardWrapper img {
         height: 218px;
     }
-    .panel p{
-       text-align: left;
+
+    .panel p {
+        text-align: left;
     }
 
 
@@ -983,7 +1034,8 @@ border-radius: 0.5rem;
         justify-items: center;
         align-items: center;
     }
-    .values{
+
+    .values {
         text-align: center;
         padding-bottom: 4rem;
     }
@@ -1038,7 +1090,8 @@ border-radius: 0.5rem;
     .ungdomTraening .btn {
         margin-left: 0px !important;
     }
-    .centerGrid{
+
+    .centerGrid {
         justify-self: end;
     }
 
@@ -1046,18 +1099,22 @@ border-radius: 0.5rem;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
     }
-    .arrangementCard p{
+
+    .arrangementCard p {
         font-size: 20px;
         text-align: left;
         margin-left: 2rem
     }
-    .desktopVersion>div>article p{
+
+    .desktopVersion>div>article p {
         font-size: 20px;
     }
-    .desktopVersion h1{
+
+    .desktopVersion h1 {
         margin-bottom: 0px;
     }
-    .desktopVersion{
+
+    .desktopVersion {
         margin-bottom: 4rem;
     }
 
@@ -1088,6 +1145,7 @@ border-radius: 0.5rem;
         margin: 1rem auto;
         align-items: center;
         column-gap: 2rem;
+        gap: 1.5rem;
     }
 
     .gridTrænere img {
@@ -1120,6 +1178,9 @@ border-radius: 0.5rem;
         grid-column: 2 / 2;
         grid-row: 6 / 6;
     }
+
+
+
 
     /* sponsor */
     .hovedSponsor {

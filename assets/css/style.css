@@ -61,6 +61,7 @@ span {
 
 body {
     margin: 0;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 footer {
@@ -1613,8 +1614,35 @@ h2,
     .paddingquick{
         padding-left: 6px;
     }
+    .fa-user{
+        font-size: 24px;
+        color: var(--gul);
+    }
 
 }
+
+.ungdomsholdListe,.seniorholdListe,.øvrigeHold, .ungdomsholdListe>ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+
+.seniorholdListe>ul, .øvrigeHold>ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+
+.seniorholdListe>ul>li{
+    padding-bottom: 50px;
+}
+
+.paddingHoldListe{
+    padding-bottom: 8px;
+}
+
+
+
 .megaMenu ul{
     padding: 0px;
 }

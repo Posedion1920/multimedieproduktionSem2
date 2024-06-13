@@ -137,6 +137,7 @@ function RenderEvent(post){
 
     const btnEL = document.createElement("button");
     btnEL.classList.add("btn")
+    btnEL.classList.add("hoverEffekt");
     btnEL.textContent = "KØB BILLET TIL "+ post.acf.titel;
     
     const linkSalg = document.createElement("a");

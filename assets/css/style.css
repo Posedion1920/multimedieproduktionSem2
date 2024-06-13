@@ -60,10 +60,7 @@ p,
 span {
     font-family: "Roboto Condensed", sans-serif;
 }
-.hoverEffekt:hover{
-    color: var(--white);
-    text-decoration: underline;
-}
+
 body {
     margin: 0;
     font-family: "Roboto Condensed", sans-serif;
@@ -490,6 +487,10 @@ p {
     max-width: 100%;
     
 }
+.hoverEffekt:hover{
+    background-color: var(--blaa);
+    transition: 0.5s;
+}
 /* arrangement */
 
  .arrangementHeader {
@@ -900,7 +901,7 @@ img {
         display: block;
         animation: jumparrow 1.2s ease-in-out;
         animation-iteration-count: infinite;
-        border-style: dashed;
+        border-style: solid;
         border-radius: 100%;
         padding: 7px 15px;
         font-size: 3.5rem;

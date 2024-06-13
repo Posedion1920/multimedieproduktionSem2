@@ -1677,6 +1677,9 @@ iframe {
 .fa-angle-down{
     transition: transform 0.5s;
 }
+.fa-angle-down{
+    color: white !important;
+}
 
 
 .downArrow{

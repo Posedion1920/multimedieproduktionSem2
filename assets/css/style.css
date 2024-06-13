@@ -186,8 +186,23 @@ nav a {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+@keyframes jumparrow {
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(1rem);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+#jumparrowElement{
+  display: none;
+}
 
-.fade-in-element {
+
+.fadeElement {
   opacity: 0;
   animation: fade 1s ease-out;
   animation-fill-mode: forwards;
@@ -762,6 +777,20 @@ border-radius: 0.5rem;
 
 @media screen and (min-width: 1000px) {
 
+    #jumparrowElement{
+        display: block;
+        animation: jumparrow 1.2s ease-in-out;
+        animation-iteration-count: infinite;
+        border-style: dashed;
+        border-radius: 100%;
+        padding: 7px 15px;
+        font-size: 3.5rem;
+        color: var(--gul) !important;
+        position: absolute;
+        top: 81vh;
+        right: 48vw;
+        background-color: #f2f2f2;
+    }
     .arrangementHeader,
     .traeningHeader {
         display: none;

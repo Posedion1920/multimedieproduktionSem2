@@ -602,145 +602,7 @@ p {
     margin-bottom: var(--smallSpacing);
 }
 
-/* media queries til refusion og udgift */
-@media screen and (min-width: 1000px) {
-    .refusionUdgift {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
 
-    .roedtKort {
-        grid-column: 1;
-        grid-row: 2;
-        padding-left: var(--xLargeSpacing);
-        padding-right: var(--xLargeSpacing);
-        padding-top: var(--xLargeSpacing);
-    }
-
-    .imgRefusionUdgift {
-        margin-bottom: var(--mediumSpacing);
-    }
-
-    .refusion {
-        padding-left: var(--xLargeSpacing);
-        padding-right: var(--xLargeSpacing);
-        padding-top: var(--xLargeSpacing);
-    }
-
-}
-
-
-
-@media screen and (min-width: 1000px) {
-    #hideMegaMenu ul:last-of-type{
-        margin-left: 43px;
-    }
-    .flexLister{
-        display: flex;
-        gap: 5rem;
-    }
-    .centerGrid {
-        font-size: 20px;
-    }
-
-    .utility {
-        font-size: 20px;
-        padding-inline: 0px;
-    }
-
-    .utility:last-of-type {
-        margin-bottom: 0px;
-    }
-
-    .traeningstider {
-        padding: 0px 3rem 0px 3rem;
-    }
-
-    .desktopForside {
-        display: grid;
-        grid-template-columns: [first] 2fr [line2] 1fr [end];
-        padding: 0px 3rem 0px 3rem;
-    }
-
-    .herovideo {
-        width: 100%;
-        height: 85vh;
-        object-fit: cover;
-
-    }
-    .desktopForside{
-        gap: 3rem;
-        
-    }
-
-    .vaerdier{
-        display:flex;
-        padding-right: 0;
-        justify-content: space-between;
-        margin-top: var(--largeSpacing);       
-        
-    }
-
-    .aalbrogHKForside {
-        grid-row-start: 1;
-        grid-row-end: 2;
-        margin-top: var(--largeSpacing);
-        padding-right: 3rem;
-    }
-
-    
-    
-    .aalbrogHKForside p {
-       
-        font-size: 20px;
-    }
-
-    .blivTraener p {
-        
-        font-size: 20px;
-    }
-
-    .blivTraener h2 {
-        margin-left: 0px;
-    }
-
-
-    .blivTraener {
-        grid-column-start: 1;
-        grid-template-rows: 3;
-    }
-
-    .btn {
-        padding: 1.5rem;
-        width: 20rem;
-        font-size:large;
-    }
-
-
-    .kalender {
-        grid-row-start: 1;
-        grid-row-end: 2;
-        margin-top: var(--largeSpacing);
-        padding:var(--largeSpacing);
-    }
-
-    .kommendeArrange h2 {
-        text-align: left;
-    }
-
-    .sponsorForside {
-        flex-direction: row;
-        gap: 3rem;
-        justify-content: center;
-    }
-    .vaerdi1, .vaerdi3{
-        justify-self: end;
-    }
-    .vaerdi2, .vaerdi4{
-        justify-self: start;
-    }
-}
 
 /* traenere */
 .kontaktOsWrapper {
@@ -907,6 +769,576 @@ img {
 
 /* media queries */
 
+
+.eventsection h1,
+h3 {
+    text-align: center;
+}
+
+.salg {
+    display: flex;
+    /* gap: 2rem; */
+    align-items: center;
+}
+
+.eventImage img {
+    width: 100%;
+}
+
+
+
+
+/* Sommertraening */
+.traeningHeader {
+    background-image: url(../billeder/sommertraeningHeader.jpg);
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    height: 18vh;
+}
+
+.sommertraening {
+    display: none;
+}
+
+.centerbtn {
+    display: block;
+    margin: auto;
+    margin-bottom: 5rem;
+}
+
+.mandag {
+    display: grid;
+    grid-template-columns: 110px 248px;
+    /* gap: 3rem; */
+}
+
+.dag {
+    text-align: center;
+    background-color: var(--lysBlaa);
+    color: white;
+    max-width: 110px;
+    margin-bottom: 1px;
+}
+
+.radius {
+    border-top-left-radius: 10px;
+}
+
+.daybox {
+    background-color: white;
+    border-radius: 6px;
+    padding-bottom: 1rem;
+    margin-left: 6px;
+    margin-bottom: 6px
+}
+
+.daybox p {
+    margin-top: 0px;
+}
+
+.sommertraeningUngdomDesk {
+    display: none;
+}
+
+
+
+
+/* Selve holdsiden */
+.holdesideGrid h3 {
+    text-align: left;
+
+}
+
+.fremhaeveTekst {
+    font-weight: bold;
+    margin: 0;
+}
+
+.tilbyder p {
+    margin-top: 0;
+}
+
+.medlemansvarlig {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.medlemansvarlig img {
+    padding: 0;
+    object-fit: contain;
+}
+
+.medlemansvarlig i,
+.tiderHold i,
+.traenereSektion i {
+    color: var(--blaa);
+    margin-right: 0.5rem;
+}
+
+.holdesideGrid img {
+    max-width: 100%;
+    height: auto
+}
+
+.tilmeldHold {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.tilmeldHold h4 {
+    margin: 0px;
+    padding-top: 1.5rem;
+}
+
+.tilmeldHold .fremhaeveTekst {
+    text-align: right;
+}
+
+.mobilHold {
+    padding: 1rem;
+}
+
+.btncontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.flexhold {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.tiderHold h4 {
+    text-align: center;
+}
+
+.tid {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+.traeningsdag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 17px;
+    width: 114px;
+    height: 102px;
+    background-color: #BAD97C;
+    color: #657B3D;
+}
+
+.traenigstid1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.traenere div {
+    background-color: white;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+
+
+
+/* Faciliteter */
+.faciliteter img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+
+
+
+.menU{
+    list-style-type: none;
+}
+
+.navDropDown ul{
+    list-style-type: none;
+}
+
+.ungdomsholdListe,.seniorholdListe,.øvrigeHold, .ungdomsholdListe>ul{
+    list-style-type: none;
+    padding: 0px;
+}
+.trainer div {
+    background-color: white;
+    border-radius: 4px;
+    padding: 1rem;
+}
+.alignself{
+    margin-bottom: 10px;
+}
+.trainer p{
+    margin: 0px;
+}
+
+.alignself p{
+    padding: 0px;
+}
+
+
+
+.seniorholdListe>ul, .øvrigeHold>ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+
+.seniorholdListe>ul>li{
+    padding-bottom: 50px;
+}
+
+.paddingHoldListe{
+    padding-bottom: 8px;
+}
+
+
+
+.megaMenu ul{
+    padding: 0px;
+}
+
+.megaMenu{
+    display: none;
+}
+
+
+iframe {
+    display: flex;
+    margin: auto;
+    width: 700px;
+    height: 1056px;
+}
+
+.aarsplanHeading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.mobileNav .fa-bars {
+    font-size: 33px;
+    color: #fce144;
+}
+
+.hello {
+    height: 40vh;
+    background-color: red;
+}
+
+.fa-arrow-down {
+    color: white !important;
+}
+
+.navBurger {
+    display: none;
+    padding-right: 2rem;
+}
+
+.navBurger>ul>li {
+    list-style-type: none;
+}
+/* mobile nav */
+
+.show {
+    display: block !important;
+}
+
+.tilmeldDropdown {
+    display: none;
+}
+.ungdomsholdListe, .seniorholdListe, .øvrigeHold{
+    margin-top: var(--mediumSpacing);
+}
+
+
+
+.praktiskDropdown {
+    display: none;
+}
+
+.menU {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#hideMegaMenu{
+    display: none;
+}
+.fa-angle-down{
+    transition: transform 0.5s;
+}
+.fa-angle-down{
+    color: white !important;
+}
+
+
+.downArrow{
+    transform: rotate(180deg);
+}
+
+/* media queries til refusion og udgift */
+@media screen and (min-width: 1000px) {
+    .refusionUdgift {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .roedtKort {
+        grid-column: 1;
+        grid-row: 2;
+        padding-left: var(--xLargeSpacing);
+        padding-right: var(--xLargeSpacing);
+        padding-top: var(--xLargeSpacing);
+    }
+
+    .imgRefusionUdgift {
+        margin-bottom: var(--mediumSpacing);
+    }
+
+    .refusion {
+        padding-left: var(--xLargeSpacing);
+        padding-right: var(--xLargeSpacing);
+        padding-top: var(--xLargeSpacing);
+    }
+
+}
+@media screen and (min-width: 1000px) {
+    .faciliteter {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 2rem;
+        padding: 0px 3rem 0px 3rem;
+        align-items: center;
+        gap: 3rem;
+
+    }
+
+
+    .faciliteter img {
+        max-width: 100%;
+        max-height: 500px;
+    }
+
+    .faciTekst {
+        padding: 2rem;
+        align-items: center;
+    }
+
+    .headtext {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 50%;
+        padding: 3.3rem;
+    }
+    .gemVaeK{
+        display: none;
+    }
+    .dropDownMenu{
+        display: block;
+        margin-top: 10px;
+        position: absolute;
+        background-color: black;
+        list-style-type: none;
+        padding-left: 0px;
+        border-radius: 4px;
+        z-index: 100;
+    }
+    
+    .kek{
+        width: 110px;
+        display: flex;
+        justify-content: start;
+        padding-left: 12px;
+        padding-bottom: 10px;
+        padding-top: 8px
+    }
+
+    .megaMenu{
+        background-color: #062142;
+        position: absolute;
+        width: 100%;
+        display: grid !important;
+        grid-template-columns: repeat(4,1fr);
+        justify-items: center;
+        color: white;
+        z-index: 100;
+    }
+    .megaMenu ul{
+        list-style-type: none;
+    }
+    .megaMenu p{
+        padding-bottom: 10px;
+    }
+    .megaMenu a{
+        color: white;
+        text-decoration: none;
+    }
+    .justifyCenter{
+        margin-bottom: 0.7px;
+    }
+    .menU{
+        display: none !important;
+    }
+    #hideMegaMenu p{
+        font-weight: bolder;
+    }
+    .liFlex{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .padGap{
+        padding-right: 5px;
+    }
+    .paddingquick{
+        padding-left: 6px;
+    }
+    .fa-user{
+        font-size: 24px;
+        color: var(--gul);
+    }
+    .trainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        /* Tilføj gap her */
+        margin: 0;
+    }
+    
+    
+    .boldText{
+        font-weight: bold;
+    }
+
+}
+
+
+
+@media screen and (min-width: 1000px) {
+    #hideMegaMenu ul:last-of-type{
+        margin-left: 43px;
+    }
+    .flexLister{
+        display: flex;
+        gap: 5rem;
+    }
+    .centerGrid {
+        font-size: 20px;
+    }
+
+    .utility {
+        font-size: 20px;
+        padding-inline: 0px;
+    }
+
+    .utility:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    .traeningstider {
+        padding: 0px 3rem 0px 3rem;
+    }
+
+    .desktopForside {
+        display: grid;
+        grid-template-columns: [first] 2fr [line2] 1fr [end];
+        padding: 0px 3rem 0px 3rem;
+    }
+
+    .herovideo {
+        width: 100%;
+        height: 85vh;
+        object-fit: cover;
+
+    }
+    .desktopForside{
+        gap: 3rem;
+        
+    }
+
+    .vaerdier{
+        display:flex;
+        padding-right: 0;
+        justify-content: space-between;
+        margin-top: var(--largeSpacing);       
+        
+    }
+
+    .aalbrogHKForside {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin-top: var(--largeSpacing);
+        padding-right: 3rem;
+    }
+
+    
+    
+    .aalbrogHKForside p {
+       
+        font-size: 20px;
+    }
+
+    .blivTraener p {
+        
+        font-size: 20px;
+    }
+
+    .blivTraener h2 {
+        margin-left: 0px;
+    }
+
+
+    .blivTraener {
+        grid-column-start: 1;
+        grid-template-rows: 3;
+    }
+
+    .btn {
+        padding: 1.5rem;
+        width: 20rem;
+        font-size:large;
+    }
+
+
+    .kalender {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin-top: var(--largeSpacing);
+        padding:var(--largeSpacing);
+    }
+
+    .kommendeArrange h2 {
+        text-align: left;
+    }
+
+    .sponsorForside {
+        flex-direction: row;
+        gap: 3rem;
+        justify-content: center;
+    }
+    .vaerdi1, .vaerdi3{
+        justify-self: end;
+    }
+    .vaerdi2, .vaerdi4{
+        justify-self: start;
+    }
+}
 @media screen and (min-width: 1000px) {
 
     #jumparrowElement{
@@ -1315,188 +1747,6 @@ img {
 
     }
 }
-
-.eventsection h1,
-h3 {
-    text-align: center;
-}
-
-.salg {
-    display: flex;
-    /* gap: 2rem; */
-    align-items: center;
-}
-
-.eventImage img {
-    width: 100%;
-}
-
-
-
-
-/* Sommertraening */
-.traeningHeader {
-    background-image: url(../billeder/sommertraeningHeader.jpg);
-    background-repeat: no-repeat;
-    /* background-size: contain; */
-    height: 18vh;
-}
-
-.sommertraening {
-    display: none;
-}
-
-.centerbtn {
-    display: block;
-    margin: auto;
-    margin-bottom: 5rem;
-}
-
-.mandag {
-    display: grid;
-    grid-template-columns: 110px 248px;
-    /* gap: 3rem; */
-}
-
-.dag {
-    text-align: center;
-    background-color: var(--lysBlaa);
-    color: white;
-    max-width: 110px;
-    margin-bottom: 1px;
-}
-
-.radius {
-    border-top-left-radius: 10px;
-}
-
-.daybox {
-    background-color: white;
-    border-radius: 6px;
-    padding-bottom: 1rem;
-    margin-left: 6px;
-    margin-bottom: 6px
-}
-
-.daybox p {
-    margin-top: 0px;
-}
-
-.sommertraeningUngdomDesk {
-    display: none;
-}
-
-
-
-
-/* Selve holdsiden */
-.holdesideGrid h3 {
-    text-align: left;
-
-}
-
-.fremhaeveTekst {
-    font-weight: bold;
-    margin: 0;
-}
-
-.tilbyder p {
-    margin-top: 0;
-}
-
-.medlemansvarlig {
-    display: flex;
-    background-color: white;
-    border-radius: 10px;
-    padding: 1rem;
-}
-
-.medlemansvarlig img {
-    padding: 0;
-    object-fit: contain;
-}
-
-.medlemansvarlig i,
-.tiderHold i,
-.traenereSektion i {
-    color: var(--blaa);
-    margin-right: 0.5rem;
-}
-
-.holdesideGrid img {
-    max-width: 100%;
-    height: auto
-}
-
-.tilmeldHold {
-    background-color: white;
-    border-radius: 10px;
-    padding: 1rem;
-}
-
-.tilmeldHold h4 {
-    margin: 0px;
-    padding-top: 1.5rem;
-}
-
-.tilmeldHold .fremhaeveTekst {
-    text-align: right;
-}
-
-.mobilHold {
-    padding: 1rem;
-}
-
-.btncontainer {
-    display: flex;
-    justify-content: center;
-}
-
-.flexhold {
-    display: flex;
-    justify-content: space-around;
-    gap: 1rem;
-}
-
-.tiderHold h4 {
-    text-align: center;
-}
-
-.tid {
-    background-color: white;
-    border-radius: 10px;
-    display: flex;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    align-items: center;
-    gap: 2rem;
-}
-
-.traeningsdag {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 17px;
-    width: 114px;
-    height: 102px;
-    background-color: #BAD97C;
-    color: #657B3D;
-}
-
-.traenigstid1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-
-.traenere div {
-    background-color: white;
-    border-radius: 4px;
-    padding: 1rem;
-}
-
-
 /* Holdsiden  desktop*/
 @media screen and (min-width: 1000px) {
     .holdesideGrid {
@@ -1562,256 +1812,6 @@ h3 {
 
 
 }
-
-
-/* Faciliteter */
-.faciliteter img {
-    max-width: 100%;
-    object-fit: cover;
-}
-
-
-
-@media screen and (min-width: 1000px) {
-    .faciliteter {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        margin-bottom: 2rem;
-        padding: 0px 3rem 0px 3rem;
-        align-items: center;
-        gap: 3rem;
-
-    }
-
-
-    .faciliteter img {
-        max-width: 100%;
-        max-height: 500px;
-    }
-
-    .faciTekst {
-        padding: 2rem;
-        align-items: center;
-    }
-
-    .headtext {
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 50%;
-        padding: 3.3rem;
-    }
-    .gemVaeK{
-        display: none;
-    }
-    .dropDownMenu{
-        display: block;
-        margin-top: 10px;
-        position: absolute;
-        background-color: black;
-        list-style-type: none;
-        padding-left: 0px;
-        border-radius: 4px;
-        z-index: 100;
-    }
-    
-    .kek{
-        width: 110px;
-        display: flex;
-        justify-content: start;
-        padding-left: 12px;
-        padding-bottom: 10px;
-        padding-top: 8px
-    }
-
-    .megaMenu{
-        background-color: #062142;
-        position: absolute;
-        width: 100%;
-        display: grid !important;
-        grid-template-columns: repeat(4,1fr);
-        justify-items: center;
-        color: white;
-        z-index: 100;
-    }
-    .megaMenu ul{
-        list-style-type: none;
-    }
-    .megaMenu p{
-        padding-bottom: 10px;
-    }
-    .megaMenu a{
-        color: white;
-        text-decoration: none;
-    }
-    .justifyCenter{
-        margin-bottom: 0.7px;
-    }
-    .menU{
-        display: none !important;
-    }
-    #hideMegaMenu p{
-        font-weight: bolder;
-    }
-    .liFlex{
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
-    .padGap{
-        padding-right: 5px;
-    }
-    .paddingquick{
-        padding-left: 6px;
-    }
-    .fa-user{
-        font-size: 24px;
-        color: var(--gul);
-    }
-    .trainer{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;
-        /* Tilføj gap her */
-        margin: 0;
-    }
-    
-    
-    .boldText{
-        font-weight: bold;
-    }
-
-}
-
-.menU{
-    list-style-type: none;
-}
-
-.navDropDown ul{
-    list-style-type: none;
-}
-
-.ungdomsholdListe,.seniorholdListe,.øvrigeHold, .ungdomsholdListe>ul{
-    list-style-type: none;
-    padding: 0px;
-}
-.trainer div {
-    background-color: white;
-    border-radius: 4px;
-    padding: 1rem;
-}
-.alignself{
-    margin-bottom: 10px;
-}
-.trainer p{
-    margin: 0px;
-}
-
-.alignself p{
-    padding: 0px;
-}
-
-
-
-.seniorholdListe>ul, .øvrigeHold>ul{
-    list-style-type: none;
-    padding: 0px;
-}
-
-
-.seniorholdListe>ul>li{
-    padding-bottom: 50px;
-}
-
-.paddingHoldListe{
-    padding-bottom: 8px;
-}
-
-
-
-.megaMenu ul{
-    padding: 0px;
-}
-
-.megaMenu{
-    display: none;
-}
-
-
-iframe {
-    display: flex;
-    margin: auto;
-    width: 700px;
-    height: 1056px;
-}
-
-.aarsplanHeading {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.mobileNav .fa-bars {
-    font-size: 33px;
-    color: #fce144;
-}
-
-.hello {
-    height: 40vh;
-    background-color: red;
-}
-
-.fa-arrow-down {
-    color: white !important;
-}
-
-.navBurger {
-    display: none;
-    padding-right: 2rem;
-}
-
-.navBurger>ul>li {
-    list-style-type: none;
-}
-
-
-.show {
-    display: block !important;
-}
-
-.tilmeldDropdown {
-    display: none;
-}
-.ungdomsholdListe, .seniorholdListe, .øvrigeHold{
-    margin-top: var(--mediumSpacing);
-}
-
-
-
-.praktiskDropdown {
-    display: none;
-}
-
-.menU {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-#hideMegaMenu{
-    display: none;
-}
-.fa-angle-down{
-    transition: transform 0.5s;
-}
-.fa-angle-down{
-    color: white !important;
-}
-
-
-.downArrow{
-    transform: rotate(180deg);
-}
-
-
 
 
 

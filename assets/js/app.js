@@ -533,6 +533,7 @@ function renderEntryPoints(posts){
         if(entryPointsID.includes(idTempHolder)){
             const aLinkEL = document.createElement("a");
             aLinkEL.href = `selvearrangement.html?id=${post.id}`;
+            aLinkEL.classList.add("eventA");
             aside.append(aLinkEL);
             const divEl = document.createElement("div");
             aLinkEL.append(divEl);
@@ -640,6 +641,7 @@ function makeLabelsMobile(posts){
             boyTeamLink.href = `holdsiden.html?id=${post.id}`;
             boyTeamList.append(boyTeamLink);
             const boyTeamLabel = document.createElement("li")
+            boyTeamLabel.classList.add("paddingHoldListe");
             boyTeamLabel.textContent = post.acf.holdnavn;
             boyTeamLink.append(boyTeamLabel);
         }
@@ -648,6 +650,7 @@ function makeLabelsMobile(posts){
             girlTeamLink.href = `holdsiden.html?id=${post.id}`;
             girlTeamList.append(girlTeamLink);
             const girlTeamLabel = document.createElement("li")
+            girlTeamLabel.classList.add("paddingHoldListe");
             girlTeamLabel.textContent = post.acf.holdnavn;
             girlTeamLink.append(girlTeamLabel);
         }
@@ -656,6 +659,7 @@ function makeLabelsMobile(posts){
             childrenTeamLink.href = `holdsiden.html?id=${post.id}`;
             childrenTeamList.append(childrenTeamLink);
             const childrenTeamLabel = document.createElement("li")
+            childrenTeamLabel.classList.add("paddingHoldListe");
             childrenTeamLabel.textContent = post.acf.holdnavn;
             childrenTeamLink.append(childrenTeamLabel);
         }
@@ -664,6 +668,7 @@ function makeLabelsMobile(posts){
             menTeamLink.href = `holdsiden.html?id=${post.id}`;
             menTeamList.append(menTeamLink);
             const menTeamLabel = document.createElement("li")
+            menTeamLabel.classList.add("paddingHoldListe");
             menTeamLabel.textContent = post.acf.holdnavn;
             menTeamLink.append(menTeamLabel);
         }
@@ -672,6 +677,7 @@ function makeLabelsMobile(posts){
             womenTeamLink.href = `holdsiden.html?id=${post.id}`;
             womenTeamList.append(womenTeamLink);
             const womenTeamLabel = document.createElement("li")
+            womenTeamLabel.classList.add("paddingHoldListe");
             womenTeamLabel.textContent = post.acf.holdnavn;
             womenTeamLink.append(womenTeamLabel);
         }
@@ -681,6 +687,7 @@ function makeLabelsMobile(posts){
             otherTeamLink.href = `holdsiden.html?id=${post.id}`;
             otherTeamsList.append(otherTeamLink);
             const otherTeamLabel = document.createElement("li")
+            otherTeamLabel.classList.add("paddingHoldListe");
             otherTeamLabel.textContent = post.acf.holdnavn;
             otherTeamLink.append(otherTeamLabel);
         }

@@ -63,6 +63,7 @@ span {
 
 body {
     margin: 0;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 footer {
@@ -616,6 +617,9 @@ p {
 
 
 @media screen and (min-width: 1000px) {
+    #hideMegaMenu ul:last-of-type{
+        margin-left: 43px;
+    }
     .flexLister{
         display: flex;
         gap: 5rem;
@@ -1636,8 +1640,35 @@ h3 {
     .paddingquick{
         padding-left: 6px;
     }
+    .fa-user{
+        font-size: 24px;
+        color: var(--gul);
+    }
 
 }
+
+.ungdomsholdListe,.seniorholdListe,.øvrigeHold, .ungdomsholdListe>ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+
+.seniorholdListe>ul, .øvrigeHold>ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+
+.seniorholdListe>ul>li{
+    padding-bottom: 50px;
+}
+
+.paddingHoldListe{
+    padding-bottom: 8px;
+}
+
+
+
 .megaMenu ul{
     padding: 0px;
 }

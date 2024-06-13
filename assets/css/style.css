@@ -272,6 +272,7 @@ main {
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
     margin-top: var(--xLargeSpacing);
+    align-items: end;
 }
 .OmOsVærdier div{
     display: flex;
@@ -744,6 +745,13 @@ img {
     border-radius: 0.5rem;
     color: black;
     margin-bottom: var(--mediumSpacing);
+    width: 42vw;
+    
+}
+.cardWrapper{
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 .cardsUdvalg img {
@@ -753,7 +761,7 @@ img {
 
 .cardsUdvalg p {
     margin: 0;
-    margin-inline: 15px;
+    margin-inline: auto;
     padding-bottom: 10px;
 }
 
@@ -784,6 +792,10 @@ img {
     border-bottom-right-radius: 0;
     background-color: #D8DEE5;
     color: black;
+}
+.active i{
+    color: var(--blaa) !important;
+    transform: rotate(-90deg) !important;
 }
 
 .panel {
@@ -819,7 +831,8 @@ img {
 
 .accordion i {
     transform: rotate(90deg);
-
+    color: var(--white);
+    margin-right: 5%;
 }
 
 
@@ -957,15 +970,29 @@ img {
     }
 
     /* udvalg */
+    .accordion{
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .cardWrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: var(--largeSpacing);
+        gap: var(--xLargeSpacing);
 
+    }
+    .cardsUdvalg{
+        width: unset;
     }
     .cardsUdvalg img {
         width: 100%;
+        width: unset;
+    }
+    .panel{
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .cardWrapper img {

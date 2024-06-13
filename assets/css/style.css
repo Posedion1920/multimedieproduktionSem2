@@ -1578,6 +1578,7 @@ h2,
         grid-template-columns: repeat(4,1fr);
         justify-items: center;
         color: white;
+        z-index: 100;
     }
     .megaMenu ul{
         list-style-type: none;

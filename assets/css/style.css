@@ -1505,13 +1505,18 @@ h2,
         max-width: 50%;
         padding: 3.3rem;
     }
-    /* .test{
+    .gemVæK{
+        display: none;
+    }
+    .dropDownMenu{
+        display: block;
         margin-top: 10px;
         position: absolute;
         background-color: black;
         list-style-type: none;
         padding-left: 0px;
         border-radius: 4px;
+        z-index: 100;
     }
     
     .kek{
@@ -1520,7 +1525,9 @@ h2,
         justify-content: start;
         padding-left: 12px;
         padding-bottom: 10px;
-    } */
+        padding-top: 8px
+    }
+
     .megaMenu{
         background-color: #062142;
         position: absolute;
@@ -1549,6 +1556,14 @@ h2,
     #hideMegaMenu p{
         font-weight: bolder;
     }
+    .liFlex{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .padGap{
+        padding-right: 5px;
+    }
 
 }
 .megaMenu ul{
@@ -1574,6 +1589,7 @@ iframe {
 
 .mobileNav .fa-bars {
     font-size: 33px;
+    color: #fce144;
 }
 
 .hello {
@@ -1616,5 +1632,11 @@ iframe {
 #hideMegaMenu{
     display: none;
 }
+.fa-angle-down{
+    transition: transform 0.5s;
+}
 
 
+.downArrow{
+    transform: rotate(180deg);
+}

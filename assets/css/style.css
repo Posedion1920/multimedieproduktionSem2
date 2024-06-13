@@ -267,7 +267,12 @@ main {
     padding: 0;
     margin-bottom: var(--largeSpacing);
 }
-
+/* årsplan */
+.aarsplan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* Om Os */
 .gridOmOs {
     display: grid;
@@ -574,7 +579,10 @@ p {
 .blivTraener>.btn {
     margin-left: 0px;
 }
-
+.fuldscreen{
+    text-decoration: none;
+    color: var(--white);
+}
 /*Styling af refusion og udgifter*/
 
 .imgRefusionUdgift {

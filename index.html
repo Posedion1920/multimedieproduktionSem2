@@ -3,13 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <meta
+      name="description"
+      content="Aalborg HKs forside. En fin ide om hvad Aalborg HK er, og hvad vi tilbyder"
+    />
+    <meta
+      name="keywords"
+      content="Aalborg HK, Håndbold, Aalborg, Sport, Fællesskab, Selskab, Sammenhold, Udvikling"
+    />
     <link
       rel="shortcut icon"
       type="image/x-icon"
       href="./assets/Billeder/Favicon.png"
     />
+    <title>Forside</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -17,122 +25,275 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <script src="./assets/js/app.js" defer></script>
+    <script src="./assets/js/forside.js" defer></script>
     <script src="./assets/js/burgermenu.js" defer></script>
   </head>
   <body>
-    <header>
-      <div>
-        <nav>
-          <div class="mobileNav flex alignCenter">
-            <a href="/forside.html"></a
+    <div>
+      <nav>
+        <div class="mobileNav flex alignCenter">
+          <a href="/index.html"
             ><img
               class="Logo"
               src="./assets/Billeder/ahk_gullogo.png"
               alt="Logo"
-            />
-            <h1>Aalborg HK</h1>
-            <i class="fa-solid fa-bars"></i>
-          </div>
-          <div class="navBurger">
-            <ul class="menU">
-              <li class="navDropDown">
-                <a href="#"></a>Tilmelding af hold
-                <i class="fa-solid fa-angle-down"></i>
-                <ul class="tilmeldDropdown">
-                  <li class="ungdomsholdListe">Ungdomshold</li>
-
-                  <li class="seniorholdListe">Senior hold</li>
-
-                  <li class="øvrigeHold">Øvrige</li>
-                </ul>
-              </li>
-              <a href="/OmOs.html"> <li>Om os</li></a>
-              <a href="/trænere.html"><li>Bliv trænere</li></a>
-              <a href="/udvalg.html"><li>Udvalg</li></a>
-              <a href="/arrangementer.html"><li>Arrangementer</li></a>
-              <li class="navDropDown">
-                Praktisk info <i class="fa-solid fa-angle-down"></i>
-                <ul class="praktiskDropdown">
-                  <a href="/faciliteter.html">
-                    <li>Faciliteter</li>
-                  </a>
-                  <a href="/refusionUdgift.html">
-                    <li>Refusion og udgifter</li>
-                  </a>
-                  <a href="/årsplan.html">
-                    <li>Årsplan</li>
-                  </a>
-                  <a href="/vedtaegter.html">
-                    <li>Vedtægter</li>
-                  </a>
-                  <a href="/privatlivspolitik.html">
-                    <li>Privatpolitik</li>
-                  </a>
-                  <a href="/sponsor.html">
-                    <li>Sponsorer</li>
-                  </a>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <ul class="flex justifyCenter alignCenter navListe">
-            <li>
-              <a href="forside.html"
-                ><img
-                  class="Logo"
-                  src="./assets/Billeder/ahk_gullogo.png"
-                  alt="Logo"
-              /></a>
-            </li>
-            <li class="liFlex navDropDown">
-              Tilmelding af hold<i class="fa-solid fa-angle-down"></i>
-            </li>
-            <li>
-              <a href="/OmOs.html">Om os</a>
-            </li>
-            <li>
-              <a href="/trænere.html">Trænere</a>
-            </li>
-            <li>
-              <a href="/arrangementer.html">Arrangemeter</a>
-            </li>
-            <li>
-              <a href="/udvalg.html">Kontakt udvalg</a>
-            </li>
-
+          /></a>
+          <h1>Aalborg HK</h1>
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="navBurger">
+          <ul class="menU">
             <li class="navDropDown">
-              Praktisk info<i class="fa-solid fa-angle-down paddingquick"></i>
-              <ul id="dropDownMenu" class="gemVaeK">
-                <a href="/faciliteter.html"><li class="kek">Faciliteter</li></a>
-                <a href="/refusionUdgift.html"
-                  ><li class="kek">Refusion og udgifter</li></a
-                >
-                <a href="/årsplan.html"><li class="kek">Årsplan</li></a>
-                <a href="/vedtaegter.html"> <li class="kek">Vedtægter</li></a>
-                <a href="/privatlivspolitik.html">
-                  <li class="kek">Privatpolitik</li></a
-                >
-                <a href="/sponsor.html"><li class="kek">Sponsorer</li></a>
+              <a href="#"></a>Tilmelding af hold
+              <i class="fa-solid fa-angle-down"></i>
+              <ul class="tilmeldDropdown">
+                <li class="ungdomsholdListe">Ungdomshold</li>
+
+                <li class="seniorholdListe">Senior hold</li>
+
+                <li class="øvrigeHold">Øvrige</li>
               </ul>
             </li>
-
-            <li></li>
-            <li>
-              <a href=""><i class="fa-solid fa-user"></i></a>
+            <a href="/OmOs.html"> <li>Om os</li></a>
+            <a href="/traenere.html"><li>Bliv trænere</li></a>
+            <a href="/udvalg.html"><li>Udvalg</li></a>
+            <a href="/arrangementer.html"><li>Arrangementer</li></a>
+            <li class="navDropDown">
+              Praktisk info <i class="fa-solid fa-angle-down"></i>
+              <ul class="praktiskDropdown">
+                <a href="/faciliteter.html">
+                  <li>Faciliteter</li>
+                </a>
+                <a href="/refusionUdgift.html">
+                  <li>Refusion og udgifter</li>
+                </a>
+                <a href="/aarsplan.html">
+                  <li>Årsplan</li>
+                </a>
+                <a href="/vedtaegter.html">
+                  <li>Vedtægter</li>
+                </a>
+                <a href="/privatlivspolitik.html">
+                  <li>Privatpolitik</li>
+                </a>
+                <a href="/sponsor.html">
+                  <li>Sponsorer</li>
+                </a>
+              </ul>
             </li>
           </ul>
-        </nav>
-      </div>
-      <div id="hideMegaMenu"></div>
-    </header>
+        </div>
+        <ul class="flex justifyCenter alignCenter navListe">
+          <li>
+            <a href="index.html"
+              ><img
+                class="Logo"
+                src="./assets/Billeder/ahk_gullogo.png"
+                alt="Logo"
+            /></a>
+          </li>
+          <li class="liFlex navDropDown">
+            Tilmelding af hold<i class="fa-solid fa-angle-down"></i>
+          </li>
+          <li>
+            <a href="/OmOs.html">Om os</a>
+          </li>
+          <li>
+            <a href="/traenere.html">Trænere</a>
+          </li>
+          <li>
+            <a href="/arrangementer.html">Arrangemeter</a>
+          </li>
+          <li>
+            <a href="/udvalg.html">Kontakt udvalg</a>
+          </li>
 
-    <main>
-      <h1>Aalborg HK</h1>
-      <a class="btn" href="">Læs mere om træner og trænergodtgørelse</a>
-      <h2>ksdåpksdpf</h2>
-      <h3>fosdkfsdpf</h3>
-    </main>
+          <li class="navDropDown">
+            Praktisk info<i class="fa-solid fa-angle-down paddingquick"></i>
+            <ul id="dropDownMenu" class="gemVaeK">
+              <a href="/faciliteter.html"><li class="kek">Faciliteter</li></a>
+              <a href="/refusionUdgift.html"
+                ><li class="kek">Refusion og udgifter</li></a
+              >
+              <a href="/aarsplan.html"><li class="kek">Årsplan</li></a>
+              <a href="/vedtaegter.html"> <li class="kek">Vedtægter</li></a>
+              <a href="/privatlivspolitik.html">
+                <li class="kek">Privatpolitik</li></a
+              >
+              <a href="/sponsor.html"><li class="kek">Sponsorer</li></a>
+            </ul>
+          </li>
+
+          <li></li>
+          <li>
+            <a href=""><i class="fa-solid fa-user"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id="hideMegaMenu"></div>
+    <div class="forsideVideo">
+      <video
+        autoplay
+        muted
+        class="herovideo"
+        src="./assets/Billeder/Herovideo.mp4"
+      ></video>
+      <i class="fa-solid fa-arrow-down" id="jumparrowElement"></i>
+    </div>
+    <div class="desktopPadding">
+      <article class="aalbrogHKForside">
+        <h1>Aalborg HK</h1>
+        <p>
+          Aalborg Håndbold er mere end bare en sportsklub. Vi er et fællesskab,
+          hvor alle er velkomne, uanset alder, niveau eller talent. Vi tror på
+          bredden i håndbolden og at alle skal have mulighed for at deltage.
+        </p>
+        <p>
+          Hos Aalborg Håndbold er håndbold mere end bare et spil. Det handler om
+          glæde, bevægelse og sammenhold. Vi ønsker at skabe et inspirerende
+          miljø, hvor alle kan udvikle sig både som håndboldspillere og
+          mennesker.
+        </p>
+        <p>
+          Fællesskabet er kernen i alt, hvad vi gør. Vi arrangerer løbende
+          sociale arrangementer for både spillere, trænere og frivillige. Vi
+          tror på, at stærke relationer uden for banen skaber et endnu stærkere
+          hold på banen. Vores værdier er funderet i frivillighed og respekt. Vi
+          er stolte af vores unge talenter, der ikke kun bidrager på banen, men
+          også tager et aktivt ansvar som trænere for de yngre generationer.
+          Dette skaber et unikt sammenhold, hvor vi alle støtter hinanden og
+          lærer af hinanden.
+        </p>
+        <section class="vaerdier">
+          <div class="vaerdi1">
+            <i class="material-symbols-outlined"> diversity_2 </i>
+            <p>Fællesskab</p>
+          </div>
+          <div class="vaerdi2">
+            <i class="fa-solid fa-handshake vIkon"></i>
+            <p>Respekt</p>
+          </div>
+          <div class="vaerdi3">
+            <i class="material-symbols-outlined"> diversity_1 </i>
+            <p>Diversitet</p>
+          </div>
+          <div class="vaerdi4">
+            <i class="fa-solid fa-hand-holding-heart vIkon"></i>
+            <p>Frivillighed</p>
+          </div>
+        </section>
+      </article>
+      <section class="blivTraener">
+        <video controls src="./assets/Billeder/TraenerVideo.mp4"></video>
+        <h2>Bliv træner</h2>
+        <p>
+          Vil du være med til at forme fremtidens håndboldstjerner? Vi søger
+          trænere, du får mulighed for at inspirere og guide vores unge spillere
+          gennem deres håndboldrejse.
+        </p>
+        <p>
+          Uanset om du er en erfaren træner eller blot har en stærk interesse
+          for sporten, er din entusiasme og engagement det vigtigste.
+        </p>
+        <a class="btn rykInd hoverEffekt" href="">
+          Læs mere om træner og trænergodtgørelse</a
+        >
+      </section>
+      <aside class="kalender">
+        <h2>Aktiviteter i hallen</h2>
+        <div class="maned">
+          <ul>
+            <li class="tilbage"><i class="fa-solid fa-angle-left"></i></li>
+            <li>Juni</li>
+            <li class="naeste"><i class="fa-solid fa-angle-right"></i></li>
+          </ul>
+        </div>
+
+        <ul class="ugedage">
+          <li>Man</li>
+          <li>Tir</li>
+          <li>Ons</li>
+          <li>Tor</li>
+          <li>Fre</li>
+          <li>Lør</li>
+          <li>Søn</li>
+        </ul>
+
+        <ul class="dage">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li>30</li>
+        </ul>
+
+        <section>
+          <h2>Aktiviteter for idag</h2>
+          <div class="dagensaktivitet">
+            <p class="fremhaevelse">
+              <i class="fa-solid fa-clock"></i> 17:30 - 19:00
+            </p>
+            <p>Træning U11 piger</p>
+          </div>
+          <div class="dagensaktivitet">
+            <p class="fremhaevelse">
+              <i class="fa-solid fa-clock"></i> 17:30 - 19:00
+            </p>
+            <p>Træning U11 piger</p>
+          </div>
+        </section>
+      </aside>
+
+      <aside class="kommendeArrange centerForside">
+        <h2>Kommende arrangementer</h2>
+        <p>
+          I Aalborg HK, holder vi årlige arrangementer, som vi afholder i
+          samarbejde med mange af vores sponsorer og samarbejdspartner
+        </p>
+      </aside>
+    </div>
+    <article class="centerForside">
+      <h2>Hovedsponsor</h2>
+      <div class="sponsorForside">
+        <img
+          src="./assets/Billeder/Sponsor/sparekassenM.png"
+          alt="sparekassen"
+        />
+        <img src="./assets/Billeder/Sponsor/intersportM.png" alt="intersport" />
+        <img src="./assets/Billeder/Sponsor/hummelM.png" alt="hummel" />
+      </div>
+    </article>
     <footer class="alignCenter">
       <div id="footerLeft">
         <h2>Aalborg HK</h2>
@@ -151,7 +312,7 @@
           ><i class="fa-brands fa-instagram"></i>
         </div>
       </div>
-      <a href="./index.html"
+      <a href="/forside.html"
         ><img class="Logo" src="./assets/Billeder/ahk_gullogo.png" alt="Logo"
       /></a>
     </footer>

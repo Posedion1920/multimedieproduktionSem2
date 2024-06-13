@@ -126,15 +126,16 @@ h3 {
 
 /*styling af botton*/
 .btn {
-    margin: 15px;
+    margin: 15px 0 0 0;
     padding: 10px;
     background: var(--lysBlaa);
     text-decoration: none;
     color: var(--white);
     border-radius: 5px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: center;
     width: 10rem;
+    height: 4rem;
     display: inline-block;
     border: none;
 }
@@ -564,7 +565,7 @@ p {
     text-align: center;
 }
 
-.desktopForside {
+.desktopPadding {
     padding: 0px 1.5rem 0px 1.5rem;
 }
 
@@ -1580,12 +1581,13 @@ h3 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin-bottom: 2rem;
+        padding: 0px 3rem 0px 3rem;
 
     }
 
 
     .faciliteter img {
-        min-width: 100%;
+        max-width: 100%;
         max-height: 500px;
         object-fit: contain;
 

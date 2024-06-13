@@ -1584,6 +1584,7 @@ h3 {
         grid-template-columns: repeat(2, 1fr);
         margin-bottom: 2rem;
         padding: 0px 3rem 0px 3rem;
+        align-items: center;
 
     }
 
@@ -1591,8 +1592,6 @@ h3 {
     .faciliteter img {
         max-width: 100%;
         max-height: 500px;
-        object-fit: contain;
-
     }
 
     .faciTekst {

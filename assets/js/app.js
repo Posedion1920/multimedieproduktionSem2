@@ -330,6 +330,7 @@ function RenderTeam(post){
     articleEL2.append(divEL3);
 
     const subscribeBtn = document.createElement("button");
+    subscribeBtn.classList.add("hoverEffekt");
     subscribeBtn.classList.add("btn")
     subscribeBtn.textContent = post.acf.tilmelding.knapholdnavn;
     divEL3.append(subscribeBtn);

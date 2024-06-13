@@ -1621,6 +1621,10 @@ h2,
 
 }
 
+.menU{
+    list-style-type: none;
+}
+
 .ungdomsholdListe,.seniorholdListe,.øvrigeHold, .ungdomsholdListe>ul{
     list-style-type: none;
     padding: 0px;

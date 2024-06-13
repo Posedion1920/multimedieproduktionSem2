@@ -152,6 +152,9 @@ function RenderEvent(post){
 
 
     const divEL8 = document.querySelector(".flexLister");
+    const obj = post.acf.vinimportorer
+    let keys = Object.keys(obj);
+    console.log[keys[0]]
 
 
     if(post.acf.vinimportorer.vinimport_1 !== ""){
@@ -199,6 +202,29 @@ function RenderEvent(post){
             }
         }
     }
+
+    if(post.acf.udstillere.udstiller_1 !== ""){
+        const divEl11 = document.createElement("div");
+        divEL8.append(divEl11);
+        divEl11.classList.add("deltagerlist");
+        const udstillerP = document.createElement("p");
+        udstillerP.textContent = "Udstillere";
+        const uludstillere = document.createElement("ul");
+        uludstillere.append(udstillerP)
+        divEl11.append(uludstillere); 
+        for(let key in post.acf.udstillere){
+            if(post.acf.udstillere[key] !== ""){
+                const udstillereKey = document.createElement("li");;
+                udstillereKey.textContent = "-"+post.acf.udstillere[key];
+                uludstillere.append(udstillereKey);  
+            }
+            else{
+                continue
+            }
+        }
+    }
+
+    
 }
 
 function RenderTeam(post){

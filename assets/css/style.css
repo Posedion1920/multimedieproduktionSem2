@@ -597,6 +597,9 @@ p {
 
 
 @media screen and (min-width: 1000px) {
+    #hideMegaMenu ul:last-of-type{
+        margin-left: 43px;
+    }
     .flexLister{
         display: flex;
         gap: 5rem;
